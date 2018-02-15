@@ -11,6 +11,8 @@ var handlebars = require('express3-handlebars');
 var index = require('./routes/index');
 var home = require('./routes/home');
 var eventSearch = require('./routes/eventSearch');
+var timeSelect = require('./routes/timeSelect');
+var feelingSelect = require('./routes/feelingSelect');
 var wip = require('./routes/wip');
 var map = require('./routes/map');
 var spider = require('./routes/spider');
@@ -42,8 +44,11 @@ if ('development' == app.get('env')) {
 
 app.get('/', index.view);
 app.get('/home', home.view);
+//app.get('/eventSearch', eventSearch.view);
+app.get('/timeSelect', timeSelect.view);
+app.get('/feelingSelect', feelingSelect.view);
 app.get('/eventSearch', (req, res) => { res.redirect("/eventSearch/0")});
-app.get('/eventSearch/:id([0-9])', eventSearch.view);
+app.get('/eventSearch/:id', eventSearch.view);
 app.get('/wip',wip.view);
 app.get('/map',map.view);
 app.get('/spider', spider.view);
