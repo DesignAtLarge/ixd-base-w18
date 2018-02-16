@@ -1,8 +1,56 @@
+<!DOCTYPE html>
 <html>
-<head>
-	<title>Test Page</title>
-</head>
-<body>
-Begin here (or replace this with any static code already written).
-</body>
+  <head>
+    <meta charset="utf-8">
+  	<link href="css/project-starter.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="/js/fontawesome-all.js"></script>
+  </head>
+  <body>
+    <div id="top"> 
+      <div class="title"><h1>Bustle</h1></div>
+    </div>
+    <div id="main">
+
+
+    	<div id="mySidenav" class="sidenav">
+    	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    		<a href="#">Search Routes</a>
+    		<div class="topnav">
+	          <div class = "search-container">
+	              <input type="text" id="search-p" onblur="this.value=''" onkeyup= "search()" placeholder="Search..">
+	          </div>
+        	</div>
+        	
+	      <div>
+				<ul id="routes-ul">
+					{{#each routes}}
+					<li><a href="#">{{number}}</a></li>
+					<br>
+					{{/each}}
+				</ul>
+			</div>
+    	</div>
+
+
+		<div id="mySidenav2" class="sidenav2">
+		<a href="javascript:void(0)" class="closebtn2" onclick="closeNav2()">&times;</a>
+			<a href="#">Favorites</a>
+		</div>
+
+
+
+		<div class="search"><span onclick="openNav()" class="button1">Search</span>
+		</div>
+
+      <div class="favorites"><span onclick="openNav2()" class="button1">Favorites</span></div>
+    </div>
+
+    <div id="bottom"> 
+      <div class="accounts"><button class="button">Accounts</button></div>
+    </div> 
+    <script src = "https://code.jquery.com/jquery.js"></script>
+    <script src = "js/project.js"></script>
+  </body>
 </html>
