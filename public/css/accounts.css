@@ -1,0 +1,90 @@
+#sized-down{
+	max-height: 300px;
+	max-width: 300px;
+}
+
+
+
+#home{
+    top:0;
+    right:0;
+    float:right;
+    position: absolute;
+    margin-top: 1px;
+    margin-right: 2px;
+}
+
+.info{
+	position: relative;
+    font-size: 35px;
+}
+
+
+
+body{
+    margin-left:50px;
+    margin-right: 50px
+    left: 50px;
+    border: 50px;
+    width:500px;
+    height:50px;
+    font-size: 30px;   
+}
+
+#points{
+    margin-left:50px;
+    margin-right: 50px
+    left: 50px;
+    border: 50px;
+    width:500px;
+    height:50px;
+    font-size: 30px;
+}
+
+.sum-box{
+
+
+    width: 200px;
+	background-color:#888888;
+    margin-top: 5px;
+    float:left;
+    margin-right: 100px;
+}
+.tot-box{
+
+    border-top: 5px;
+    width: 200px;
+    background-color:#888888;
+    margin-top: 5px;
+    float:right;
+}
+
+
+
+#container{
+    width:500px;
+    height:50px;
+    font-size: 30px;
+    left:50px;
+}
+
+
+
+.dis-box{
+
+
+    width: 200px;
+    background-color:#888888;
+    margin-top: 5px;
+    margin-right: 100px;
+}
+.ace-box{
+
+    border-top: 5px;
+    width: 200px;
+    background-color:#888888;
+    margin-top: 5px;
+}
+
+
+

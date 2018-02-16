@@ -1,0 +1,54 @@
+{
+
+	"North Campus Shuttle": [
+		{
+			"name": "North Campus Shuttle"
+		},
+		{
+			"number": "14"
+		},
+		{
+			"stop": "P 704 Regents Parking"
+		},
+		{
+			"stop": "Lot P510/Canyonview (W)"
+		},
+		{
+			"stop": "Price Center (W)"
+		},
+		{
+			"stop": "Warren Apartments (CCW)"
+		},
+		{
+			"stop": "Hopkins Structure (CCW)"
+		},
+		{
+			"stop": "North Point (CCW)"
+		},
+		{
+			"stop": "Gliderport"
+		},
+		{
+			"stop": "Pangea Parking Structure (CW)"
+		},
+		{
+			"stop": "ERC (CW)"
+		},
+		{
+			"stop": "North Point (CW)"
+		},
+		{
+			"stop": "Hopkins Structure (CW)"
+		},
+		{
+			"stop": "Warren Apartments (CW)"
+		},
+		{
+			"stop": "Price Center (E)"
+		},
+		{
+			"stop": "Athena Parking"
+		}
+	]
+}
+
