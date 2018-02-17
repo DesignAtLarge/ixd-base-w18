@@ -1,6 +1,11 @@
+.navbar{
+    background-color: rgba(255,255,255,0.4) !important;
+    height:15%;
+}
+
 .navbar-header {
     float: left;
-    padding: 15px;
+    padding: 5px;
     text-align: center;
     width: 100%;
 }
