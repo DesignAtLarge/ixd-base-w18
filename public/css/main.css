@@ -1,6 +1,6 @@
 .navbar{
     background-color: rgba(255,255,255,0.4) !important;
-    height:15%;
+    height:10%;
 }
 
 .navbar-header {
@@ -38,7 +38,7 @@
     _position:absolute;
     _top:expression(eval(document.documentElement.scrollTop+
         (document.documentElement.clientHeight-this.offsetHeight)));
-    height:100px
+    height:12.5%;
 }
 .crop {
     width: 100%;
