@@ -5,10 +5,13 @@ var now = new Date();
 var oneHourLater = new Date();
 oneHourLater.setHours(now.getHours() + 1);
 
+var moment = require('moment');
+
 Date.prototype.addHours = function(h){
-    var copiedDate = new Date();
-    copiedDate.setTime(this.getTime() + (h*60*60*1000)); 
-    return copiedDate;
+	//var copiedDate = new Date();
+	var copiedDate = moment().tz('America/Los_Angeles').add(moment.duration(h, "hours"));
+    //copiedDate.setTime(this.getTime() + (h*60*60*1000)); 
+    return copiedDate.toDate();
 }
 
 exports.view = function(req, res){
