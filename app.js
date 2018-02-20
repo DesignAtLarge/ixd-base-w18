@@ -44,7 +44,6 @@ if ('development' == app.get('env')) {
 
 app.get('/', index.view);
 app.get('/home', home.view);
-//app.get('/eventSearch', eventSearch.view);
 app.get('/timeSelect', timeSelect.view);
 app.get('/feelingSelect', feelingSelect.view);
 app.get('/eventSearch', (req, res) => { res.redirect("/eventSearch/0")});
@@ -52,9 +51,28 @@ app.get('/eventSearch/:id', eventSearch.view);
 app.get('/wip',wip.view);
 app.get('/map',map.view);
 app.get('/spider', spider.view);
-// Example route
-// app.get('/users', user.list);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+
+//////////// REST API /////////////////
+
+var db = require('./db');
+
+var bodyParser = require('body-parser');
+
+var mongoose = require('mongoose');
+
+app.use(bodyParser.json()); 
+
+app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
+mongoose.connect(db.url).then(() => {
+  console.log("Connection to MongoDB Successful");
+
+  http.createServer(app).listen(app.get('port'), function(){
+    console.log('Express server listening on port ' + app.get('port'));
+  });
+}).catch( err => {
+  console.error("Could not connect to MongoDB");
 });
