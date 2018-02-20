@@ -67,6 +67,22 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+var eventURL = "/api/event";
+var userURL = "/api/user";
+
+var apiUser = require('./routes/apiUser');
+var apiEvent = require('./routes/apiEvent');
+
+app.get(eventURL, apiEvent.get);
+app.post(eventURL, apiEvent.post);
+app.put(eventURL, apiEvent.put);
+app.delete(eventURL, apiEvent.delete);
+
+app.get(userURL, apiUser.get);
+app.post(userURL, apiUser.post);
+app.put(userURL, apiUser.put);
+app.delete(userURL, apiUser.delete);
+
 mongoose.connect(db.url).then(() => {
   console.log("Connection to MongoDB Successful");
 
