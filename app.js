@@ -75,15 +75,15 @@ var userURL = "/api/user";
 var apiUser = require('./routes/apiUser');
 var apiEvent = require('./routes/apiEvent');
 
-app.get(eventURL, apiEvent.get);
+app.get(eventURL + "/:id", apiEvent.get);
 app.post(eventURL, apiEvent.post);
-app.put(eventURL, apiEvent.put);
-app.delete(eventURL, apiEvent.delete);
+app.put(eventURL + "/:id", apiEvent.put);
+app.delete(eventURL + "/:id", apiEvent.delete);
 
-app.get(userURL, apiUser.get);
+app.get(userURL + "/:id", apiUser.get);
 app.post(userURL, apiUser.post);
-app.put(userURL, apiUser.put);
-app.delete(userURL, apiUser.delete);
+app.put(userURL + "/:id", apiUser.put);
+app.delete(userURL + "/:id", apiUser.delete);
 
 mongoose.connect(db.url).then(() => {
   console.log("Connection to MongoDB Successful");
