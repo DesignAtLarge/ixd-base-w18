@@ -17,14 +17,14 @@ function loadInformation(response){
 	var htmlString = loadContents(response);
 	div.appendChild(htmlString);
 
-	$("body").prepend(div);
+	$("body").append(div);
 	$(".close-info").click(closeInformation);
 }
 
 function loadContents(res){
 	console.log(res);
 	var header = document.createElement("div");
-	header.innerHTML = '<a href="#"><button class="btn btn-lg btn-primary close-info" style="float:right;"><i class="fa fa-times-circle" style="color:#fff;"></i></button></a>';
+	header.innerHTML = '<a href="#"><button class="btn btn-lg btn-primary close-info" style="float:right;"><i class="fa fa-times-circle-o" style="color:#fff;"></i></button></a>';
 	var description = document.createElement("div");
 	description.setAttribute("class","content");
 	description.innerHTML = "Lorem Ipsum dolores.."
