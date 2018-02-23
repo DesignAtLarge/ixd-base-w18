@@ -18,6 +18,7 @@ var map = require('./routes/map');
 var spider = require('./routes/spider');
 var eventCreation = require('./routes/eventCreation');
 var eventCreationDetails = require('./routes/eventCreationDetails');
+var locationPreview = require('./routes/locationPreview');
 // Example route
 // var user = require('./routes/user');
 
@@ -55,6 +56,7 @@ app.get('/map',map.view);
 app.get('/spider', spider.view);
 app.get('/eventCreation', eventCreation.view);
 app.get('/eventCreationDetails', eventCreationDetails.view);
+app.get('/locationPreview', locationPreview.view);
 
 //////////// REST API /////////////////
 
