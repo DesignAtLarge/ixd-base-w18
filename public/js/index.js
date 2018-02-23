@@ -1,65 +1,103 @@
-'use strict';
-
+'use strict';   
 $(document).ready(function() {
-	  initializePage();
+      initializePage();
 })
 
 function initializePage(){
-    $(".chore_content canvas").hide();
-    $(".expense canvas").hide();
+   $(".chore canvas").hide();
     $(".card").click(function(e){
         e.preventDefault();
         var graphId = $(this).find('canvas').attr("id");
         makeChart(graphId);
         $(this).find('canvas').toggle();
     })
-
     $(".doneBtn").click(function(e){
         e.preventDefault();
         e.stopPropagation();
+        let idx = $(this).attr('index');
+        let id = '#' + idx;
         $(this).parent().parent().parent().toggleClass('chore_content doneGray');
-        $(this).toggleClass('doneBtn reviveBtn');
         $(this).toggleClass('btn-success btn-danger');
+        let name = $("#fbProfilePic").attr('user');
+        console.log("what is the text?", $(this).text());
         if ($(this).text() == "Done"){
             $(this).text("Revive");
+            $(this).toggleClass('doneBtn reviveBtn');
+
+        if(name == 'Karanbir'){
+            let pts = $(id).attr('Karanbir');
+            pts++;
+            $(id).attr('Karanbir', pts);
+        } else if(name == 'Alex'){
+            
+            let pts = $(id).attr('Alex');
+            pts++;
+            $(id).attr('Alex', pts);
+        } else if(name == 'Youxi'){
+            
+            let pts = $(id).attr('Youxi');
+            pts++;
+            $(id).attr('Youxi', pts);
+        } else if(name == 'All'){
+            
+            let pts = $(id).attr('All');
+            pts++;
+            $(id).attr('All', pts);
         }else{
+            let pts = $(id).attr('guest');
+            pts++;
+            $(id).attr('guest', pts);
+        }
+            makeChart($(id).attr('id'));
+        }
+        else{
+
             $(this).text("Done");
         };
-//        $('.chore_rows').append($(this).parent().parent().parent());
-//        $(this).parent().parent().parent().append($('.chore_rows'))
-        //get rid of it from the json file.
-    })
 
-/*
+        //TODO: REMOVE FROM THE DATABSE!!!
+    });
+
     $(".reviveBtn").click(function (e){
-        e.preventDefault();
-        $(this).parent().parent().parent().toggleClass('doneGray chore_content');
-        $(this).toggleClass(`doneBtn reviveBtn`);
-        $(this).toggleClass(`btn-danger btn-success`);
-
-//        $(this).text("Done");
-
-    })
-    */
+        if ($(this).text() == "Revive"){
+            $(this).text("Done");
+            $(this).toggleClass('reviveBtn doneBtn');
+            $(this).toggleClass('btn-danger btn-success');
+        }
+    });
 
     $(".boughtBtn").click(function(e){
         e.preventDefault;
         $(this).parent().parent().parent().hide();
-    })
-
-
+    });
 }
 function makeChart(graphId){
 var graph = document.getElementById(graphId);
+var id = '#' + graphId;
+var kb = $(id).attr('Karanbir');
+var alex = $(id).attr('Alex');
+var allDee = $(id).attr('All');
+var youxi = $(id).attr('Youxi');
+var guest = $(id).attr('guest');
 var ctx = graph.getContext('2d');
-console.log("This is the value returned from getElementByClassName",ctx);
+let name = $("#fbProfilePic").attr('user');
+let label = [];
+let datas = [];
+if(name == 'Karanbir' || name == 'Youxi' || name == "All" || name == "Alex"){
+    label = ["All", "KB", "Youxi", "Alex"];
+    datas = [allDee, kb, youxi, alex];
+}else{
+    label =["All", "KB", "Youxi", "Alex", name]; 
+    datas = [allDee, kb, youxi, alex, guest];
+}
+
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ["All", "KB", "Youxi", "Alex"],
+        labels: label,
         datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5],
+            label: '# of Points',
+            data: datas,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

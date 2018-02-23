@@ -1,10 +1,12 @@
 var jasonDB = require("../data/DB.json");
 
 exports.addUser = function(req, res){	
+	console.log("the req", req.body);
 
 	let user = {
 		name: req.body.name,
-		url: req.body.url
+		url: req.body.url,
+		first: req.body.first
 	}
 
 	console.log("BREAK");

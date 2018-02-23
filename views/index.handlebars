@@ -17,7 +17,7 @@
 
                     {{#if users}}
                     <li class=" col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon dropdown pull-right">
-                        <a  data-toggle="dropdown" class="dropdown-toggle"><img id="fbProfilePic" src="{{users.0.url}}"><b class="caret"></b></a>
+                        <a  data-toggle="dropdown" class="dropdown-toggle"><img id="fbProfilePic" user="{{users.0.first}}" src="{{users.0.url}}"><b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="divider"></li>
                             <li><a href="/">Sign Off</a></li>
@@ -56,16 +56,17 @@
                             <p>{{description}}</p>
                         </div>
                             <div class="done col-xs-4 col-sm-4 col-md43 col-lg-4">
-                                <button class="btn btn-success doneBtn" type="submit">Done</button>
+                                <button class="btn btn-success doneBtn" index="{{@index}}" type="submit">Done</button>
                             </div>
 
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:center">
                                 <span class="glyphicon glyphicon-chevron-down" style="font-size:15px"></span>
                             </div>
-                        </div>
-                        <canvas width="400" height="400" id="{{imageURL}}"> </canvas>
+                        </div> 
+                        <canvas width="400" height="400" id="{{@index}}" Karanbir="{{kb}}" Alex="{{alex}}" All="{{allDee}}" Youxi="{{youxi}}" guest="{{guest}}" > </canvas>
                         </div>
                     </div>
+                    
                     {{/each}}
                 </div>
 

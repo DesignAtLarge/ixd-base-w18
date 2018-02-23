@@ -22,7 +22,8 @@ function addUser(response){
   
   let user = {
     name: response.name,
-    url: response.picture.data.url
+    url: response.picture.data.url,
+    first: response.first_name
   }
 
   let url = "/addUser"; 
