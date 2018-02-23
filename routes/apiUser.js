@@ -26,11 +26,11 @@ exports.post = (req, res) => {
     //newUser.history = [];
 
     User.find({idToken : newUser.idToken}, (err, user) => {
-        if(err)
-            res.status(500).json({
-                message: "error retrieving user",
-                user   : undefined
-            });
+        // if(err)
+        //     res.status(500).json({
+        //         message: "error retrieving user",
+        //         user   : undefined
+        //     });
         if(user.length > 0)
             res.status(200).json({
                 message: "user already exists",
@@ -39,12 +39,12 @@ exports.post = (req, res) => {
         else
             newUser.save( err => {
                 console.log(newUser);
-                if(err)
-                    console.error(err);
-                    res.status(500).json({
-                        message : "could not create user",
-                        user    : undefined
-                    });
+                // if(err)
+                //     console.error(err);
+                //     res.status(500).json({
+                //         message : "could not create user",
+                //         user    : undefined
+                //     });
                 
                 res.status(200).json({
                     message : "success",
