@@ -1,0 +1,81 @@
+<html>
+
+<head>
+	<title>hApp</title>
+
+	<link rel="stylesheet" href="/scripts/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/scripts/bootstrap-material-design/dist/css/bootstrap-material-design.css">
+	<link rel="stylesheet" href="/static/css/main.css">
+	<link rel="stylesheet" href="/static/css/eventCreation.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/static/css/button-theme.css">
+</head>
+
+<body class="bg-light">
+	{{!-- Begin here (or replace this with any static code already written). --}}
+
+
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="navbar-header">
+			<a href="/eventCreation" href="#">
+				<button type="button" class="btn btn-lg left">
+					<img src="/static/icons/left-arrow.svg" height="35"/>
+				</button></a>
+			<a class="navbar-brand center" href="#"><h3>hApp</h3></a>
+		
+		</div>
+	</nav>
+
+
+	<div>
+			<img style="float: left; margin: 0px 5% 5% 10%;" src="static/img/raccoon.jpg" width="125" />
+			<div class="row">
+				<h4>Raccoon Spotted</h4><br>	
+			</div>
+			<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<input id="startTime" type="time" value={{currentTime}}>
+						<input id="endTime" type="time" value={{nextTime}}>	
+					</div>
+			</div>	
+	</div>
+	<br>
+
+	<div style="padding-top:12.5%">
+			<h5 class="center">Location</h5>
+			
+			<form>
+  				<div>
+    				<input type="checkbox" id="use_cur_loc_checkbox" name="subscribe">
+    				<label for="subscribeNews">Use Current Location</label>
+  				</div>
+				<div>
+    				<input type="checkbox" id="use_custom_loc_checkbox" name="subscribe">
+    				<label for="subscribeNews">Other</label>
+  				</div>
+  			
+			</form>
+
+			<h5 class="center">Tags</h5>
+			<div style=" margin: auto; display:inline-block; width:20%; height: 20%; min-width:125px; min-height:125px; padding:1%;"> <div class="myButton" style="width:100%; padding: 40px 12.5%">Tired</div></div>
+			<div style=" margin: auto; display:inline-block; width:20%; height: 20%; min-width:125px; min-height:125px; padding:1%;"> <div class="myButton" style="width:100%; padding: 40px 12.5%">Wild</div></div>
+			<div style=" margin: auto; display:inline-block; width:20%; height: 20%; min-width:125px; min-height:125px; padding:1%;"> <div class="myButton" style="width:100%; padding: 40px 12.5%">Calm</div></div>
+
+	</div>
+	<div class="row center" style="padding-top:25px">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+					<a href="/home"><button type="button" id="nxt_btn" class="btn btn-lg btn-secondary active">DROP PIN</button></a>
+				</div>
+	</div>
+	
+
+	<script src="/scripts/jquery/dist/jquery.js"></script>
+	<script src="/scripts/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="/scripts/popper.js/dist/umd/popper.js"></script>
+	<script src="/scripts/bootstrap-material-design/dist/js/bootstrap-material-design.js"></script>
+	<script src="/static/js/main.js"></script>
+	<script src="/static/js/eventCreationSaving.js"></script>
+</body>
+
+</html>

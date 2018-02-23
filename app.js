@@ -17,6 +17,7 @@ var wip = require('./routes/wip');
 var map = require('./routes/map');
 var spider = require('./routes/spider');
 var eventCreation = require('./routes/eventCreation');
+var eventCreationDetails = require('./routes/eventCreationDetails');
 // Example route
 // var user = require('./routes/user');
 
@@ -53,7 +54,7 @@ app.get('/wip',wip.view);
 app.get('/map',map.view);
 app.get('/spider', spider.view);
 app.get('/eventCreation', eventCreation.view);
-
+app.get('/eventCreationDetails', eventCreationDetails.view);
 
 //////////// REST API /////////////////
 
