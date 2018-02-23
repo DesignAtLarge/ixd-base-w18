@@ -1,10 +1,11 @@
-'use strict';   
+'use strict';
 $(document).ready(function() {
       initializePage();
 })
 
 function initializePage(){
-   $(".chore canvas").hide();
+    $(".chore canvas").hide();
+    $(".expense_content canvas").hide();
     $(".card").click(function(e){
         e.preventDefault();
         var graphId = $(this).find('canvas').attr("id");
@@ -21,6 +22,7 @@ function initializePage(){
         let name = $("#fbProfilePic").attr('user');
         console.log("what is the text?", $(this).text());
         if ($(this).text() == "Done"){
+
             $(this).text("Revive");
             $(this).toggleClass('doneBtn reviveBtn');
 
@@ -29,17 +31,17 @@ function initializePage(){
             pts++;
             $(id).attr('Karanbir', pts);
         } else if(name == 'Alex'){
-            
+
             let pts = $(id).attr('Alex');
             pts++;
             $(id).attr('Alex', pts);
         } else if(name == 'Youxi'){
-            
+
             let pts = $(id).attr('Youxi');
             pts++;
             $(id).attr('Youxi', pts);
         } else if(name == 'All'){
-            
+
             let pts = $(id).attr('All');
             pts++;
             $(id).attr('All', pts);
@@ -87,7 +89,7 @@ if(name == 'Karanbir' || name == 'Youxi' || name == "All" || name == "Alex"){
     label = ["All", "KB", "Youxi", "Alex"];
     datas = [allDee, kb, youxi, alex];
 }else{
-    label =["All", "KB", "Youxi", "Alex", name]; 
+    label =["All", "KB", "Youxi", "Alex", name];
     datas = [allDee, kb, youxi, alex, guest];
 }
 
