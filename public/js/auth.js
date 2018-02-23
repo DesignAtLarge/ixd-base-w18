@@ -9,9 +9,15 @@ function authFB(res){
             console.log("no user found, attempting to create user...");
             $.post("/api/user", { name: res.name, idToken: res.id, history: []}, (res) => {
                 console.log(res);
+                setTimeout(() => {
+                    $(location).attr('href', '/home');
+                }, 10);
             })
         } else {
             console.log("user found: " + response.user[0])
+            setTimeout(() => {
+                $(location).attr('href', '/home');
+            }, 10);
         }
     });
 
@@ -24,5 +30,8 @@ function authGPlus(res){
     console.log("authenticating with Google Plus");
 
     console.log(res);
+    setTimeout(() => {
+        $(location).attr('href', '/home');
+    }, 10);
 }
 
