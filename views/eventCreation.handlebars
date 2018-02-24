@@ -1,0 +1,78 @@
+<html>
+
+<head>
+	<title>hApp</title>
+
+	<link rel="stylesheet" href="/scripts/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/scripts/bootstrap-material-design/dist/css/bootstrap-material-design.css">
+	<link rel="stylesheet" href="/static/css/main.css">
+	<link rel="stylesheet" href="/static/css/eventCreation.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/static/css/button-theme.css">
+</head>
+
+<body class="bg-light">
+	{{!-- Begin here (or replace this with any static code already written). --}}
+
+
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="navbar-header">
+			<a href="/home" href="#">
+				<button type="button" class="btn btn-lg left">
+					<img src="/static/icons/home.svg" height="35"/>
+				</button></a>
+			<a class="navbar-brand center" href="#"><h3>hApp</h3></a>
+		
+		</div>
+	</nav>
+
+
+	<div>
+		<form style="padding-top: 6.75%">
+			<strong style="line-height:2em">Pin Name</strong><br>
+			<input type="text" name="firstname">
+
+			<div class="container" style="line-height:2em; text-align:center; padding-top: 6.75%">
+				<strong>Time</strong><br>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<strong>From:</strong>
+						<input id="startTime" type="time" value={{currentTime}}>			
+						<strong>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;To:</strong>
+						<input id="endTime" type="time" value={{nextTime}}>	
+					</div>
+				</div>		
+					
+			</div>
+
+			<div class="container" style="line-height:2em; text-align:center; padding-top: 6.75%">
+				<strong>Description</strong><br>
+				<textarea name="upload_description" style="padding-top:25px" id="description_textbox"></textarea>
+			</div>
+
+			<a href="/wip">
+			<button type="button" class="btn btn-lg" style="padding-top:6.75%">
+				<img src="/static/icons/add-square-button.svg" height="35"/>
+			</button></a>
+			<br>
+			<strong style="line-height:2em">Upload Photo</strong><br>
+
+			<div class="row" style="padding-top:25px">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+					<a href="/eventCreationDetails"><button type="button" id="nxt_btn" class="btn btn-lg btn-secondary active">NEXT</button></a>
+				</div>
+			</div>
+		</form>
+	</div>
+	
+
+	<script src="/scripts/jquery/dist/jquery.js"></script>
+	<script src="/scripts/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="/scripts/popper.js/dist/umd/popper.js"></script>
+	<script src="/scripts/bootstrap-material-design/dist/js/bootstrap-material-design.js"></script>
+	<script src="/static/js/main.js"></script>
+	<script src="/static/js/eventCreationSaving.js"></script>
+</body>
+
+</html>

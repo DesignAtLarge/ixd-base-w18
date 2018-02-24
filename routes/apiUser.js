@@ -4,14 +4,14 @@ exports.get = (req, res) => {
 
     var id = req.params.id;
     
-    User.findById(id, (err, user) => {
+    User.find({idToken : id}, (err, user) => {
         if(err)
             res.status(500).json({
-                message: "could not get user",
+                message: "error retrieving user",
                 user   : undefined
             });
         res.status(200).json({
-            message: "user found",
+            message: "success",
             user : user
         });
     });
@@ -20,24 +20,38 @@ exports.get = (req, res) => {
 exports.post = (req, res) => {
     console.log(req.body);
 
-    var user = new User();
-    user.idToken = req.body.idToken;
-    user.name = req.body.name;
-    user.history = req.body.history;
+    var newUser = new User();
+    newUser.idToken = req.body.idToken;
+    newUser.name = req.body.name;
+    //newUser.history = [];
 
-    user.save( err => {
-        if(err)
-            res.status(500).json({
-                message : "could not create user",
-                user    : undefined
+    User.find({idToken : newUser.idToken}, (err, user) => {
+        // if(err)
+        //     res.status(500).json({
+        //         message: "error retrieving user",
+        //         user   : undefined
+        //     });
+        if(user.length > 0)
+            res.status(200).json({
+                message: "user already exists",
+                user : undefined
             });
-        
-        res.status(200).json({
-            message : "user created",
-            user : user
-        });
+        else
+            newUser.save( err => {
+                console.log(newUser);
+                // if(err)
+                //     console.error(err);
+                //     res.status(500).json({
+                //         message : "could not create user",
+                //         user    : undefined
+                //     });
+                
+                res.status(200).json({
+                    message : "success",
+                    user : newUser
+                });
+            });
     });
-    
 }
 
 exports.put = (req, res) => {
