@@ -24,7 +24,7 @@ function loadInformation(response){
 function loadContents(res){
 	console.log(res);
 	var header = document.createElement("div");
-	header.innerHTML = '<a href="#"><button class="btn btn-lg btn-primary close-info" style="float:right;"><i class="fa fa-times-circle-o" style="color:#fff;"></i></button></a>';
+	header.innerHTML = '<a href="#"><button class="btn btn-lg btn-primary close-info" style="float:right;"><i class="fa fa-times-circle-o fa-2x" style="color:#fff;"></i></button></a>';
 	var description = document.createElement("div");
 	description.setAttribute("class","content");
 	description.innerHTML = "Lorem Ipsum dolores.."
