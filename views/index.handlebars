@@ -78,21 +78,22 @@
 			bg.push(str);
 			{{/each}}
 			var header = $('body');
+			//Randomly initialise current
+			//On redirect, preserve value of current
+			var current = 0;
 
-var current = 0;
+			function nextBackground() {
+    			current++;
+    			current = current % bg.length;
+    			header.css('transition','background-image 1s');
+    			header.css('transition-time-function','ease-in-out');
+    			header.css('background-image', bg[current]);
+    			$('.home-page').css('background-image', bg[current]);
+			}
+			setInterval(nextBackground, 15000);
 
-function nextBackground() {
-    current++;
-    current = current % bg.length;
-    header.css('transition','background-image 1s');
-    header.css('transition-time-function','ease-in-out');
-    header.css('background-image', bg[current]);
-    $('.home-page').css('background-image', bg[current]);
-}
-setInterval(nextBackground, 15000);
-
-header.css('background-image', bg[0]);
-});
+			header.css('background-image', bg[0]);
+		});
 	</script>
 
 	<script src="/static/js/auth.js"></script>
