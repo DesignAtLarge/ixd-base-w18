@@ -2,7 +2,8 @@
 /*
  * GET home page.
  */
+var background = require('../public/json/background.json');
 
 exports.view = function(req, res){
-  res.render('home');
+  res.render('home',background);
 };

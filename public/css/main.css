@@ -1,5 +1,5 @@
 .navbar{
-    background-color: rgba(255,255,255,0.4) !important;
+    background-color: rgba(255,255,255,0.8) !important;
     height:10%;
 }
 
@@ -28,7 +28,7 @@
 {
     display: inline-block;
 }
-#outer
+.outer
 {
     width:100%;
     text-align: center;
@@ -64,30 +64,62 @@
 }
 
 .login-row{
-    margin-top:2.5%;
+    margin-top: 2.5%;
     margin-bottom: 2.5%
 }
 
-.btn.btn-lg.active.btn-facebook{
+.login-row.form{
+    margin-top: 5%;
+    margin-bottom: 5%
+}
+
+.btn.btn-lg.active.btn-login{
+    min-width: 200px;
+}
+
+.btn.btn-lg.active.btn-home{
+    min-width: 200px;
+    min-height: 75px;
+}
+
+.btn.btn-lg.active.btn-home:hover{
+    background-color: rgba(250,250,250,0.8);
+    border-color: rgba(250,250,250,0.8);
+}
+
+.btn.btn-lg.active.btn-social{
+    min-width: 90px;
+}
+
+.btn.btn-lg.active.btn-social.btn-facebook{
     color:#FFF;
     background-color: #3B5998;
 }
 
-.btn.btn-lg.active.btn-facebook:hover{
+.btn.btn-lg.active.btn-social.btn-facebook:hover{
     color: #3B5998;
     background-color: rgba(153, 153, 153, 0.4);
     border-color: rgba(153, 153, 153, 0.4);;
 }
 
-.btn.btn-lg.active.btn-google{
+.btn.btn-lg.active.btn-social.btn-google{
     color:#FFF;
     background-color: #DD4B39;
 }
 
-.btn.btn-lg.active.btn-google:hover{
+.btn.btn-lg.active.btn-social.btn-google:hover{
     color: #DD4B39;
     background-color: rgba(153, 153, 153, 0.4);
     border-color: rgba(153, 153, 153, 0.4);
+}
+
+.btn.btn-lg.btn-header{
+    margin-bottom: 0;
+}
+
+.home-body{
+    height: 200px;
+    margin: auto;
 }
 
 .btn-circle.btn-xl {
@@ -114,7 +146,7 @@
 }
 
 .info-panel .content{
-    padding-top: 10%;
+    padding-top: 15vh;
 }
 
 .center {
@@ -130,4 +162,69 @@
 .left {
     position: absolute;
     left: 0;
+}
+
+input[type=checkbox], input[type=radio] {
+  vertical-align: middle;
+  position: relative;
+  bottom: 1px;
+}
+
+input[type=radio] {
+  bottom: 2px;
+}
+
+input[type=time]{
+    width: 150px;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+}
+
+.tags{
+    margin: auto;
+    display:inline-block;
+    width:100%;
+    height: 100%;
+    min-width:150px;
+    min-height:150px;
+    padding:1%;
+    color:#FFF;
+    background:rgba(0,0,0,0.6);
+}
+
+.btn.tags:hover{
+    color:#FFF;
+    background: rgba(0,0,0,0.5);
+    text-decoration: underline;  
+}
+
+.tag-tile{
+    margin: 0.5% auto;
+    display:inline-block;
+    width:20vmin;
+    height: 20vmin;
+    min-width:150px;
+    min-height:150px;
+    background: url("../img/raccoon.jpg");
+    background-size: cover;
+}
+.center {
+    margin: auto;
+    width: 50%;
+    text-align: center;    
+    padding: 10px;
+}
+.right {
+    position: absolute;
+    right: 0;
+}
+.left {
+    position: absolute;
+    left: 0;
+}
+
+.feeling{
+    -moz-box-shadow:    inset 0 0 5px #222;
+   -webkit-box-shadow: inset 0 0 5px #222;
+   box-shadow:         inset 0 0 5px #222;
 }

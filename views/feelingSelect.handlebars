@@ -15,47 +15,33 @@
 	{{!-- Begin here (or replace this with any static code already written). --}}
 
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="max-height:100px">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="navbar-header">
 			<a class="navbar-brand center" href="#"><h3>hApp</h3></a>
-			<a href="/home" class="left" href="#">
-				<button type="button" class="btn btn-lg">
-					<img src="/static/icons/home.svg" height="35"/>
+			<a href="/timeSelect" class="left" href="#">
+				<button type="button" class="btn btn-lg btn-header">
+					<img src="/static/icons/back-arrow.svg" height="30"/>
 				</button></a>
 			<a class="right" href="#">
-				<button type="button" class="btn btn-lg info">
-					<img src="/static/icons/info.svg" height="35"/>
+				<button type="button" class="btn btn-lg btn-header info">
+					<img src="/static/icons/info.svg" height="30"/>
 				</button></a>
 		</div>
 	</nav>
 
-	<div class="container" style="height:calc(window.innerHeight - 200px - 0.5pt); text-align:center; padding: 1%">
+	<div class="container" style="height:calc(77.5vh - 0.5pt); text-align:center; padding: 1%">
 		<h3>How are you Feeling?</h3>
-		<div style="width:100%; height:60%; overflow-y:auto;">
+		<span class="overflow" style="display:none;">Scroll through and tell us</span>
+		<div class="feeling" style="width:100%; height:90%; overflow-y:auto; background:#e6e6e6; padding:1%">
 			{{#each tags}}
-				<div style=" margin: auto; display:inline-block; width:20%; height: 20%; min-width:125px; min-height:125px; padding:1%;"><a href="/eventSearch/0"> <div class="myButton" style="width:100%; padding: 40px 12.5%">{{this}}</div></a></div>
+				<div class="tag-tile" style="background-image: url('{{url}}')"><a href="/eventSearch/0"> <button class="btn tags" style="">{{name}}</button></a></div>
 			{{/each}}
 		</div>
-		<!--
-		<div class="row" style="height:50%">
-				<div style="position: absolute; left: 12.5%"><a href="/eventSearch/0"> <div class="myButton">**Tired**</div></a></div>
-				<div style="position: absolute; right:12.5%"><a href="/eventSearch/0"> <div class="myButton">Adventurous</div></a></div>
-		</div>
-		<div class="row" style="height:50%">
-				<div style="position: absolute; left: 12.5%"><a href="/eventSearch/0"> <div class="myButton">**Hungry**</div></a></div>
-				<div style="position: absolute; right:12.5%"><a href="/eventSearch/0"> <div class="myButton">Hardworking</div></a></div>
-
-		</div>-->
 	</div>
-
-
-	<div class="container" class="outer">
-		<div class="row">
-				<a href="/eventSearch/0" style="margin: auto"> <div class="myButton2">SURPRISE ME</div></a>
-		</div>
+	<div class="outer" style="text-align: center;">
+		OR<br>
+		<a href="/eventSearch/0" style="margin: auto"> <div class="btn btn-lg btn-primary active btn-login">SURPRISE ME</div></a>
 	</div>
-
-	
 
 	<script src="/scripts/jquery/dist/jquery.js"></script>
 	<script src="/scripts/bootstrap/dist/js/bootstrap.js"></script>
@@ -63,6 +49,26 @@
 	<script src="/scripts/bootstrap-material-design/dist/js/bootstrap-material-design.js"></script>
 	<script src="/static/js/main.js"></script>
 	<script src="/static/js/loadInfo.js"></script>
+	<script>
+		function scrollLayout(){
+			if($(".feeling").prop('scrollHeight')>$(".feeling").prop('clientHeight')){
+				console.log("scroll");
+				$(".overflow").css("display","block");
+				$(".feeling").css("height","85%");
+			}
+			else{
+				$(".overflow").css("display","none");
+				$(".feeling").css("height","90%");
+			
+			}
+		}
+		$(document).ready(function(){
+			scrollLayout();
+		})
+		$(window).resize(function(){
+			scrollLayout();
+		})
+	</script>
 </body>
 
 </html>

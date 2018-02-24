@@ -14,55 +14,52 @@
 	{{!-- Begin here (or replace this with any static code already written). --}}
 
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="max-height:100px">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="navbar-header">
 			<a class="navbar-brand center" href="#"><h3>hApp</h3></a>
 			<a href="/home" class="left" href="#">
-				<button type="button" class="btn btn-lg">
-					<img src="/static/icons/home.svg" height="35"/>
+				<button type="button" class="btn btn-lg btn-header">
+					<img src="/static/icons/home.svg" height="30"/>
 				</button></a>
 			<a class="right" href="#">
-				<button type="button" class="btn btn-lg info">
-					<img src="/static/icons/info.svg" height="35"/>
+				<button type="button" class="btn btn-lg btn-header info">
+					<img src="/static/icons/info.svg" height="30"/>
 				</button></a>
 		</div>
 	</nav>
 
-	<div class="container" style="text-align:center; padding-top: 5%">
-		<div class="row" style="padding-top:25px">
+	<div class="container" style="text-align:center; padding-top:calc(40vh - 200px)">
+		<div style="width:90%; margin:auto; height: 400px">
+		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 subtitle">
 				<strong>When will you be available?</strong>
 			</div>
-		
 		</div>
-	</div>
-
-	<div class="container" style="text-align:center; padding-top: 6.25%">
-		<div class="row" style="padding-top:25px">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-				<strong>From:</strong>
-				<input id="startTime" type="time" value={{currentTime}}>			
+		<div class="row" style="padding-top:80px;">
+			<div style="width:calc(50% - 55px); text-align: right; padding:0.5%;">
+				<strong>From:</strong>					
+			</div>
+			<div style="text-align: left; padding:0.5%;">
+				<input id="startTime" type="time" value={{currentTime}} size=20>
 			</div>
 		</div>
 
-		<div class="row" style="padding-top:25px">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+		<div class="row" style="padding-top:80px;">
+			<div style="width:calc(50% - 55px); text-align: right; padding:0.5%;">
 				<strong>To:</strong>
+			</div>
+			<div style="width:50%; text-align: left; padding:0.5%;">
 				<input id="endTime" type="time" value={{nextTime}}>			
 			</div>
 		</div>
-			
-	</div>
-
-	<div class="container" style="text-align:center; padding-top: 12.5%">
-		<div class="row" style="padding-top:25px">
+		<div class="row" style="padding-top:80px;">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-				<a href="feelingSelect"><button type="button" class="btn btn-lg active">GO</button></a>
+				<a href="feelingSelect"><button type="button" class="btn btn-lg active btn-primary btn-login">GO</button></a>
 			</div>
 		
 		</div>
+		</div>
 	</div>
-	
 
 	<script src="/scripts/jquery/dist/jquery.js"></script>
 	<script src="/scripts/bootstrap/dist/js/bootstrap.js"></script>

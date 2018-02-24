@@ -17,35 +17,29 @@
 		<div class="navbar-header">
 			<a class="navbar-brand center" href="#"><h3>hApp</h3></a>
 			<a href="/wip" class="left" href="#">
-				<button type="button" class="btn btn-lg">
-					<img src="/static/icons/history.svg" height="35"/>
+				<button type="button" class="btn btn-lg btn-header">
+					<img src="/static/icons/history.svg" height="30"/>
 				</button></a>
 			<a class="right" href="/wip">
-				<button type="button" class="btn btn-lg">
-					<img src="/static/icons/settings-work-tool.svg" height="35"/>
+				<button type="button" class="btn btn-lg btn-header">
+					<img src="/static/icons/settings-work-tool.svg" height="30"/>
 				</button></a>
 		</div>
 	</nav>
 
-	<div class="container" style="text-align:center; padding-top: 12.5%">
-		<div>
+	<div class="container" style="text-align:center; padding-top: calc(40vh - 100px); padding-bottom: calc(50vh - 100px)">
+		<div class="home-body">
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-				<a href="/timeSelect"><button type="button" class="btn btn-lg btn-primary active">Search</button></a>
+				<a href="/timeSelect"><button type="button" class="btn btn-lg btn-primary active btn-home">Search</button></a>
 			</div>
 		</div>
-		<div class="row" style="padding-top:25px">
+		<div class="row" style="padding-top:50px;">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-				<a href="/eventCreation"><button type="button" class="btn btn-lg btn-secondary active">Upload</button></a>
+				<a href="/eventCreation"><button type="button" class="btn btn-lg btn-secondary active btn-home">Upload</button></a>
 			</div>
 		</div>
-		<!--<div class="row" style="padding-top:50px">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-				<a href="wip"><button type="button" class="btn btn-lg btn-secondary active">
-					<img src="/static/icons/history.svg" height="35"/>
-				</button></a>
-			</div>
-		</div>--></div>
+		</div>
 	</div>
 
 	
@@ -55,6 +49,31 @@
 	<script src="/scripts/popper.js/dist/umd/popper.js"></script>
 	<script src="/scripts/bootstrap-material-design/dist/js/bootstrap-material-design.js"></script>
 	<script src="/static/js/main.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			var bg = new Array();
+			{{#each backgrounds}}
+			var str = "url('{{this}}')";
+			bg.push(str);
+			{{/each}}
+			var header = $('body');
+
+			var current = 0;
+
+			function nextBackground() {
+    			current++;
+    			current = current % bg.length;
+    			header.css('transition','background-image 1s');
+    			header.css('transition-time-function','ease-in-out');
+    			header.css('background-image', bg[current]);
+    			$('.home-page').css('background-image', bg[current]);
+			}
+			setInterval(nextBackground, 15000);
+
+			header.css('background-image', bg[0]);
+			});
+	</script>
 </body>
 
 </html>

@@ -1,13 +1,36 @@
 {
-	"tags" : ["tired",
-		"adventurous",
-		"hungry",
-		"hardworking",
-		"wild",
-		"calm", 
-		"curious",
-		"engaging",
-		"educational",
-		"all-ages"
+	"tags" : [
+		{
+			"name":"tired",
+			"url":"/static/img/tags/tired.jpg"
+		},{
+			"name":"adventurous",
+			"url":"/static/img/tags/adventurous.jpeg"
+		},
+		{
+			"name":"hungry",
+			"url":"/static/img/tags/hungry.jpg"
+		},{
+			"name":"hardworking",
+			"url":"/static/img/tags/hardworking.jpg"
+		},{
+			"name":"wild",
+			"url":"/static/img/tags/wild.jpg"
+		},{
+			"name":"calm",
+			"url":"/static/img/tags/calm.jpeg"
+		},{
+			"name":"curious",
+			"url":"/static/img/tags/curious.jpg"
+		},{
+			"name":"engaging",
+			"url":"/static/img/tags/engaging.jpg"
+		},{
+			"name":"educational",
+			"url":"/static/img/tags/educational.jpg"
+		},{
+			"name":"all-ages",
+			"url":"/static/img/tags/all-ages.jpg"
+		}
 	]
 }

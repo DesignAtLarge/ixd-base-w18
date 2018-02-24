@@ -6,20 +6,13 @@
 	<link rel="stylesheet" href="/scripts/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/scripts/bootstrap-material-design/dist/css/bootstrap-material-design.css">
 	<link rel="stylesheet" href="/static/css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google-signin-client_id" content="652318829129-jdp92ajetti9q57dvqhh34ri6g3djc2b.apps.googleusercontent.com">
 </head>
 
 <body class="bg-light home-page">
 	{{!-- Begin here (or replace this with any static code already written). --}}
-
-<!--
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#" style="text-align:center"><h1>hApp</h1></a>
-		</div>
-	</nav>-->
-
 	<div class="container" style="text-align:center; padding-top: calc(50vh - 243.5px); padding-bottom: calc(50vh - 243.5px)">
 		<div class="login-box page-one">
 			<div class="row">
@@ -34,12 +27,12 @@
 			</div>
 			<div class="row login-row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-					<button type="button" class="btn btn-primary btn-lg active" id="signup">SIGN UP</button>
+					<button type="button" class="btn btn-primary btn-lg active btn-login" id="signup">SIGN UP</button>
 				</div>
 			</div>
 			<div class="row login-row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-					<button type="button" class="btn btn-secondary btn-lg active" id="login">LOG IN</button>
+					<button type="button" class="btn btn-secondary btn-lg active btn-login" id="login"> LOG IN </button>
 				</div>
 			</div>
 			<div class="row login-row">
@@ -47,28 +40,25 @@
 				OR
 				</div>
 			</div>
-
-			<p class="facebookLogin">
-		    	
-		    	<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-                 </fb:login-button>
-            </p>
-            <div class="g-signin2" data-onsuccess="authGPlus">
-           	
-            </div>
-			<!--<div class="row login-row">
+			<div class="row login-row">
 				<div style="margin:auto;">
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-					<a href="home"><button type="button" class="btn btn-lg active btn-facebook">Facebook</button></a>
-					<a href="home"><button type="button" class="">Facebook</button></a>
+					<a href="home"><button type="button" class="btn btn-lg active btn-social btn-facebook">Fb</button></a>
 					&nbsp;&nbsp;&nbsp;
-				</div>
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-					<a href="home"><button type="button" class="btn btn-lg active btn-google">Google+</button></a>
-					<button type="button" class="">Google+</button>
+					<a href="home"><button type="button" class="btn btn-lg active btn-social btn-google">G+</button></a>
 				</div>
 		
-			</div>-->
+			</div>
+			<div class="row login-row">
+				<div style="margin:auto;">
+					<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                 	</fb:login-button>
+					&nbsp;&nbsp;&nbsp;
+					<div class="g-signin2" data-onsuccess="authGPlus" style="display: inline-block;">
+           	
+            		</div>
+				</div>
+		
+			</div>
 		</div>
 	</div>
 
@@ -79,6 +69,32 @@
 	<script src="/scripts/popper.js/dist/umd/popper.js"></script>
 	<script src="/scripts/bootstrap-material-design/dist/js/bootstrap-material-design.js"></script>
 	<script src="/static/js/main.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			var bg = new Array();
+			{{#each backgrounds}}
+			var str = "url('{{this}}')";
+			bg.push(str);
+			{{/each}}
+			var header = $('body');
+
+var current = 0;
+
+function nextBackground() {
+    current++;
+    current = current % bg.length;
+    header.css('transition','background-image 1s');
+    header.css('transition-time-function','ease-in-out');
+    header.css('background-image', bg[current]);
+    $('.home-page').css('background-image', bg[current]);
+}
+setInterval(nextBackground, 15000);
+
+header.css('background-image', bg[0]);
+});
+	</script>
+
 	<script src="/static/js/auth.js"></script>
 	{{>facebook}}
 	<script src="/static/js/facebook.js"></script>
