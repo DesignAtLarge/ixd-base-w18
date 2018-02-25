@@ -19,51 +19,74 @@
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="navbar-header">
 			<a href="/home" href="#">
-				<button type="button" class="btn btn-lg left">
-					<img src="/static/icons/home.svg" height="35"/>
+				<button type="button" class="btn btn-lg left btn-header">
+					<img src="/static/icons/home.svg" height="30"/>
 				</button></a>
 			<a class="navbar-brand center" href="#"><h3>hApp</h3></a>
 		
 		</div>
 	</nav>
 
-
-	<div>
-		<form style="padding-top: 6.75%">
-			<strong style="line-height:2em">Pin Name</strong><br>
-			<input type="text" name="firstname">
-
-			<div class="container" style="line-height:2em; text-align:center; padding-top: 6.75%">
-				<strong>Time</strong><br>
-				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-						<strong>From:</strong>
-						<input id="startTime" type="time" value={{currentTime}}>			
-						<strong>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;To:</strong>
-						<input id="endTime" type="time" value={{nextTime}}>	
-					</div>
-				</div>		
-					
-			</div>
-
-			<div class="container" style="line-height:2em; text-align:center; padding-top: 6.75%">
-				<strong>Description</strong><br>
-				<textarea name="upload_description" style="padding-top:25px" id="description_textbox"></textarea>
-			</div>
-
-			<a href="/wip">
-			<button type="button" class="btn btn-lg" style="padding-top:6.75%">
-				<img src="/static/icons/add-square-button.svg" height="35"/>
-			</button></a>
-			<br>
-			<strong style="line-height:2em">Upload Photo</strong><br>
-
-			<div class="row" style="padding-top:25px">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-					<a href="/eventCreationDetails"><button type="button" id="nxt_btn" class="btn btn-lg btn-secondary active">NEXT</button></a>
+	<div class="container" style="text-align:center; padding-top:calc(40vh - 250px)">
+		<div style="width:90%; margin:auto;">
+			<form>
+				<div class="row" style="margin:auto;">
+					<div style="width:20%; text-align: right; padding:0.5%;"></div>
+					<strong style="line-height:2em">Pin Name</strong>
 				</div>
-			</div>
-		</form>
+				<div class="row" style="margin:auto;">
+					<div style="width:20%; text-align: right; padding:0.5%;"></div>
+					<input type="text" name="firstname" style="width:194.8px;">
+				</div>
+
+				<div class="row" style="padding-top:25px; margin:auto;">
+					<div style="width:20%; text-align: right; padding:0.5%;"></div>
+					<strong>Time</strong>
+				</div>
+				<div class="row" style="margin:auto;">
+					<div style="width:calc(20% + 42.02px); text-align: right; padding:0.5%;">
+						<strong>From:</strong>					
+					</div>
+					<div style="text-align: left; padding:0.5%;">
+						<input id="startTime" type="time" value={{currentTime}} size=20>
+					</div>
+				</div>
+				<div class="row" style="margin:auto;">
+					<div style="width:calc(20% + 42.02px); text-align: right; padding:0.5%;">
+						<strong>To:</strong>
+					</div>
+					<div style="width:50%; text-align: left; padding:0.5%;">
+						<input id="endTime" type="time" value={{nextTime}}>			
+					</div>
+				</div>
+
+				<div class="row" style="padding-top: 25px; margin:auto;">
+					<div style="width:20%; text-align: right; padding:0.5%;"></div>
+					<strong>Description</strong>
+				</div>
+				<div class="row" style="margin:auto;">
+					<div style="width:20%; text-align: right; padding:0.5%;"></div>
+					<textarea name="upload_description" id="description_textbox"></textarea>
+				</div>
+
+				<div class="row" style="padding-top: 25px; margin:auto;">
+					<a href="/wip" style="margin:auto;">
+						<button type="button" class="btn btn-lg" style="margin-bottom: 0;">
+							<img src="/static/icons/add-square-button.svg" height="35"/>
+						</button>
+					</a>
+				</div>
+				<div class="row" style="margin:auto;">
+					<strong style="line-height:2em;margin:auto;">Upload Photo</strong>
+				</div>
+
+				<div class="row" style="padding-top:25px">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<a href="/eventCreationDetails"><button type="button" id="nxt_btn" class="btn btn-lg btn-primary active btn-login">NEXT</button></a>
+					</div>
+				</div>
+			</form>
+		</div>
 	</div>
 	
 
