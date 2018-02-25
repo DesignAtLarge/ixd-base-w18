@@ -1,4 +1,5 @@
 {
 	"timeSelect":"This option lets you set your available time",
-	"feelingSelect":"Pick the pins you see based on your mood"
+	"feelingSelect":"Pick the pins you see based on your mood",
+	"spider": "Shows the rating for the pins"
 }
