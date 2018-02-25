@@ -152,8 +152,7 @@
 .center {
     margin: auto;
     width: 50%;
-    text-align: center;    
-    padding: 10px;
+    text-align: center;
 }
 .right {
     position: absolute;
@@ -208,21 +207,6 @@ input[type=time]{
     background: url("../img/raccoon.jpg");
     background-size: cover;
 }
-.center {
-    margin: auto;
-    width: 50%;
-    text-align: center;    
-    padding: 10px;
-}
-.right {
-    position: absolute;
-    right: 0;
-}
-.left {
-    position: absolute;
-    left: 0;
-}
-
 .feeling{
     -moz-box-shadow:    inset 0 0 5px #222;
    -webkit-box-shadow: inset 0 0 5px #222;
