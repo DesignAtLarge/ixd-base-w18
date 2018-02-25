@@ -12,7 +12,7 @@ function loadInformation(response){
 	div.style.color = "white";
 	div.style.position = "absolute";
 	div.style.top = "0";
-	div.style.zIndex = "100";
+	div.style.zIndex = "1000";
 	div.setAttribute("class","info-panel");
 	var htmlString = loadContents(response);
 	div.appendChild(htmlString);
@@ -27,7 +27,7 @@ function loadContents(res){
 	header.innerHTML = '<a href="#"><button class="btn btn-lg btn-primary close-info" style="float:right;"><i class="fa fa-times-circle-o fa-2x" style="color:#fff;"></i></button></a>';
 	var description = document.createElement("div");
 	description.setAttribute("class","content");
-	description.innerHTML = "Lorem Ipsum dolores.."
+	description.innerHTML = desc;
 	var content = document.createElement("div");
 	content.append(header);
 	content.append(description);
