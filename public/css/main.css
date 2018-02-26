@@ -224,3 +224,12 @@ input[type=time]{
     -webkit-box-shadow: inset 0 0 5px #222;
     box-shadow: inset 0 0 5px #222;
 }
+.giveMeEllipsis {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2; /* number of lines to show */
+   line-height: 1.2em;        /* fallback */
+   max-height: 2.4em;       /* fallback */
+}
