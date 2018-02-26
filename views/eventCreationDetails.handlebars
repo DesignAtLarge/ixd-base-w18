@@ -13,60 +13,60 @@
 
 <body class="bg-light">
 	{{!-- Begin here (or replace this with any static code already written). --}}
-
-
-
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="navbar-header">
-				<button type="button" class="btn btn-lg left" onclick="window.history.back()">
-					<img src="/static/icons/left-arrow.svg" height="35"/>
+				<button type="button" class="btn btn-lg left btn-header" onclick="window.history.back()">
+					<img src="/static/icons/back-arrow.svg" height="30"/>
 				</button>
 			<a class="navbar-brand center" href="#"><h3>hApp</h3></a>
-		
 		</div>
 	</nav>
 
-
-	<div>
-			<img style="float: left; margin: 0px 5% 5% 10%;" src="static/img/raccoon.jpg" width="125" />
+	<div class="container" style="padding-top: 5%;">
+		<div style="height:20%; width:95%; max-width: 500px; margin:auto;">
+			<img style="float: left; margin: 0 2.5%;" src="static/img/grey.jpg" width="100" height="100" />
 			<div class="row">
-				<h4>Raccoon Spotted</h4><br>	
+				<h6 style="margin-bottom: 0">Pin Name</h6>
 			</div>
 			<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-						<input id="startTime" type="time" value={{currentTime}}>
-						<input id="endTime" type="time" value={{nextTime}}>	
-					</div>
-			</div>	
-	</div>
-	<br>
-
-	<div style="padding-top:6.75%">
-			<h5 class="center">Location</h5>
-			
-			<form>
+					Start Time - End Time
+			</div>
+			<div class="row">
+				<p>Description</p>
+			</div>
+		</div>
+		<div style="padding-top:2.5%; width: 92.5%; margin:auto; max-width: 500px;">
+			<div>
+				<strong style="text-align: left;">Location</strong>
   				<div>
-    				<a href="/wip" class="btn btn-lg active" style="font-size:16px">Use Current Location</a>
-  				</div>
-				<div>
-					<a href="/locationPreview" class="btn btn-lg active" style="font-size:16px">Set Location</a>
+    				<a href="/wip"><button class="btn btn-sm active">Use Current Location</button></a>
+    				&nbsp;
+    				&nbsp;
+					<a href="/locationPreview"><button class="btn btn-sm active">Set Location</button></a>
 				</div>
-  			
-			</form>
-
-			<h5 class="center">Tags</h5>
-			<div style=" margin: auto; display:inline-block; width:20%; height: 20%; min-width:125px; min-height:125px; padding:1%;"> <div class="myButton" style="width:100%; padding: 40px 12.5%">Tired</div></div>
+			</div>
+			<div style="padding-top: 5%">
+				<strong>Tags</strong><br>
+				<!--Put code to toggle select and push the tag to the input data if selected-->
+				<div style="margin:auto; text-align: center;">
+				{{#each tags}}
+					<div class="tag-tile minimal" style="background-image: url('{{url}}')">
+						<a href="#"><button class="btn tags minimal" style="">{{name}}</button></a>
+					</div>
+				{{/each}}
+				</div>
+			<!-- <div style=" margin: auto; display:inline-block; width:20%; height: 20%; min-width:125px; min-height:125px; padding:1%;"> <div class="myButton" style="width:100%; padding: 40px 12.5%">Tired</div></div>
 			<div style=" margin: auto; display:inline-block; width:20%; height: 20%; min-width:125px; min-height:125px; padding:1%;"> <div class="myButton" style="width:100%; padding: 40px 12.5%">Wild</div></div>
-			<div style=" margin: auto; display:inline-block; width:20%; height: 20%; min-width:125px; min-height:125px; padding:1%;"> <div class="myButton" style="width:100%; padding: 40px 12.5%">Calm</div></div>
+			<div style=" margin: auto; display:inline-block; width:20%; height: 20%; min-width:125px; min-height:125px; padding:1%;"> <div class="myButton" style="width:100%; padding: 40px 12.5%">Calm</div></div> -->
+			</div>
 
-	</div>
-	<div class="row center" style="padding-top:25px">
+			<div class="row" style="padding-top:20%; text-align: center;">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-					<a href="/home"><button type="button" id="nxt_btn" class="btn btn-lg btn-secondary active">DROP PIN</button></a>
+					<a href="/wip"><button type="button" id="nxt_btn" class="btn btn-lg btn-primary active btn-login">DROP PIN</button></a>
 				</div>
+			</div>
+		</div>		
 	</div>
-	
-
 	<script src="/scripts/jquery/dist/jquery.js"></script>
 	<script src="/scripts/bootstrap/dist/js/bootstrap.js"></script>
 	<script src="/scripts/popper.js/dist/umd/popper.js"></script>
