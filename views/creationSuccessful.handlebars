@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<title>hApp</title>
+
+	<link rel="stylesheet" href="/scripts/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/scripts/bootstrap-material-design/dist/css/bootstrap-material-design.css">
+	<link rel="stylesheet" href="/static/css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="bg-light">
+	{{!-- Begin here (or replace this with any static code already written). --}}
+
+	<div class="container" style="text-align:center; padding-top: calc(50vh - 243.5px); padding-bottom: calc(50vh - 243.5px)">
+		<div>
+			<img src="static/icons/checked.svg" width="200px">
+			<h3>Pin Successfully Created!</h3>
+			<p>Check back in the recent tab to view or edit your pin.</p>
+			You will now be redirected in <span id="counter">5</span> seconds.
+		</div>
+	</div>
+
+	
+
+	<script src="/scripts/jquery/dist/jquery.js"></script>
+	<script src="/scripts/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="/scripts/popper.js/dist/umd/popper.js"></script>
+	<script src="/scripts/bootstrap-material-design/dist/js/bootstrap-material-design.js"></script>
+	<script src="/static/js/main.js"></script>
+	<script>
+        setInterval(function() {
+        	var div = document.querySelector("#counter");
+            var count = div.textContent * 1 - 1;
+            div.textContent = count;
+            if (count <= 0) {
+                window.location="/home";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
