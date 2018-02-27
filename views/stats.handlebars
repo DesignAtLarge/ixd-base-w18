@@ -18,7 +18,7 @@
 
                 {{#if users}}
                 <li class=" col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon dropdown pull-right">
-                    <a  data-toggle="dropdown" class="dropdown-toggle"><img id="fbProfilePic" src="{{users.0.url}}"><b class="caret"></b></a>
+                    <a  data-toggle="dropdown" class="dropdown-toggle"><img id="fbProfilePic" src="{{users.0.url}}" user="{{users.0.first}}"><b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li class="divider"></li>
                         <li><a href="/signOut">Sign Off</a></li>
@@ -31,9 +31,10 @@
 
     </div>
     <div class="graph_content">
-	<h1 class="graphTitle">Expense Summary</h1>
-	<canvas id="myChart" width="400" height="400"></canvas>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+	<h1 class="graphTitle">Expenses Summary</h1>
+	<canvas id="myChart" width="400" height="400" Karanbir="{{housemates.0.expense}}" Alex="{{housemates.3.expense}}" All="{{housemates.1.expense}}" Youxi="{{housemates.2.expense}}" guest="{{users.0.expense}}"></canvas>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 	<script src="js/stats.js"></script>
     </div>

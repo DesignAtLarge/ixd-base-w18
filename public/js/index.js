@@ -82,7 +82,7 @@ var allDee = $(id).attr('All');
 var youxi = $(id).attr('Youxi');
 var guest = $(id).attr('guest');
 var ctx = graph.getContext('2d');
-let name = $("#fbProfilePic").attr('user');
+let name = $("#fbProfilePic").attr('user') || "Guest";
 let label = [];
 let datas = [];
 if(name == 'Karanbir' || name == 'Youxi' || name == "All" || name == "Alex"){
