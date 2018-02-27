@@ -1,12 +1,25 @@
 var ctx = document.getElementById("myChart").getContext('2d');
+var kb = $("#myChart").attr('Karanbir');
+var alex = $("#myChart").attr('Alex');
+var allDee = $("#myChart").attr('All');
+var youxi = $("#myChart").attr('Youxi');
+var guest = $("#myChart").attr('guest'); //this will only hold first element in users (so might not be guest)
+//var ctx = graph.getContext('2d');
+let name = $("#fbProfilePic").attr('user') || "Guest";
+let label = ["All", "KB", "Youxi", "Alex"];
+let datas = [allDee, kb, youxi, alex];
+if(name != 'Karanbir' && name != 'Youxi' && name != "All" && name != "Alex"){
+    label.push(name);
+    datas.push(guest);
+}
 
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ["All", "KB", "Youxi", "Alex"],
+        labels: label,
         datasets: [{
-            label: 'Amount Spent in $',
-            data: [11, 19, 3, 5],
+            label: 'Amount spent in $',
+            data: datas,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -36,3 +49,5 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+
+

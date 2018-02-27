@@ -6,7 +6,8 @@ exports.addUser = function(req, res){
 	let user = {
 		name: req.body.name,
 		url: req.body.url,
-		first: req.body.first
+		first: req.body.first,
+		expense: 0.0
 	}
 
 	console.log("BREAK");
