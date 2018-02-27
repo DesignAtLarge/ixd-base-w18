@@ -70,9 +70,16 @@ function initializePage(){
 
     $(".boughtBtn").click(function(e){
         e.preventDefault;
-        $(this).parent().parent().parent().hide();
+        var thisCard = $(this);
+        $('#bought-confirmation').click(function(e){
+            if(!$('#price').val()){
+                alert("Enter a number for expensed price!")
+            }else{
+                thisCard.parent().parent().parent().hide();}
+        })
     });
 }
+
 function makeChart(graphId){
 var graph = document.getElementById(graphId);
 var id = '#' + graphId;

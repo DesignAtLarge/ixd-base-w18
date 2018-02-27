@@ -58,7 +58,7 @@
                                     <p>{{description}}</p>
                                 </div>
                                 <div class="done col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                    <button class="btn btn-success boughtBtn" type="submit">Bought</button>
+                                        <button class="btn btn-success boughtBtn" type="submit" data-toggle="modal" data-target="#myModal">Bought</button>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:center">
                                     <span class="glyphicon glyphicon-chevron-down" style="font-size:30px"></span>
@@ -74,10 +74,30 @@
                     {{#if expenses}}
                     <form action="/expense">
                         <button id="submitBtn" class="btn btn-success btn-block" type="submit" > Create New Expense</button>
-                    {{/if}}
+                        {{/if}}
                     </form>
                 </div>
         </div>
+<!-- Modal  -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">How much you spent?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="number" id="price" placeholder="Enter the total expense" style="border: 1px solid gray;width: 100%;" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="bought-confirmation" type="submit" class="btn btn-success" data-dismiss="modal" style="left: 15px;position: absolute;">Confirm</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
