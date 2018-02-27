@@ -1,0 +1,54 @@
+.graphTitle{
+	color: black;
+	text-align: center;
+}
+#defaultProfile{
+    font-size:50px;
+    color: white;
+}
+
+#fbProfilePic {
+    border-radius: 25px;
+
+}
+. glyphicon-user{
+    top: 18px;
+}
+body{
+    background-color: #555;
+}
+#title {
+    color: white;
+    padding: 0 3% 0 0;
+}
+.doneGray{
+    padding: 10px;
+    border-bottom: solid;
+    border-width: thick;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+
+.doneGray {
+
+}
+
+.navbar{
+    margin-bottom: 20px;
+    text-align:center;
+    list-style-type: none;
+}
+.nav{
+    text-align: center;
+}
+
+.nav_icon{
+    margin-top: 20px;
+    text-align: center;
+}
+.nav_bar{
+    width:100%;
+    position:relative;
+    left:15px;
+}

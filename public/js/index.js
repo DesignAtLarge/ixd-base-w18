@@ -3,6 +3,12 @@ $(document).ready(function() {
       initializePage();
 })
 
+function ajax(name, pts){
+
+
+}
+
+
 function initializePage(){
     $(".chore canvas").hide();
     $(".expense_content canvas").hide();
@@ -26,34 +32,32 @@ function initializePage(){
             $(this).text("Revive");
             $(this).toggleClass('doneBtn reviveBtn');
 
-        if(name == 'Karanbir'){
-            let pts = $(id).attr('Karanbir');
-            pts++;
-            $(id).attr('Karanbir', pts);
-        } else if(name == 'Alex'){
+            if(name == 'Karanbir'){
+                let pts = $(id).attr('Karanbir');
+                pts++;
+                $(id).attr('Karanbir', pts);
+            } else if(name == 'Alex'){
 
-            let pts = $(id).attr('Alex');
-            pts++;
-            $(id).attr('Alex', pts);
-        } else if(name == 'Youxi'){
+                let pts = $(id).attr('Alex');
+                pts++;
+                $(id).attr('Alex', pts);
+            } else if(name == 'Youxi'){
 
-            let pts = $(id).attr('Youxi');
-            pts++;
-            $(id).attr('Youxi', pts);
-        } else if(name == 'All'){
+                let pts = $(id).attr('Youxi');
+                pts++;
+                $(id).attr('Youxi', pts);
+            } else if(name == 'All'){
 
-            let pts = $(id).attr('All');
-            pts++;
-            $(id).attr('All', pts);
+                let pts = $(id).attr('All');
+                pts++;
+                $(id).attr('All', pts);
+            }else{
+                let pts = $(id).attr('guest');
+                pts++;
+                $(id).attr('guest', pts);
+            }
+                makeChart($(id).attr('id'));
         }else{
-            let pts = $(id).attr('guest');
-            pts++;
-            $(id).attr('guest', pts);
-        }
-            makeChart($(id).attr('id'));
-        }
-        else{
-
             $(this).text("Done");
         };
 
@@ -66,17 +70,6 @@ function initializePage(){
             $(this).toggleClass('reviveBtn doneBtn');
             $(this).toggleClass('btn-danger btn-success');
         }
-    });
-
-    $(".boughtBtn").click(function(e){
-        e.preventDefault;
-        var thisCard = $(this);
-        $('#bought-confirmation').click(function(e){
-            if(!$('#price').val()){
-                alert("Enter a number for expensed price!")
-            }else{
-                thisCard.parent().parent().parent().hide();}
-        })
     });
 }
 
