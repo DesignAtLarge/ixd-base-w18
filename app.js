@@ -17,6 +17,7 @@ var addExpense = require('./routes/addExpense');
 var login = require('./routes/login');
 var addUser = require('./routes/addUser');
 var expenseHomepage = require('./routes/expenseHomepage');
+var signOut = require ('./routes/signOut');
 
 // all environments
 var app = express();
@@ -63,6 +64,7 @@ app.get('/stats', stats.view);
 app.get('/homepage', index.view);
 app.post('/addUser', addUser.addUser);
 app.get('/expenseHomepage', expenseHomepage.view);
+app.get('/signOut', signOut.signOut);
 // Example route
 // app.get('/users', user.list);
 
