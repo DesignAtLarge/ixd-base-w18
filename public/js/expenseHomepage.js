@@ -4,17 +4,8 @@ $(document).ready(function() {
       initializePage();
 })
 
-
-
 function initializePage(){
     $(".expense_content canvas").hide();
-    
-    $(".card").click(function(e){
-        e.preventDefault();
-        var graphId = $(this).find('canvas').attr("id");
-        makeChart(graphId);
-        $(this).find('canvas').toggle();
-    })
     
     $(".reviveBtn").click(function (e){
         if ($(this).text() == "Revive"){
@@ -36,7 +27,12 @@ function initializePage(){
     });
 }
 
-function ajax(name, pts){
+function yeet(){
+    let money = $("#price").val();
+    console.log("this is that yeet yeet", money);
+    //update the person who is signed in expense field. 
 
+    //get the user
 
+    //ajax call (name, cost){//add cost to current cost}
 }
