@@ -10,7 +10,10 @@
 
 #fbProfilePic {
     border-radius: 25px;
-    
+
+}
+. glyphicon-user{
+    top: 18px;
 }
 body{
     background-color: #555;
