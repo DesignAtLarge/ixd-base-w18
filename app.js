@@ -57,9 +57,11 @@ if ('development' == app.get('env')) {
 
 app.get('/', login.view);
 app.get('/chore', chore.view);
+app.post('/chores/:id', chore.edit);
 app.get('/addChore', addChore.addChore);
 app.get('/addExpense', addExpense.addExpense);
 app.get('/expense', expense.view);
+app.post('/expense/edit', expense.edit);
 app.get('/stats', stats.view);
 app.get('/homepage', index.view);
 app.post('/addUser', addUser.addUser);
