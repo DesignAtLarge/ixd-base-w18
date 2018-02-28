@@ -11,7 +11,7 @@ exports.addExpense = function(req, res){
 	console.log("the expense to push is ", expense);
 	console.log("BREAK");
 	if(req.query.name){
-	jasonDB.expenses.push(expense);	
+	jasonDB.expenses.push(expense);
 	}
-	res.render('expenseHomepage', jasonDB);
+	res.render('expense', jasonDB);
 }
