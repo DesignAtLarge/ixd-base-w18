@@ -58,9 +58,7 @@
                                 <div class="done col-xs-4 col-sm-4 col-md-4 col-lg-4">
                                         <button class="btn btn-success boughtBtn" type="submit" data-toggle="modal" data-target="#myModal">Bought</button>
                                 </div>
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:center">
-                                    <span class="glyphicon glyphicon-chevron-down" style="font-size:30px"></span>
-                                </div>
+
                             </div>
                             <canvas width="400" height="400" id="{{imageURL}}"> </canvas>
                         </div>
@@ -68,7 +66,7 @@
                     {{/each}}
                 </div>
 
-                <div class="add col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                <div class="add col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     {{#if expenses}}
                     <form action="/expense">
                         <button id="submitBtn" class="btn btn-success btn-block" type="submit" > Create New Expense</button>
