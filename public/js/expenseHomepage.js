@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 function initializePage(){
     $(".expense_content canvas").hide();
-    
+
     $(".reviveBtn").click(function (e){
         if ($(this).text() == "Revive"){
             $(this).text("Done");
@@ -46,6 +46,7 @@ function yeet(){
     //call expenseHomepageRoute();
     window.location = "expenseHomepage";
 }
+
 
 function ajax(name, money){
     console.log("inside of ajax");
