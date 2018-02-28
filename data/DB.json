@@ -5,11 +5,12 @@
 			"description": "rinse dishes before putting them in dishwasher",
 			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg",
 			"priority": "1",
-			"kb": 0,
-			"allDee": 5,
-			"youxi": 6,
-			"alex": 12,
-			"guest": 0
+			"done": false,
+			"Karanbir": 0,
+			"All": 5,
+			"Youxi": 6,
+			"Alex": 12,
+			"Guest": 0
 		}
 	],
 
@@ -31,28 +32,32 @@
 			"id": "1793456764009716",
 			"name": "Karanbir Bains",
 			"url": "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/600428_1129483653740367_5474046829598099238_n.jpg?oh=6d4b1df1502239277ed9ffdd57069214&oe=5B1ABAA6",
-			"expense": 4.20
+			"expense": 4.20,
+			"chorePts": 0
 		},
 		{
 			"first_name":"All",
 			"id": "1804553019555716",
 			"name": "All Dee",
 			"url": "https://scontent.xx.fbcdn.net/v/t1.0-1/c93.306.411.411/s50x50/26814794_1767430683267950_2979340764895606495_n.jpg?oh=77fce12fbef20b3e8351da3572f72ce2&oe=5B49A535",
-			"expense": 0.0
+			"expense": 0.0,
+			"chorePts": 0
 		},
 		  {
 			"first_name":"Youxi",
 			"id": "1144949162306987",
 			"name": "Youxi Li",
 			"url":"https://scontent.xx.fbcdn.net/v/t1.0-1/c0.0.50.50/…g?oh=a8d1ea4c9a62e8a837a9760e8989ef21&oe=5B4E6710",
-			"expense": 0.0
+			"expense": 0.0,
+			"chorePts": 0
 		},
 		{
 			"first_name":"Alex",
 			"id": "1601026163280347",
 			"name": "Alex Kurland",
 			"url": "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/13177463_1034081723308130_1534890141889199493_n.jpg?oh=0ae047fa57180bc09474923e67db6ac8&oe=5B49124D",
-			"expense": 17.38
+			"expense": 17.38,
+			"chorePts": 0
 		}
 	]
 }

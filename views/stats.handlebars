@@ -29,17 +29,19 @@
                 {{/if}}
             </div>
     </div>
+    
     <div class="graph_content" >
-	<h1 class="graphTitle">Expenses Summary</h1>
-	<canvas id="myChart_expense" width="400" height="400" Karanbir="{{housemates.0.expense}}" Alex="{{housemates.3.expense}}" All="{{housemates.1.expense}}" Youxi="{{housemates.2.expense}}" guest="{{users.0.expense}}"></canvas>
-  <h1 class="graphTitle">Chore Summary</h1>
-	<canvas id="myChart_chore" width="400" height="400" Karanbir="{{housemates.0.expense}}" Alex="{{housemates.3.expense}}" All="{{housemates.1.expense}}" Youxi="{{housemates.2.expense}}" guest="{{users.0.expense}}"></canvas>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	   <h1 class="graphTitle">Expenses Summary</h1>
+	   <canvas id="myChart_expense" width="400" height="400" Karanbir="{{housemates.0.expense}}" Alex="{{housemates.3.expense}}" All="{{housemates.1.expense}}" Youxi="{{housemates.2.expense}}" guest="{{users.0.expense}}"></canvas>
+    </div>
+    
+    <div class="graph_content" >
+        <h1 class="graphTitle">Chore Summary</h1>
+	   <canvas id="myChart_chore" width="400" height="400" Karanbir="{{housemates.0.expense}}" Alex="{{housemates.3.expense}}" All="{{housemates.1.expense}}" Youxi="{{housemates.2.expense}}" guest="{{users.0.expense}}"></canvas>
+	</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 	<script src="js/stats.js"></script>
-    </div>
-
-
 </body>
 </html>

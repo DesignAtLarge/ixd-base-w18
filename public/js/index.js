@@ -3,11 +3,18 @@ $(document).ready(function() {
       initializePage();
 })
 
-function ajax(name, pts){
-
-
+function ajax(index, name, pts){
+    console.log("inside of ajax");
+    let url = "/chores/" + index;
+    console.log("the URL is: ", url);   
+    console.log("the ID is: ", index);
+    //$.get(url, callback);
+    if(name){
+        $.post( url, { name: name, pts:pts });
+    }else{
+        $.post( url, { name: "Guest", pts:pts });
+    }
 }
-
 
 function initializePage(){
     $(".chore canvas").hide();
@@ -36,25 +43,27 @@ function initializePage(){
                 let pts = $(id).attr('Karanbir');
                 pts++;
                 $(id).attr('Karanbir', pts);
+                ajax(idx, name, pts);
             } else if(name == 'Alex'){
-
                 let pts = $(id).attr('Alex');
                 pts++;
                 $(id).attr('Alex', pts);
+                ajax(idx, name, pts);
             } else if(name == 'Youxi'){
-
                 let pts = $(id).attr('Youxi');
                 pts++;
                 $(id).attr('Youxi', pts);
+                ajax(idx, name, pts);
             } else if(name == 'All'){
-
                 let pts = $(id).attr('All');
                 pts++;
                 $(id).attr('All', pts);
+                ajax(idx, name, pts);
             }else{
                 let pts = $(id).attr('guest');
                 pts++;
                 $(id).attr('guest', pts);
+                ajax(idx, name, pts);
             }
                 makeChart($(id).attr('id'));
         }else{
@@ -80,7 +89,7 @@ var kb = $(id).attr('Karanbir');
 var alex = $(id).attr('Alex');
 var allDee = $(id).attr('All');
 var youxi = $(id).attr('Youxi');
-var guest = $(id).attr('guest');
+var guest = $(id).attr('Guest');
 var ctx = graph.getContext('2d');
 let name = $("#fbProfilePic").attr('user') || "Guest";
 let label = [];

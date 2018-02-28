@@ -29,10 +29,20 @@ function initializePage(){
 
 function yeet(){
     let money = $("#price").val();
-    console.log("this is that yeet yeet", money);
-    //update the person who is signed in expense field.
+    let name = $('#fbProfilePic').attr('user');
+    ajax(name, money);
+}
 
-    //get the user
 
-    //ajax call (name, cost){//add cost to current cost}
+function ajax(name, money){
+    console.log("inside of ajax");
+    let url = "/expense/edit";
+    console.log("The name is", name);
+    console.log("The money is", money);
+    //$.get(url, callback);
+    if(name){
+        $.post( url, { name: name, money:money });
+    }else{
+        $.post( url, { name: "Guest", money:money });
+    }
 }
