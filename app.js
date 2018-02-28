@@ -61,6 +61,7 @@ app.post('/chores/:id', chore.edit);
 app.get('/addChore', addChore.addChore);
 app.get('/addExpense', addExpense.addExpense);
 app.get('/expense', expense.view);
+app.post('/expense/:id', expense.delete);
 app.post('/expense/edit', expense.edit);
 app.get('/stats', stats.view);
 app.get('/homepage', index.view);

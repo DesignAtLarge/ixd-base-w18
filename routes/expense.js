@@ -34,3 +34,14 @@ exports.edit = function(req, res){
   	jasonDB.housemates[id] = mate;
   	res.json(mate);
 };
+
+exports.delete = function (req, res){
+	let index = req.params.id;
+	jasonDB.expenses.splice(index,1)
+	
+	if(jasonDB.expenses.length == 0){
+		console.log("this is empty");
+	}else{
+		console.log("the expense array is", jasonDB.expenses)
+	}
+}

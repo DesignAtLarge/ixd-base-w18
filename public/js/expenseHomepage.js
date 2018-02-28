@@ -16,21 +16,35 @@ function initializePage(){
     });
 
     $(".boughtBtn").click(function(e){
-        e.preventDefault;
+        e.preventDefault();
+        let idx = $(this).attr('index');
         var thisCard = $(this);
+        
         $('#bought-confirmation').click(function(e){
+            e.preventDefault();
             if(!$('#price').val()){
-                alert("Enter a number for expensed price!")
+                alert("Enter a number for expensed price!");
             }else{
-                thisCard.parent().parent().parent().hide();}
+                console.log("in the ELSE, about to delete");
+                yeet().then(function() {
+                  ajaxDelete(idx);  
+              });
+            }
         })
     });
+}
+
+function ajaxDelete( index){
+    let url = '/expense/' + index;
+    $.post(url);
 }
 
 function yeet(){
     let money = $("#price").val();
     let name = $('#fbProfilePic').attr('user');
     ajax(name, money);
+    //call expenseHomepageRoute();
+    window.location = "expenseHomepage";
 }
 
 function ajax(name, money){

@@ -22,5 +22,21 @@ exports.edit = function(req, res){
   	console.log("the chore AFTER the incremnet is", chore);
   	jasonDB.chores[choreID] = chore;
 
+  	let id = 0;
+	if(Name == 'Karanbir'){
+		id = 0;
+	}else if( Name == 'All'){
+		id = 1;
+	}else if (Name == 'Youxi'){
+		id = 2;
+	} 
+	else if (Name == 'Alex'){
+		id = 3
+	}else {
+		id = 4;
+	}
+	let mate = jasonDB.housemates[id];
+	mate.chorePts = pts;
+	jasonDB.housemates[id] = mate;
   	res.json(chore);
 }
