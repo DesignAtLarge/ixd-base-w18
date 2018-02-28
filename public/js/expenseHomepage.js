@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 function initializePage(){
     $(".expense_content canvas").hide();
-    
+
     $(".reviveBtn").click(function (e){
         if ($(this).text() == "Revive"){
             $(this).text("Done");
@@ -30,7 +30,7 @@ function initializePage(){
 function yeet(){
     let money = $("#price").val();
     console.log("this is that yeet yeet", money);
-    //update the person who is signed in expense field. 
+    //update the person who is signed in expense field.
 
     //get the user
 
