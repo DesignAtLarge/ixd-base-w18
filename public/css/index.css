@@ -31,8 +31,13 @@ body{
     color: white;
 }
 
-.doneGray {
-
+.doneGray .done {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.doneGray .des{
+    width: 100%;
 }
 
 .navbar{
