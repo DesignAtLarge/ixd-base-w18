@@ -16,6 +16,11 @@ function ajax(index, name, pts){
     }
 }
 
+function ajax2(index){
+    let url = "/chores/done/" + index;
+    $.post(url);
+}
+
 function initializePage(){
     $(".chore canvas").hide();
     $(".expense_content canvas").hide();
@@ -60,24 +65,31 @@ function initializePage(){
                 $(id).attr('All', pts);
                 ajax(idx, name, pts);
             }else{
-                let pts = $(id).attr('guest');
+                let pts = $(id).attr('Guest');
                 pts++;
-                $(id).attr('guest', pts);
+                $(id).attr('Guest', pts);
                 ajax(idx, name, pts);
             }
                 makeChart($(id).attr('id'));
         }else{
             $(this).text("Done");
+            $(this).toggleClass('reviveBtn doneBtn');
+            $(this).toggleClass('btn-danger btn-success');
+            let idx = $(this).attr('index');
+            ajax2(idx);
         };
 
         //TODO: REMOVE FROM THE DATABSE!!!
     });
 
     $(".reviveBtn").click(function (e){
+        console.log("we are in teh revive button");
         if ($(this).text() == "Revive"){
             $(this).text("Done");
             $(this).toggleClass('reviveBtn doneBtn');
             $(this).toggleClass('btn-danger btn-success');
+            let idx = $(this).attr('index');
+            ajax2(idx);
         }
     });
 }

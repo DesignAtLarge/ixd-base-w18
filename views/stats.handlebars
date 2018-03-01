@@ -8,37 +8,37 @@
     </head>
     <body style="background-color: white">
         <div class="container" style="background-color: #555">
-
-            <div class="row navbar">
+           <div class="row navbar">
                 <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon">
                     <a href="/stats"> <script class="glyphicon glyphicon-object-align-bottom" style="color: white; font-size:50px"></script></a>
                 </li>
 
-                <li><a href="/addChore"><h1 class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="title">Home.ie</h1></a></li>
+                <li><a href="/homepage"><h1 class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="title">Home.ie</h1></a></li>
 
-                {{#if users}}
-                <li class=" col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon dropdown pull-right">
-                    <a  data-toggle="dropdown" class="dropdown-toggle"><img id="fbProfilePic" src="{{users.0.url}}" user="{{users.0.first}}"><b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li class="divider"></li>
-                        <li><a href="/signOut">Sign Off</a></li>
-                    </ul>
-                </li>
-                {{else}}
-                <a id="defaultProfile" href="/"><script class="glyphicon glyphicon-user" style="top: 20px" ></script></a>
-                {{/if}}
+                    {{#if users}}
+                    <li class=" col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon dropdown pull-right">
+                        <a  data-toggle="dropdown" class="dropdown-toggle"><img id="fbProfilePic" user="{{users.0.first}}" src="{{users.0.url}}"><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="divider"></li>
+                            <li><a href="/signOut">Sign Off</a></li>
+                        </ul>
+                    </li>
+                    {{else}}
+                    <a id="defaultProfile" href="/"><script class="glyphicon glyphicon-user" style="top: 18px" ></script></a>
+                    {{/if}}
             </div>
+
+            <div class="graph_content" >
+        	   <h1 class="graphTitle">Expenses Summary</h1>
+        	   <canvas id="myChart_expense" width="400" height="400" Karanbir="{{housemates.0.expense}}" Alex="{{housemates.3.expense}}" All="{{housemates.1.expense}}" Youxi="{{housemates.2.expense}}" Guest="{{housemates.4.expense}}"></canvas>
+            </div>
+            
+            <div class="graph_content" >
+                <h1 class="graphTitle">Chore Summary</h1>
+        	   <canvas id="myChart_chore" width="400" height="400" Karanbir="{{housemates.0.chorePts}}" Alex="{{housemates.3.chorePts}}" All="{{housemates.1.chorePts}}" Youxi="{{housemates.2.chorePts}}" Guest="{{housemates.4.chorePts}}"></canvas>
+        	</div>
     </div>
-    
-    <div class="graph_content" >
-	   <h1 class="graphTitle">Expenses Summary</h1>
-	   <canvas id="myChart_expense" width="400" height="400" Karanbir="{{housemates.0.expense}}" Alex="{{housemates.3.expense}}" All="{{housemates.1.expense}}" Youxi="{{housemates.2.expense}}" guest="{{users.0.expense}}"></canvas>
-    </div>
-    
-    <div class="graph_content" >
-        <h1 class="graphTitle">Chore Summary</h1>
-	   <canvas id="myChart_chore" width="400" height="400" Karanbir="{{housemates.0.chorePts}}" Alex="{{housemates.3.chorePts}}" All="{{housemates.1.chorePts}}" Youxi="{{housemates.2.chorePts}}" guest="{{users.0.chorePts}}"></canvas>
-	</div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>

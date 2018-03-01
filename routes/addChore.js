@@ -13,7 +13,6 @@ exports.addChore = function(req, res){
 		Youxi: 0,
 		Alex: 0,
 		Guest: 0
-		
 	}
 
 	console.log("BREAK");
@@ -24,5 +23,5 @@ exports.addChore = function(req, res){
 	jasonDB.chores.push(chore);
 	}
 	
-	res.render('expense', jasonDB);
+	res.render('index', jasonDB);
 }

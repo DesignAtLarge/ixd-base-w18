@@ -19,6 +19,9 @@ exports.edit = function(req, res){
   	var chore = jasonDB.chores[choreID]; // of by one, our first project has index 0
   	console.log("the chore BEFORE the incremnet is", chore);
   	chore[Name] = pts;
+  	if(!chore.done){
+  		chore.done = true;
+  	} 
   	console.log("the chore AFTER the incremnet is", chore);
   	jasonDB.chores[choreID] = chore;
 
@@ -39,4 +42,14 @@ exports.edit = function(req, res){
 	mate.chorePts = pts;
 	jasonDB.housemates[id] = mate;
   	res.json(chore);
+}
+
+exports.done = function (req, res){
+	let choreID = req.params.id; 
+	let chore = jasonDB.chores[choreID];
+	if(chore.done){
+  		chore.done = false;
+  	}
+  	console.log("the chore in DONE is", chore);
+  	jasonDB.chores[choreID] = chore;
 }
