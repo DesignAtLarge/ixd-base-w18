@@ -49,14 +49,23 @@
                 <div class="chore_rows row ">
                     {{#each chores}}
                     <div class="chore col-xs-12 col-sm-12 col-md-12 col-lg-12 card">
-                        <div class="chore_content">
+                        {{#if done}}
+                                    <div class="doneGray">
+                                {{else}}
+                                <div class="chore_content">
+                        {{/if}}
+                        
                         <div class="row">
                             <div class="des col-xs-8 col-sm-8 col-md-8 col-lg-8">
                             <h3>{{name}}</h3>
                             <p>{{description}}</p>
                         </div>
                             <div class="done col-xs-4 col-sm-4 col-md43 col-lg-4">
+                                {{#if done}}
+                                <button class="btn btn-success reviveBtn" index="{{@index}}" type="submit">Revive</button>
+                                {{else}}
                                 <button class="btn btn-success doneBtn" index="{{@index}}" type="submit">Done</button>
+                                {{/if}}
                             </div>
 
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:center">
