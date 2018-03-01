@@ -61,8 +61,8 @@ let name2 = $("#fbProfilePic").attr('user') || "Guest";
 let label2 = ["All", "KB", "Youxi", "Alex"];
 let datas2 = [allDee2, kb2, youxi2, alex2];
 if(name2 != 'Karanbir' && name2 != 'Youxi' && name2 != "All" && name2 != "Alex"){
-    label.push(name2);
-    datas.push(guest2);
+    label2.push(name2);
+    datas2.push(guest2);
 }
 
 var myChart_chore = new Chart(ctx2, {

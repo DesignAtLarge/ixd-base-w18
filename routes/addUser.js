@@ -22,7 +22,6 @@ exports.addUser = function(req, res){
 			jasonDB.users.push(user);	
 			jasonDB.housemates.push(user);
 		}
-		
 	}
 	res.render("index", jasonDB);
 

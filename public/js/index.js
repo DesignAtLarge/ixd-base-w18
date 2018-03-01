@@ -8,6 +8,7 @@ function ajax(index, name, pts){
     let url = "/chores/" + index;
     console.log("the URL is: ", url);   
     console.log("the ID is: ", index);
+    console.log("the name is", name);
     //$.get(url, callback);
     if(name){
         $.post( url, { name: name, pts:pts });
@@ -65,6 +66,7 @@ function initializePage(){
                 $(id).attr('All', pts);
                 ajax(idx, name, pts);
             }else{
+                console.log("YAY we are in the guest pts increment");
                 let pts = $(id).attr('Guest');
                 pts++;
                 $(id).attr('Guest', pts);
@@ -73,8 +75,6 @@ function initializePage(){
                 makeChart($(id).attr('id'));
         }else{
             $(this).text("Done");
-            $(this).toggleClass('reviveBtn doneBtn');
-            $(this).toggleClass('btn-danger btn-success');
             let idx = $(this).attr('index');
             ajax2(idx);
         };
