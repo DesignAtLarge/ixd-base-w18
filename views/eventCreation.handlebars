@@ -70,14 +70,25 @@
 				</div>
 
 				<div class="row" style="padding-top: 25px; margin:auto;">
-					<a href="/wip" style="margin:auto;">
-						<button type="button" class="btn btn-lg" style="margin-bottom: 0;">
+					<div style="height:0px;overflow:hidden">
+   						<input type="file" id="fileInput" name="fileInput" />
+					</div>
+
+					<a style="margin:auto;">
+						<button type="button" onclick="chooseFile();" class="btn btn-lg" style="margin-bottom: 0;">
 							<img src="/static/icons/add-square-button.svg" height="35"/>
 						</button>
+
+						<script>
+   							function chooseFile() {
+      							$("#fileInput").click();
+   							}
+						</script>
 					</a>
 				</div>
 				<div class="row" style="margin:auto;">
 					<strong style="line-height:2em;margin:auto;">Upload Photo</strong>
+					
 				</div>
 
 				<div class="row" style="padding-top:25px">
