@@ -36,19 +36,6 @@ function initializePage(){
     });
 }
 
-function ajaxDelete( index){
-    let url = '/expense/' + index;
-    $.post(url);
-}
-
-function yeet(){
-    let money = $("#price").val();
-    let name = $('#fbProfilePic').attr('user');
-    ajax(name, money);
-    //call expenseHomepageRoute();
-    
-}
-
 function ajax(idx, name, money){
     console.log("inside of ajax");
     let url = "/expense/edit/" + idx;

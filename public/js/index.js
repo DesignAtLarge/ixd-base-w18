@@ -8,12 +8,18 @@ function ajax(index, name, pts){
     let url = "/chores/" + index;
     console.log("the URL is: ", url);   
     console.log("the ID is: ", index);
+    console.log("the name is", name);
     //$.get(url, callback);
     if(name){
         $.post( url, { name: name, pts:pts });
     }else{
         $.post( url, { name: "Guest", pts:pts });
     }
+}
+
+function ajax2(index){
+    let url = "/chores/done/" + index;
+    $.post(url);
 }
 
 function initializePage(){
@@ -60,24 +66,30 @@ function initializePage(){
                 $(id).attr('All', pts);
                 ajax(idx, name, pts);
             }else{
-                let pts = $(id).attr('guest');
+                console.log("YAY we are in the guest pts increment");
+                let pts = $(id).attr('Guest');
                 pts++;
-                $(id).attr('guest', pts);
+                $(id).attr('Guest', pts);
                 ajax(idx, name, pts);
             }
                 makeChart($(id).attr('id'));
         }else{
             $(this).text("Done");
+            let idx = $(this).attr('index');
+            ajax2(idx);
         };
 
         //TODO: REMOVE FROM THE DATABSE!!!
     });
 
     $(".reviveBtn").click(function (e){
+        console.log("we are in teh revive button");
         if ($(this).text() == "Revive"){
             $(this).text("Done");
             $(this).toggleClass('reviveBtn doneBtn');
             $(this).toggleClass('btn-danger btn-success');
+            let idx = $(this).attr('index');
+            ajax2(idx);
         }
     });
 }

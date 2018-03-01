@@ -7,7 +7,8 @@ exports.addUser = function(req, res){
 		name: req.body.name,
 		url: req.body.url,
 		first: req.body.first,
-		expense: 0.0
+		expense: 0.0,
+		chorePts: 0
 	}
 
 	console.log("BREAK");
@@ -15,7 +16,12 @@ exports.addUser = function(req, res){
 	console.log("BREAK");
 
 	if(req.body.name){
-		jasonDB.users.push(user);
+		if(req.body.name == 'Karanbir' || req.body.name == 'Alex' || req.body.name == 'Youxi' || req.body.name == 'All'){
+			jasonDB.users.push(user);	
+		}else{
+			jasonDB.users.push(user);	
+			jasonDB.housemates.push(user);
+		}
 	}
 	res.render("index", jasonDB);
 

@@ -3,7 +3,7 @@ var kb = $("#myChart_expense").attr('Karanbir');
 var alex = $("#myChart_expense").attr('Alex');
 var allDee = $("#myChart_expense").attr('All');
 var youxi = $("#myChart_expense").attr('Youxi');
-var guest = $("#myChart_expense").attr('guest'); //this will only hold first element in users (so might not be guest)
+var guest = $("#myChart_expense").attr('Guest'); //this will only hold first element in users (so might not be guest)
 //var ctx = graph.getContext('2d');
 let name = $("#fbProfilePic").attr('user') || "Guest";
 let label = ["All", "KB", "Youxi", "Alex"];
@@ -55,14 +55,14 @@ var kb2 = $("#myChart_chore").attr('Karanbir');
 var alex2 = $("#myChart_chore").attr('Alex');
 var allDee2 = $("#myChart_chore").attr('All');
 var youxi2 = $("#myChart_chore").attr('Youxi');
-var guest2 = $("#myChart_chore").attr('guest'); //this will only hold first element in users (so might not be guest)
+var guest2 = $("#myChart_chore").attr('Guest'); //this will only hold first element in users (so might not be guest)
 //var ctx = graph.getContext('2d');
 let name2 = $("#fbProfilePic").attr('user') || "Guest";
 let label2 = ["All", "KB", "Youxi", "Alex"];
 let datas2 = [allDee2, kb2, youxi2, alex2];
 if(name2 != 'Karanbir' && name2 != 'Youxi' && name2 != "All" && name2 != "Alex"){
-    label.push(name2);
-    datas.push(guest2);
+    label2.push(name2);
+    datas2.push(guest2);
 }
 
 var myChart_chore = new Chart(ctx2, {
