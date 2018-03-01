@@ -4,3 +4,6 @@ exports.view = function(req, res){
   res.render('index', jasonDB);
 };
 
+exports.viewAlt = function (req, res){
+	res.render('indexAlt', jasonDB);
+};
