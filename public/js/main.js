@@ -66,7 +66,7 @@ function goToLogIn() {
 			</div>\
 			<div class="row login-row form" style="margin-bottom:0px;">\
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">\
-					<a href="home"><button type="button" class="btn btn-lg active btn-primary" style="width:150px;">LOG IN</button></a>\
+					<a href="about"><button type="button" class="btn btn-lg active btn-primary" style="width:150px;">LOG IN</button></a>\
 				</div>\
 			</div>\
 			<div class="row">\
@@ -119,7 +119,7 @@ function goToSignUp() {
 			</div>\
 			<div class="row login-row form">\
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">\
-					<a href="home"><button type="button" class="btn btn-lg active btn-primary" style="width:150px;">SIGN UP</button></a>\
+					<a href="about"><button type="button" class="btn btn-lg active btn-primary" style="width:150px;">SIGN UP</button></a>\
 				</div>\
 			</div>\
 			</form>\
