@@ -130,3 +130,10 @@ function goToSignUp() {
 			</div>\
 		</div>');
 }
+
+$(".btn.tags.minimal").click(toggleChecked);
+
+function toggleChecked(event){
+	event.stopPropagation();
+	$(this).toggleClass("checked");
+}
