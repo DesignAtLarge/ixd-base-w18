@@ -22,6 +22,7 @@ exports.get = (req, res) => {
 }
 
 exports.post = (req, res) => {
+    var newEvent = new Event();
     res.status(200).json("POST event, TODO");
 }
 
