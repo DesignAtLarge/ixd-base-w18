@@ -22,8 +22,9 @@ var locationPreview = require('./routes/locationPreview');
 var creationSuccessful = require('./routes/creationSuccessful');
 var recentHistory = require('./routes/recentHistory');
 var about = require('./routes/about');
-// Example route
-// var user = require('./routes/user');
+
+//ab test eventSearch alternative
+var eventList = require('./routes/eventList');
 
 var app = express();
 
@@ -63,6 +64,7 @@ app.get('/locationPreview', locationPreview.view);
 app.get('/creationSuccessful',creationSuccessful.view);
 app.get('/recentHistory',recentHistory.view);
 app.get('/about',about.view);
+app.get('/eventList', eventList.view);
 
 //////////// REST API /////////////////
 
