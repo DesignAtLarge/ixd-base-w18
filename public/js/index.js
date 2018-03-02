@@ -23,7 +23,7 @@ function ajax2(index){
 }
 
 function googleAnalytics(){
-    console.log("the like button has been pressed");
+    console.log("the done button has been pressed");
     ga('create', 'UA-114995147-1', 'auto');
     ga("send", "event", 'done', 'click');   
 }
@@ -39,6 +39,7 @@ function initializePage(){
     })
     $(".doneBtn").click(function(e){
         e.preventDefault();
+        googleAnalytics();
         e.stopPropagation();
         let idx = $(this).attr('index');
         let id = '#' + idx;
