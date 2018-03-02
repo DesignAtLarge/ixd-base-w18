@@ -201,7 +201,7 @@ input[type=time]{
 }
 .btn.tags:hover{
     color:#FFF;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.4);
 }
 .tags.minimal{
     height: 5vmin;
