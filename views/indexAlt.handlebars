@@ -63,7 +63,7 @@
 
                 <div class="chore_rows row ">
                     {{#each chores}}
-                    <div class="chore col-xs-12 col-sm-12 col-md-12 col-lg-12 card">
+                    <div class="chore col-xs-6 col-sm-6 col-md-6 col-lg-6 card">
                         {{#if done}}
                                     <div class="doneGray">
                                 {{else}}
@@ -71,11 +71,11 @@
                         {{/if}}
                         
                         <div class="row">
-                            <div class="des col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                            <div class="des col-xs-4 col-sm-4 col-md-4 col-lg-4">
                             <h3>{{name}}</h3>
                             <p>{{description}}</p>
                         </div>
-                            <div class="done col-xs-4 col-sm-4 col-md43 col-lg-4">
+                            <div class="done col-xs-2 col-sm-2 col-md23 col-lg-2">
                                 {{#if done}}
                                 <button class="btn btn-success reviveBtn" index="{{@index}}" type="submit">Revive</button>
                                 {{else}}
@@ -83,7 +83,7 @@
                                 {{/if}}
                             </div>
 
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:center">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align:center">
                                 <span class="glyphicon glyphicon-chevron-down" style="font-size:15px"></span>
                             </div>
                         </div>
