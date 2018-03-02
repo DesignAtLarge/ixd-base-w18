@@ -95,20 +95,6 @@ function initializePage(){
 
         //TODO: REMOVE FROM THE DATABSE!!!
     });
-
-    $(".reviveBtn").click(function (e){
-        if ($(this).text() == "Revive"){
-            $(this).text("Done");
-            $(this).toggleClass('reviveBtn doneBtn');
-            $(this).toggleClass('btn-danger btn-success');
-            $(this).parent().parent().parent().toggleClass('doneGray chore_content');
-            let index = $('.doneBtn').index;
-            console.log("the index is", index)
-            ajax2(index);
-        }else{
-            $(this).text("Revive");
-        }
-    });
 }
 
 function makeChart(graphId){
