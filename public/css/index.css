@@ -137,7 +137,10 @@ body{
     margin: 10 0 10 0;
 }
 .doneBtn{
-    font-size: 20px;
+    font-size: 28px;
+}
+.reviveBtn{
+        font-size: 12px;
 }
 
 .boughtBtn{

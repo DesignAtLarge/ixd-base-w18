@@ -5,7 +5,6 @@ exports.addChore = function(req, res){
 	let chore = {
 		name: req.query.name,
 		description: req.query.description,
-		imageURL: 'http://4.bp.blogspot.com/-gcFUfBFmSKU/ThWcm3ua6zI/AAAAAAAAAHM/Rgj6B4i0R-8/s1600/laundry.gif',
 		priority: req.query.priority,
 		done: false,
 		Karanbir: 0,
@@ -20,8 +19,19 @@ exports.addChore = function(req, res){
 	console.log("BREAK");
 	
 	if(req.query.name){
-	jasonDB.chores.push(chore);
+		if(!init(chore, jasonDB.chores)){
+			jasonDB.chores.push(chore);
+		};
 	}
-	
 	res.render('index', jasonDB);
+}
+
+
+function init(obj, arr){
+	for (var i = 0; i < arr.length; i++) {
+		if(obj.name == arr[i].name){
+			return true;
+		}
+	}
+	return false;
 }

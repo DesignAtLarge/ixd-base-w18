@@ -1,3 +1,54 @@
 legend {
 	text-align: center;
+	color: white;
+}
+.navbar{
+    margin-bottom: 20px;
+    text-align:center;
+    list-style-type: none;
+}
+.nav{
+    text-align: center;
+}
+
+.nav_icon{
+    margin-top: 20px;
+    text-align: center;
+}
+.nav_bar{
+    width:100%;
+    position:relative;
+    left:15px;
+}
+.nav_chore{
+    background-color: #cdcdcd;
+    border-color: white;
+    border-style: solid;
+    border-radius: 5px;
+}
+.nav_expense{
+    background-color: white;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+}
+#defaultProfile{
+    font-size:50px;
+    color: white;
+}
+
+#fbProfilePic {
+    border-radius: 25px;
+
+}
+. glyphicon-user{
+    top: 18px;
+}
+body{
+    background-color: #555;
+    color: white;
+}
+#title {
+    color: white;
+    padding: 0 3% 0 0;
 }

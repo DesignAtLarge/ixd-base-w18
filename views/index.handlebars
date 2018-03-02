@@ -24,9 +24,9 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
         <div class="container">
             <div class="row navbar">
                 <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon">
-                    <a href="/stats"> <script class="glyphicon glyphicon-object-align-bottom" style="color: white; font-size:50px"></script></a>
+                    <a href="/stats"> <img style="width: 50px; height: 50px; border-radius: 25px; position:relative; left:-25px;" src="/img/stats.jpg" style="top: 18px"></a>
                 </li>
-                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon"><a href="/addChore"><img style="width: 150px; position:relative; left:-25px;" src="/img/logo.png" style="top: 18px"></a></li>
+                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon"><a href="/homepage"><img style="width: 150px; position:relative; left:-25px;" src="/img/logo.png" style="top: 18px"></a></li>
                     {{#if users}}
                     <li class=" col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon dropdown pull-right">
                         <a  data-toggle="dropdown" class="dropdown-toggle"><img id="fbProfilePic" user="{{users.0.first}}" src="{{users.0.url}}"><b class="caret"></b></a>
@@ -74,7 +74,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                         </div>
                             <div class="done col-xs-2 col-sm-2 col-md23 col-lg-2">
                                 {{#if done}}
-                                <button class="btn btn-success reviveBtn" index="{{@index}}" type="submit">Revive</button>
+                                <button class="btn btn-danger reviveBtn" index="{{@index}}" type="submit">Revive</button>
                                 {{else}}
                                 <button class="btn btn-success doneBtn" index="{{@index}}" type="submit">Done</button>
                                 {{/if}}
@@ -116,9 +116,9 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                         </div>
                             <div class="done col-xs-4 col-sm-4 col-md43 col-lg-4">
                                 {{#if done}}
-                                <button class="btn btn-success reviveBtn" index="{{@index}}" type="submit">Revive</button>
+                                <button class="btn btn-danger doneBtn" state="{{done}}" index="{{@index}}" type="submit">Revive</button>
                                 {{else}}
-                                <button class="btn btn-success doneBtn" index="{{@index}}" type="submit" >Done</button>
+                                <button class="btn btn-success doneBtn" state="{{done}}" index="{{@index}}" type="submit" >Done</button>
                                 {{/if}}
                             </div>
 
