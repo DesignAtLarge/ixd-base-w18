@@ -39,7 +39,7 @@
 {
     width:100%;
     text-align: center;
-    bottom:0;
+    bottom:1;
     position:fixed;
     z-index:150;
     _position:absolute;
