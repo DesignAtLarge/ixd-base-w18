@@ -1,6 +1,6 @@
 var jasonDB = require("../data/DB.json");
 exports.view = function(req, res){
-  res.render('createChore');
+  res.render('createChore', jasonDB);
 };
 
 exports.edit = function(req, res){

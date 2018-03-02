@@ -44,15 +44,16 @@ function initializePage(){
         e.stopPropagation();
         let idx = $(this).attr('index');
         let id = '#' + idx;
-        $(this).parent().parent().parent().toggleClass('chore_content doneGray');
-        $(this).toggleClass('btn-success btn-danger');
         let name = $("#fbProfilePic").attr('user');
         console.log("what is the text?", $(this).text());
+         
         if ($(this).text() == "Done"){
-
-            $(this).text("Revive");
-            $(this).toggleClass('doneBtn reviveBtn');
-
+            console.log("the state is ",$(this).attr('state'));
+            $(this)
+                .text("Revive")
+                .toggleClass('btn-success btn-danger')
+                .attr( "state", "true" )
+                .parent().parent().parent().toggleClass('chore_content doneGray');
             if(name == 'Karanbir'){
                 let pts = $(id).attr('Karanbir');
                 pts++;
@@ -81,7 +82,15 @@ function initializePage(){
             }
                 makeChart($(id).attr('id'));
         }else{
-            $(this).text("Done");
+            console.log("the state is ",$(this).attr('state'));
+            $(this)
+                .text("Done")
+                .toggleClass('btn-danger btn-success')
+                .attr( "state", "false")
+                .parent().parent().parent().toggleClass('doneGray chore_content');
+            let index = idx;
+            console.log("the index is", index)
+            ajax2(index);
         };
 
         //TODO: REMOVE FROM THE DATABSE!!!
@@ -92,6 +101,12 @@ function initializePage(){
             $(this).text("Done");
             $(this).toggleClass('reviveBtn doneBtn');
             $(this).toggleClass('btn-danger btn-success');
+            $(this).parent().parent().parent().toggleClass('doneGray chore_content');
+            let index = $('.doneBtn').index;
+            console.log("the index is", index)
+            ajax2(index);
+        }else{
+            $(this).text("Revive");
         }
     });
 }

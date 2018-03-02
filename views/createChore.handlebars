@@ -8,6 +8,42 @@
 </head>
 <body>
 	<div class="container">
+    <div class="row navbar">
+                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon">
+                    <a href="/stats"> <img style="width: 50px; height: 50px; border-radius: 25px; position:relative; left:-25px;" src="/img/stats.jpg" style="top: 18px"></a>
+                </li>
+                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon"><a href="/homepage"><img style="width: 150px; position:relative; left:-25px;" src="/img/logo.png" style="top: 18px"></a></li>
+                {{#if users}}
+                <li class=" col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon dropdown pull-right">
+                    <a  data-toggle="dropdown" class="dropdown-toggle"><img id="fbProfilePic" src="{{users.0.url}}" user="{{users.0.first}}"><b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class="divider"></li>
+                        <li><a href="/signOut">Sign Off</a></li>
+                    </ul>
+                </li>
+                {{else}}
+                <a id="defaultProfile" href="/"><script class="glyphicon glyphicon-user" style="top: 18px" ></script></a>
+                {{/if}}
+            </div>
+
+
+            <div class="row nav_bar">
+                <div class="nav_chore col-sm-6 col-xs-6 col-md-6 col-lg-6">
+                    <a id="choresBtn" href="/homepage">
+                        <div class="nav">
+                            Chores
+                        </div>
+                    </a>
+                </div>
+
+                <div class="nav_expense col-sm-6 col-xs-6 col-md-6 col-lg-6">
+                    <a id="expensesBtn" href="/expenseHomepage">
+                        <div class="nav">
+                            Expenses
+                        </div>
+                    </a>
+                </div>
+            </div>
     	<form id="addChoreForm" aria-hidden="false" role="form" method="get" action="/addChore">
             <legend><h1>Create a Chore</h1></legend>
             <div class="form-group">
@@ -44,6 +80,8 @@
         </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
     <script src="/js/createChore.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114995147-1"></script>
