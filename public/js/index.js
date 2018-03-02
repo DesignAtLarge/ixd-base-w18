@@ -6,9 +6,8 @@ $(document).ready(function() {
 function ajax(index, name, pts){
     console.log("inside of ajax");
     let url = "/chores/" + index;
-    console.log("the URL is: ", url);   
+    console.log("the URL is: ", url);
     console.log("the ID is: ", index);
-    console.log("the name is", name);
     //$.get(url, callback);
     if(name){
         $.post( url, { name: name, pts:pts });
@@ -16,6 +15,8 @@ function ajax(index, name, pts){
         $.post( url, { name: "Guest", pts:pts });
     }
 }
+
+
 
 function ajax2(index){
     let url = "/chores/done/" + index;
@@ -25,7 +26,7 @@ function ajax2(index){
 function googleAnalytics(){
     console.log("the done button has been pressed");
     ga('create', 'UA-114995147-1', 'auto');
-    ga("send", "event", 'done', 'click');   
+    ga("send", "event", 'done', 'click');
 }
 
 function initializePage(){
@@ -73,30 +74,24 @@ function initializePage(){
                 $(id).attr('All', pts);
                 ajax(idx, name, pts);
             }else{
-                console.log("YAY we are in the guest pts increment");
-                let pts = $(id).attr('Guest');
+                let pts = $(id).attr('guest');
                 pts++;
-                $(id).attr('Guest', pts);
+                $(id).attr('guest', pts);
                 ajax(idx, name, pts);
             }
                 makeChart($(id).attr('id'));
         }else{
             $(this).text("Done");
-            let idx = $(this).attr('index');
-            ajax2(idx);
         };
 
         //TODO: REMOVE FROM THE DATABSE!!!
     });
 
     $(".reviveBtn").click(function (e){
-        console.log("we are in teh revive button");
         if ($(this).text() == "Revive"){
             $(this).text("Done");
             $(this).toggleClass('reviveBtn doneBtn');
             $(this).toggleClass('btn-danger btn-success');
-            let idx = $(this).attr('index');
-            ajax2(idx);
         }
     });
 }
