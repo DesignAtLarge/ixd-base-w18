@@ -14,6 +14,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
 </script><script>utmx('url','A/B');</script>
 <!-- End of Google Analytics Content Experiment code -->
+
 	    <title >Home.ie</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,14 +62,9 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
          <div class="chore_rows row ">
                     {{#each chores}}
                     <div class="chore col-xs-6 col-sm-6 col-md-6 col-lg-6 card">
-                        {{#if done}}
-                                    <div class="doneGray">
-                                {{else}}
                                 <div class="chore_content">
-                        {{/if}}
-                        
                         <div class="row">
-                            <div class="des col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="des col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <h3>{{name}}</h3>
                             <p>{{description}}</p>
                         </div>
@@ -77,10 +73,9 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                                 <button class="btn btn-danger reviveBtn" index="{{@index}}" type="submit">Revive</button>
                                 {{else}}
                                 <button class="btn btn-success doneBtn" index="{{@index}}" type="submit">Done</button>
-                                {{/if}}
                             </div>
 
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align:center">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:center">
                                 <span class="glyphicon glyphicon-chevron-down" style="font-size:15px"></span>
                             </div>
                         </div>
@@ -103,12 +98,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                          <div class="chore_rows row ">
                     {{#each chores}}
                     <div class="chore col-xs-12 col-sm-12 col-md-12 col-lg-12 card">
-                        {{#if done}}
-                                    <div class="doneGray">
-                                {{else}}
                                 <div class="chore_content">
-                        {{/if}}
-                        
                         <div class="row">
                             <div class="des col-xs-8 col-sm-8 col-md-8 col-lg-8">
                             <h3>{{name}}</h3>
@@ -121,7 +111,6 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                                 <button class="btn btn-success doneBtn" state="{{done}}" index="{{@index}}" type="submit" >Done</button>
                                 {{/if}}
                             </div>
-
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:center">
                                 <span class="glyphicon glyphicon-chevron-down" style="font-size:15px"></span>
                             </div>
