@@ -74,7 +74,12 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                         </div>
 
                             <div class="done col-xs-12 col-sm-12 col-md-12 col-lg-12" style="top: 0px;">
-                                <button class="btn btn-success doneBtn" index="{{@index}}" type="submit">Done</button>
+                             {{#if done}}
+                                 <button class="btn btn-danger doneBtn" index="{{@index}}" type="submit">Revive</button>
+                            {{else}}
+                              <button class="btn btn-success doneBtn" index="{{@index}}" type="submit">Done</button>
+                            {{/if}}
+                              
                             </div>
 
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:center">
