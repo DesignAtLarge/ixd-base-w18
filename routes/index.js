@@ -11,6 +11,6 @@ exports.viewAlt = function (req, res){
 };
 
 exports.view_B = function (req, res){
-	  jasonDB["viewAlt"] = true;
+	  jasonDB["viewAlt"] = false;
 	  res.render('index2', jasonDB);
 };
