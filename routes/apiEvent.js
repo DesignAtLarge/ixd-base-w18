@@ -1,5 +1,24 @@
+var Event = require('../models/event');
+
 exports.get = (req, res) => {
-    res.status(200).json("GET event, TODO");
+    var id = req.params.id;
+
+    if(id !== undefined)
+        Event.findById(id, (err, event) => {});
+    else
+        Event.find({}, (err, events) => {
+            if(err){
+                res.status(500).json({
+                    message: "error retrieving events",
+                    events: undefined
+                });
+                return;
+            }
+            res.status(200).json({
+                message: "success",
+                events : events
+            })
+        });
 }
 
 exports.post = (req, res) => {

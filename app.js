@@ -86,7 +86,7 @@ var userURL = "/api/user";
 var apiUser = require('./routes/apiUser');
 var apiEvent = require('./routes/apiEvent');
 
-app.get(eventURL + "/:id", apiEvent.get);
+app.get(eventURL + "/:id?", apiEvent.get);
 app.post(eventURL, apiEvent.post);
 app.put(eventURL + "/:id", apiEvent.put);
 app.delete(eventURL + "/:id", apiEvent.delete);
