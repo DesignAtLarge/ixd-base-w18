@@ -65,6 +65,7 @@ app.get('/expense', expense.view);
 app.post('/expense/edit/:id', expense.edit);
 app.get('/stats', stats.view);
 app.get('/homepage', index.view);
+app.get('/homepageAlt', index.viewAlt);
 app.post('/addUser', addUser.addUser);
 app.get('/expenseHomepage', expenseHomepage.view);
 app.get('/signOut', signOut.signOut);

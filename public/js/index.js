@@ -16,6 +16,19 @@ function ajax(index, name, pts){
     }
 }
 
+
+
+function ajax2(index){
+    let url = "/chores/done/" + index;
+    $.post(url);
+}
+
+function googleAnalytics(){
+    console.log("the like button has been pressed");
+    ga('create', 'UA-114995147-1', 'auto');
+    ga("send", "event", 'done', 'click');
+}
+
 function initializePage(){
     $(".chore canvas").hide();
     $(".expense_content canvas").hide();
