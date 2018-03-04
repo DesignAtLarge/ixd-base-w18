@@ -24,7 +24,7 @@ var recentHistory = require('./routes/recentHistory');
 var about = require('./routes/about');
 
 //ab test eventSearch alternative
-var eventList = require('./routes/eventList');
+//var eventList = require('./routes/eventSearch');
 
 var app = express();
 
@@ -64,7 +64,7 @@ app.get('/locationPreview', locationPreview.view);
 app.get('/creationSuccessful',creationSuccessful.view);
 app.get('/recentHistory',recentHistory.view);
 app.get('/about',about.view);
-app.get('/eventList', eventList.view);
+app.get('/eventList', eventSearch.viewAlt);
 
 //////////// REST API /////////////////
 
