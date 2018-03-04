@@ -39,15 +39,15 @@
                 {{#each events}}
                 <a class="thumbnail" style="width: 100%; height: 50px; overflow: auto;">
                     <img src={{imageURL}} style="width: 100%; height: 200px; display: block;">
-                    <div class="caption">
-                        <h5>Thumbnail label</h5>
+                    <div class="caption" style="padding-bottom:20px">
+                        <h5>{{name}}</h5>
                         <h6>{{distance}}</h6>
                         <p>{{description}}</p>
                         <p>
-                            <a href="/map">
+                            <a href="/map" class="pull-left">
                             <i class="fa fa-heart" style="color:#000"></i>
                             </a>
-                            <a href="/spider">
+                            <a href="/spider" class="pull-right">
                             <img src="/static/icons/ellipsis.svg" height="20" />
                             </a>
                         </p>
