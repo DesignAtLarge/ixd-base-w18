@@ -25,6 +25,7 @@ $("button.uninterested").click(cycleForwardThroughEvents);
 $("button.rewind").click(cycleBackwardThroughEvents);
 
 function displayEvent(id){
+    console.log(id);
     var event = events[id % events.length];
     $("img.eventImage").attr("src", event.imageURL);
     $("h6.eventName").text(event.name);
