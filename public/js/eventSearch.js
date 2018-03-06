@@ -43,6 +43,10 @@ function cycleForwardThroughEvents(event) {
     //$(location).attr('href', '/eventSearch/' + id);
     //window.history.pushState('', '', '/eventSearch/' + id);
     displayEvent(id);
+    if(id === 0){
+		$('button.rewind').prop('disabled', true);
+    } else 
+        $('button.rewind').prop('disabled', false);
 }
 
 function cycleBackwardThroughEvents(event) {
@@ -52,4 +56,8 @@ function cycleBackwardThroughEvents(event) {
 	//let id = parseInt(splitPath[splitPath.length - 1]) - 1;
 	//window.history.pushState('', '', '/eventSearch/' + id);
     displayEvent(id);
+    if(id === 0){
+		$('button.rewind').prop('disabled', true);
+    } else 
+        $('button.rewind').prop('disabled', false);
 }
