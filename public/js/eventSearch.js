@@ -1,12 +1,13 @@
 'use strict';
 
 var events = [];
+var id = 0
 
 $(document).ready(() => {
 	console.log("javascript loaded");
 
 	let splitPath = window.location.pathname.split('/');
-	let id = parseInt(splitPath[splitPath.length - 1]);
+	//let id = parseInt(splitPath[splitPath.length - 1]);
 	console.log(id);
 	if(id === 0){
 		$('button.rewind').prop('disabled', true);
@@ -36,7 +37,7 @@ function displayEvent(id){
 function cycleForwardThroughEvents(event) {
 	event.preventDefault();
 	let splitPath = window.location.pathname.split('/');
-	let id = parseInt(splitPath[splitPath.length - 1]) + 1;
+	//let id = parseInt(splitPath[splitPath.length - 1]) + 1;
 	console.log(id);
     //$(location).attr('href', '/eventSearch/' + id);
     window.history.pushState('', '', '/eventSearch/' + id);
@@ -46,7 +47,7 @@ function cycleForwardThroughEvents(event) {
 function cycleBackwardThroughEvents(event) {
 	event.preventDefault();
 	let splitPath = window.location.pathname.split('/');
-	let id = parseInt(splitPath[splitPath.length - 1]) - 1;
+	//let id = parseInt(splitPath[splitPath.length - 1]) - 1;
 	window.history.pushState('', '', '/eventSearch/' + id);
     displayEvent(id);
 }
