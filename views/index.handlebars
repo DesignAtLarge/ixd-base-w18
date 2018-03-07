@@ -79,9 +79,9 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                     {{#each chores}}
                     <div class="chore col-xs-6 col-sm-6 col-md-6 col-lg-6 card">
                     {{#if done}}
-                                <div class="doneGray">
+                                <div class="doneGray doneGray_alt">
                             {{else}}
-                            <div class="chore_content">
+                            <div class="chore_content chore_content_alt">
                             {{/if}}
                         <div class="row">
                             <div class="des col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -95,7 +95,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                             {{else}}
                               <button class="btn btn-success doneBtn" index="{{@index}}" type="submit">Done</button>
                             {{/if}}
-                              
+
                             </div>
 
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:center">

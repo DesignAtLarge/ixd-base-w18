@@ -23,7 +23,8 @@ body{
     padding: 0 3% 0 0;
 }
 .doneGray{
-    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     border-bottom: solid;
     border-width: thick;
     border-radius: 5px;
@@ -133,6 +134,22 @@ body{
     border-radius: 5px;
     background-color: #cdcdcd;
 }
+
+.chore_content_alt h3, .doneGray_alt h3{
+    height: 50px;
+    overflow: scroll;
+}
+.chore_content_alt p, .doneGray_alt p{
+    height: 60px;
+    overflow: scroll;
+}
+.chore_content_alt{
+    height: 220px;
+}
+.doneGray_alt{
+    height: 220px;
+}
+
 .card{
     margin: 10 0 10 0;
 }
