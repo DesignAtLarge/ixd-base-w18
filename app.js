@@ -21,8 +21,10 @@ var eventCreationDetails = require('./routes/eventCreationDetails');
 var locationPreview = require('./routes/locationPreview');
 var creationSuccessful = require('./routes/creationSuccessful');
 var recentHistory = require('./routes/recentHistory');
-// Example route
-// var user = require('./routes/user');
+var about = require('./routes/about');
+
+//ab test eventSearch alternative
+//var eventList = require('./routes/eventSearch');
 
 var app = express();
 
@@ -61,6 +63,8 @@ app.get('/eventCreationDetails', eventCreationDetails.view);
 app.get('/locationPreview', locationPreview.view);
 app.get('/creationSuccessful',creationSuccessful.view);
 app.get('/recentHistory',recentHistory.view);
+app.get('/about',about.view);
+app.get('/eventList', eventSearch.viewAlt);
 
 //////////// REST API /////////////////
 
@@ -82,7 +86,7 @@ var userURL = "/api/user";
 var apiUser = require('./routes/apiUser');
 var apiEvent = require('./routes/apiEvent');
 
-app.get(eventURL + "/:id", apiEvent.get);
+app.get(eventURL + "/:id?", apiEvent.get);
 app.post(eventURL, apiEvent.post);
 app.put(eventURL + "/:id", apiEvent.put);
 app.delete(eventURL + "/:id", apiEvent.delete);

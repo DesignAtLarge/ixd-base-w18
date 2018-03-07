@@ -1,3 +1,9 @@
+.bg-light{
+	background-image: url("../img/timeBackground.jpg") !important;
+	background-image:
+	background-position:center;
+}
+
 .navbar{
     background-color: rgba(255,255,255,0.8) !important;
     height:10%;
@@ -33,7 +39,7 @@
 {
     width:100%;
     text-align: center;
-    bottom:0;
+    bottom:1;
     position:fixed;
     z-index:150;
     _position:absolute;
@@ -193,15 +199,22 @@ input[type=time]{
     color:#FFF;
     background:rgba(0,0,0,0.6);
 }
+.btn.tags:hover{
+    color:#FFF;
+    background: rgba(0,0,0,0.4);
+}
 .tags.minimal{
     height: 5vmin;
     min-height:25px;
     width: 25vmin;
-}
-.btn.tags:hover{
     color:#FFF;
-    background: rgba(0,0,0,0.5);
-    text-decoration: underline;  
+    text-decoration: none;
+}
+.check-marker{
+    visibility: hidden;
+}
+.checked .check-marker{
+    visibility: visible;
 }
 
 .tag-tile{

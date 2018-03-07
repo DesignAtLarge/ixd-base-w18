@@ -3,35 +3,11 @@
 $(document).ready(() => {
 	console.log("javascript loaded");
 
-	let splitPath = window.location.pathname.split('/');
-	let id = parseInt(splitPath[splitPath.length - 1]);
-	console.log(id);
-	if(id === 0){
-		$('button.rewind').prop('disabled', true);
-	}
 })
 
 $("#login").click(goToLogIn);
 $("#signup").click(goToSignUp);
-$("button.uninterested").click(cycleForwardThroughEvents);
-$("button.rewind").click(cycleBackwardThroughEvents);
 
-function cycleForwardThroughEvents(event) {
-	event.preventDefault();
-	let splitPath = window.location.pathname.split('/');
-	let id = parseInt(splitPath[splitPath.length - 1]) + 1;
-	console.log(id);
-	$(location).attr('href', '/eventSearch/' + id);
-}
-
-function cycleBackwardThroughEvents(event) {
-	event.preventDefault();
-	let splitPath = window.location.pathname.split('/');
-	let id = parseInt(splitPath[splitPath.length - 1]) - 1;
-	console.log(id);
-
-	$(location).attr('href', '/eventSearch/' + id);
-}
 
 
 function goToLogIn() {
@@ -48,15 +24,15 @@ function goToLogIn() {
 					<h1>hApp</h1>\
 				</div>\
 			</div>\
-			<form style="margin-bottom:0.65em;">\
+			<form style="margin-bottom:0.65em;" id="login_form" action="/about">\
 			<div class="row login-row form">\
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">\
-					<input type="text" placeholder="USERNAME"></input>\
+					<input type="text" placeholder="USERNAME" required></input>\
 				</div>\
 			</div>\
 			<div class="row login-row form">\
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">\
-					<input type="text" placeholder="PASSWORD"></input>\
+					<input type="text" placeholder="PASSWORD" required></input>\
 				</div>\
 			</div>\
 			<div class="row login-row form">\
@@ -66,7 +42,7 @@ function goToLogIn() {
 			</div>\
 			<div class="row login-row form" style="margin-bottom:0px;">\
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">\
-					<a href="home"><button type="button" class="btn btn-lg active btn-primary" style="width:150px;">LOG IN</button></a>\
+					<a><button type="submit" form="login_form" class="btn btn-lg active btn-primary" style="width:150px;">LOG IN</button></a>\
 				</div>\
 			</div>\
 			<div class="row">\
@@ -97,20 +73,20 @@ function goToSignUp() {
 					<h1>hApp</h1>\
 				</div>\
 			</div>\
-			<form>\
+			<form id="signup_form" action="/about">\
 			<div class="row login-row form">\
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">\
-					<input type="text" placeholder="EMAIL"></input>\
+					<input type="text" placeholder="EMAIL" required></input>\
 				</div>\
 			</div>\
 			<div class="row login-row form">\
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">\
-					<input type="text" placeholder="USERNAME"></input>\
+					<input type="text" placeholder="USERNAME" required></input>\
 				</div>\
 			</div>\
 			<div class="row login-row form">\
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">\
-					<input type="text" placeholder="PASSWORD"></input>\
+					<input type="text" placeholder="PASSWORD" required></input>\
 				</div>\
 			</div>\
 			<div class="row login-row form">\
@@ -119,7 +95,7 @@ function goToSignUp() {
 			</div>\
 			<div class="row login-row form">\
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">\
-					<a href="home"><button type="button" class="btn btn-lg active btn-primary" style="width:150px;">SIGN UP</button></a>\
+					<a><button type="submit" form="signup_form" class="btn btn-lg active btn-primary" style="width:150px;">SIGN UP</button></a>\
 				</div>\
 			</div>\
 			</form>\
@@ -129,4 +105,11 @@ function goToSignUp() {
 				</div>\
 			</div>\
 		</div>');
+}
+
+$(".btn.tags.minimal").click(toggleChecked);
+
+function toggleChecked(event){
+	event.stopPropagation();
+	$(this).toggleClass("checked");
 }

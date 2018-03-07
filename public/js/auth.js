@@ -10,13 +10,13 @@ function authFB(res){
             $.post("/api/user", { name: res.name, idToken: res.id, history: []}, (res) => {
                 console.log(res);
                 setTimeout(() => {
-                    $(location).attr('href', '/home');
+                    $(location).attr('href', '/about');
                 }, 10);
             })
         } else {
             console.log("user found: " + response.user[0])
             setTimeout(() => {
-                $(location).attr('href', '/home');
+                $(location).attr('href', '/about');
             }, 10);
         }
     });
@@ -31,7 +31,7 @@ function authGPlus(res){
 
     console.log(res);
     setTimeout(() => {
-        $(location).attr('href', '/home');
+        $(location).attr('href', '/about');
     }, 10);
 }
 

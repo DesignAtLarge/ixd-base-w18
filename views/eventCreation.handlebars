@@ -18,11 +18,11 @@
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="navbar-header">
-			<a href="/home" href="#">
+			<a href="/home">
 				<button type="button" class="btn btn-lg left btn-header">
-					<img src="/static/icons/home.svg" height="30"/>
+					<img src="/static/icons/back-arrow.svg" height="30"/>
 				</button></a>
-			<a class="navbar-brand center" href="#"><h3>hApp</h3></a>
+			<a class="navbar-brand center" href="/home"><h3>hApp</h3></a>
 		
 		</div>
 	</nav>
@@ -70,14 +70,25 @@
 				</div>
 
 				<div class="row" style="padding-top: 25px; margin:auto;">
-					<a href="/wip" style="margin:auto;">
-						<button type="button" class="btn btn-lg" style="margin-bottom: 0;">
+					<div style="height:0px;display:none;">
+   						<input type="file" id="fileInput" name="fileInput" />
+					</div>
+
+					<a style="margin:auto;">
+						<button type="button" onclick="chooseFile();" class="btn btn-lg" style="margin-bottom: 0;">
 							<img src="/static/icons/add-square-button.svg" height="35"/>
 						</button>
+
+						<script>
+   							function chooseFile() {
+      							$("#fileInput").click();
+   							}
+						</script>
 					</a>
 				</div>
 				<div class="row" style="margin:auto;">
 					<strong style="line-height:2em;margin:auto;">Upload Photo</strong>
+					
 				</div>
 
 				<div class="row" style="padding-top:25px">

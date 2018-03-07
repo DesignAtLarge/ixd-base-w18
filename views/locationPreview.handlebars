@@ -16,15 +16,16 @@
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="navbar-header">
-				<button type="button" class="btn btn-lg left" onclick="window.history.back()">
-					<img src="/static/icons/left-arrow.svg" height="35"/>
-				</button>
-			<a class="navbar-brand center" href="#"><h3>hApp</h3></a>
+				<a href="/eventCreationDetails"><button type="button" class="btn btn-lg left">
+					<img src="/static/icons/back-arrow.svg" height="35"/>
+				</button></a>
+			<a class="navbar-brand center" href="/home"><h3>hApp</h3></a>
 		
 		</div>
 	</nav>
 
-	<div class="container" style="height:calc(100vh - 200px - 5pt)"><div class="card" style="text-align:center; margin-top:0; margin-left:0; margin-right:0; height:100%">
+	<div class="container" style="height:calc(100vh - 150px - 5pt); padding-top:2.5%">
+		<div class="card" style="text-align:center; margin-top:0; margin-left:0; margin-right:0; height:100%">
 		<div id="map" style="width:100%;height:500px;"></div>
 		<div class="card-body">
 			<h4 class="card-text text-left">{{name}}</h4>
@@ -33,6 +34,11 @@
 		</div>
 	</div></div>
 
+	<div class="outer" style="text-align: center;">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<a href="/eventCreationDetails"><button type="button" id="nxt_btn" class="btn btn-lg btn-primary active btn-login">Confirm Location</button></a>
+		</div>
+	</div>
 	
 
 	<script src="/scripts/jquery/dist/jquery.js"></script>
