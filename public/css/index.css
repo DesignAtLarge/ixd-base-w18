@@ -23,8 +23,8 @@ body{
     padding: 0 3% 0 0;
 }
 .doneGray{
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-bottom: solid;
     border-width: thick;
     border-radius: 5px;
@@ -34,7 +34,7 @@ body{
 
 .doneGray .done {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     text-align: left;
 }
 .doneGray .des{
@@ -104,7 +104,7 @@ body{
 }
 
 .done{
-    text-align:center;
+    text-align:right;
     position:relative;
     top:15px;
 }
@@ -144,10 +144,10 @@ body{
     overflow: scroll;
 }
 .chore_content_alt{
-    height: 220px;
+    //height: 220px;
 }
 .doneGray_alt{
-    height: 220px;
+    //height: 220px;
 }
 
 .card{
