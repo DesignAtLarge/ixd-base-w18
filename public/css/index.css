@@ -137,11 +137,9 @@ body{
     margin: 10 0 10 0;
 }
 .doneBtn{
-    font-size: 28px;
+    font-size: 100%;
 }
-.reviveBtn{
-        font-size: 12px;
-}
+
 
 .boughtBtn{
     text-align: center;
@@ -149,7 +147,7 @@ body{
     text-align: center;
     position:relative;
     //left: -15px;
-    font-size: 20px;
+    font-size: 100%;
 }
 
 #submitBtn{
