@@ -18,22 +18,25 @@
 			<h1>Welcome to hApp</h1>
 			<a href="home" style="text-align: right;">Skip</a>
 			<br><br>
-			<p style="text-align: left;">We often find ourselves stuck in a routine, wishing to break out of it and discover something new. With hApp, this just got easier!</p>
-			<h3 style="text-align: left;">Search</h3>
+			<p style="text-align: left;">Stuck in a routine and looking for a change? With hApp, this just got easier!</p>
+			<h5 style="text-align: left;"><a href="#aboutSearch" data-toggle="collapse"><i class="fa fa-caret-right toggle"></i></a>Search</h5>
+			<div id="aboutSearch" class="collapse">
 			<p style="text-align: left;">
 				Use our simple search feature to discover interesting landmarks, events, and facilities all around you. Just tell us how much time you have on hand and how you're feeling, and we'll do the looking for you.
 			</p>
 			<img src="static/img/about/Search.PNG" height=500 style="border:2px solid #000"/>
 			<p style="text-align: left;">
 				Browse through our collection (by clicking on the <i class="fa fa-close"></i> button) till you find that perfect something new and if you fancy it, just hit that <i class="fa fa-heart"></i> and let us guide you to it. You can also see how others feel about the event to help better make that choice.
-			</p>
+			</p></div>
 			<br>
-			<h3 style="text-align: left;">Upload</h3>
-			<p style="text-align: left;">At hApp, we believe in sharing and spreading the word. If you find or know of something fresh and worth checking out, share it with the hApp community using the Upload option. Fill in a few details to help us reach the right people and just drop the pin to add it to our collection! Once it's added, you can revisit the pin along with the ones you've already explored in the recent history.</p>
+			<h5 style="text-align: left;"><a href="#aboutUpload" data-toggle="collapse"><i class="fa fa-caret-right toggle"></i></a>Upload</h5>
+			<div id="aboutUpload" class="collapse">
+			<p style="text-align: left;">At hApp, we believe in sharing and spreading the word. If you find or know of something fresh and worth checking out, share it with the hApp community using the Upload option. Fill in a few details to help us reach the right people and just drop the pin to add it to our collection! Once it's added, you can revisit the pin along with the ones you've already explored in the recent history.</p></div>
 			<br>
-			<h3 style="text-align: left;">Still Unsure?</h3>
+			<h5 style="text-align: left;"><a href="#stillUnsure" data-toggle="collapse"><i class="fa fa-caret-right toggle"></i></a>Still Unsure?</h5>
+			<div id="stillUnsure" class="collapse">
 			<p style="text-align: left;"> The best way to get to know hApp better is the same way we recommend getting to know your surroundings better - explore!<br>
-				There's helping hands (<img src="/static/icons/info.svg" height="20"/>) along the way if you feel lost, though we recommend trying out everything to learn all the features at hand. Do something different and figure out what's hAppening around you!</p>
+				There's helping hands (<img src="/static/icons/info.svg" height="20"/>) along the way if you feel lost, though we recommend trying out everything to learn all the features at hand. Do something different and figure out what's hAppening around you!</p></div>
 			<br>
 			<a href="home"><button class="btn btn-lg btn-primary active btn-login">Start the Journey</button></a>
 			<!-- <img src="static/icons/checked.svg" width="200px">
@@ -50,6 +53,12 @@
 	<script src="/scripts/popper.js/dist/umd/popper.js"></script>
 	<script src="/scripts/bootstrap-material-design/dist/js/bootstrap-material-design.js"></script>
 	<script src="/static/js/main.js"></script>
+	<script type="text/javascript">
+		$(".toggle").click(function(){
+			$(this).toggleClass("fa-caret-right");
+			$(this).toggleClass("fa-caret-down");
+		})
+	</script>
 </body>
 
 </html>

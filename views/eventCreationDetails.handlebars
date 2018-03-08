@@ -14,7 +14,7 @@
 
 <body class="bg-light">
 	{{!-- Begin here (or replace this with any static code already written). --}}
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-light">
 		<div class="navbar-header">
 				<a href="/eventCreation"><button type="button" class="btn btn-lg left btn-header">
 					<img src="/static/icons/back-arrow.svg" height="30"/>
@@ -40,10 +40,10 @@
 			<div>
 				<strong style="text-align: left;">Location</strong>
   				<div>
-    				<a href="/wip"><button class="btn btn-sm active">Use Current Location</button></a>
+    				<input type="radio" checked name="location"> Use Current Location</input>
     				&nbsp;
     				&nbsp;
-					<a href="/locationPreview"><button class="btn btn-sm active">Set Location</button></a>
+					<a href="/locationPreview" id="selectLocation"></a><input type="radio" name="location" onclick="document.getElementById('selectLocation').click()"> Set Location</button>
 				</div>
 			</div>
 			<div style="padding-top: 5%">
