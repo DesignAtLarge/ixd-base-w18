@@ -16,7 +16,7 @@
     top: 18px;
 }
 body{
-    background-color: #555;
+    background-image: url('../img/wood.jpg');
 }
 #title {
     color: white;
