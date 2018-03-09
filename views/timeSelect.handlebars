@@ -14,7 +14,7 @@
 	{{!-- Begin here (or replace this with any static code already written). --}}
 
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-light">
 		<div class="navbar-header">
 			<a class="navbar-brand center" href="/home"><h3>hApp</h3></a>
 			<a href="/home" class="left">
@@ -32,12 +32,12 @@
 		<div style="width:90%; margin:auto; height: 400px">
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 subtitle">
-				<strong>When will you be available?</strong>
+				<span>When will you be available?</span>
 			</div>
 		</div>
 		<div class="row" style="padding-top:80px;">
 			<div style="width:calc(50% - 55px); text-align: right; padding:0.5%;">
-				<strong>From:</strong>					
+				<span>From:</span>					
 			</div>
 			<div style="text-align: left; padding:0.5%;">
 				<input id="startTime" type="time" value={{currentTime}} size=20>
@@ -46,7 +46,7 @@
 
 		<div class="row" style="padding-top:80px;">
 			<div style="width:calc(50% - 55px); text-align: right; padding:0.5%;">
-				<strong>To:</strong>
+				<span>To:</span>
 			</div>
 			<div style="width:50%; text-align: left; padding:0.5%;">
 				<input id="endTime" type="time" value={{nextTime}}>			

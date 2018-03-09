@@ -15,7 +15,7 @@
 	{{!-- Begin here (or replace this with any static code already written). --}}
 
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-light">
 		<div class="navbar-header">
 			<a class="navbar-brand center" href="/home"><h3>hApp</h3></a>
 			<a href="/timeSelect" class="left">
@@ -30,9 +30,9 @@
 	</nav>
 
 	<div class="container" style="height:calc(77.5% - 0.5pt); text-align:center; padding: 1%">
-		<h3>How are you Feeling?</h3>
+		<h4>How are you Feeling?</h4>
 		<span class="overflow" style="display:none;">Scroll through and tell us</span>
-		<div class="feeling" style="width:100%; height:90%; overflow-y:auto; background:#e6e6e6; padding:1%">
+		<div class="feeling" style="width:100%; height:90%; overflow-y:auto; padding:1%">
 			{{#each tags}}
 				<div class="tag-tile" style="background-image: url('{{url}}')"><a href="/eventSearch/0"> <button class="btn tags" style="">{{name}}</button></a></div>
 			{{/each}}
