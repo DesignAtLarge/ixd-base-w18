@@ -6,12 +6,12 @@
 	      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/stats.css">
     </head>
-    <body style="background-color: white">
-        <div class="container" style="background-color: #555">
+    <body style="background-image: url('../img/stats_back.png');">
+        <div class="container" >
             <div class="row navbar">
                 <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon">
                     <a href="/stats">
-                        <img src="/img/graph3.png" style="width: 50px; height: 50px; position: relative; top: -7px; left: -7px;">
+                        <img src="/img/graph6.png" style="width: 50px; height: 50px; position: relative; top: 0px; left: -7px;">
                     </a>
                 </li>
                 <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon"><a href="/homepage"><img style="width: 150px; position:relative; left:-25px;" src="/img/logo.png" style="top: 18px"></a></li>
@@ -30,12 +30,12 @@
             </div>
         </div>
 
-        <div class="graph_content" >
+        <div class="graph_content_expense" >
         	  <h1 class="graphTitle">Expenses Summary</h1>
         	  <canvas id="myChart_expense" width="400" height="400" Karanbir="{{housemates.0.expense}}" Alex="{{housemates.3.expense}}" All="{{housemates.1.expense}}" Youxi="{{housemates.2.expense}}" Guest="{{housemates.4.expense}}"></canvas>
         </div>
 
-        <div class="graph_content" >
+        <div class="graph_content_chore" >
             <h1 class="graphTitle">Chore Summary</h1>
         	  <canvas id="myChart_chore" width="400" height="400" Karanbir="{{housemates.0.chorePts}}" Alex="{{housemates.3.chorePts}}" All="{{housemates.1.chorePts}}" Youxi="{{housemates.2.chorePts}}" Guest="{{housemates.4.chorePts}}"></canvas>
         </div>

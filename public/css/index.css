@@ -16,7 +16,7 @@
     top: 18px;
 }
 body{
-    background-image: url('../img/wood.jpg');
+    background-image: url('../img/chore_back.png');
 }
 #title {
     color: white;
@@ -25,10 +25,7 @@ body{
 .doneGray{
     padding-left: 10px;
     padding-right: 10px;
-    border-bottom: solid;
-    border-width: thick;
-    border-radius: 5px;
-    background-color: black;
+    background-color: #efd686;
     color: white;
 }
 
@@ -60,16 +57,12 @@ body{
     left:15px;
 }
 .nav_chore{
-    background-color: #cdcdcd;
-    border-color: white;
-    border-style: solid;
-    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .nav_expense{
     background-color: white;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .chore_rows{
     color: black;
@@ -78,7 +71,7 @@ body{
 
 #choresBtn {
     display:inline-block;
-    background-color: #cdcdcd;
+    background-color: white;
     color: black;
 /*
     border-style: solid;
@@ -129,10 +122,11 @@ body{
 .chore_content, .expense_content{
     padding-left: 10px;
     padding-right: 10px;
-    border-bottom: solid;
-    border-width: thick;
-    border-radius: 5px;
-    background-color: #cdcdcd;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #efbd0a;
+}
+.chore_content h3, .chore_content p, .expense_content h3, .expense_content p{
+    color: white;
 }
 
 .chore_content_alt h3, .doneGray_alt h3{
@@ -155,6 +149,9 @@ body{
 }
 .doneBtn{
     font-size: 100%;
+    background-color: #DB3549;
+    border-radius: 0px;
+    border: none;
 }
 
 
@@ -165,6 +162,7 @@ body{
     position:relative;
     //left: -15px;
     font-size: 100%;
+    background-color: #DB3549;
 }
 
 #submitBtn{
@@ -174,6 +172,8 @@ body{
     bottom: 2%;
     left: 2%;
     font-size: 20px;
+    background-color: #2F80ED;
+    border-radius: 0px;
     /*
     width: 100%;
     text-align: center;
@@ -183,11 +183,18 @@ body{
 */
 }
 .expense_content{
-    background-color: white;
+    background-color: #65AD3B;;
 }
 
 .add {
     text-align: center;
+}
+.doneGray .doneBtn{
+    background-color: #2F80ED;
+}
+.chore_content .doneBtn{
+    background-color: #DB3549;
+    color: white;
 }
 /*
 .chores{

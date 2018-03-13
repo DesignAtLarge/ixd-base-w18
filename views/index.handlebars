@@ -40,7 +40,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
             <div class="row navbar">
                 <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon">
                     <a href="/stats">
-                        <img src="/img/graph3.png" style="width: 50px; height: 50px; position: relative; top: -7px; left: -7px;">
+                        <img src="/img/graph6.png" style="width: 50px; height: 50px; position: relative; top: 0px; left: -7px;">
                     </a>
                 </li>
                 <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon"><a href="/homepage"><img style="width: 150px; position:relative; left:-25px;" src="/img/logo.png" style="top: 18px"></a></li>
@@ -58,8 +58,8 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
             </div>
 
             <div class="row nav_bar">
-                    <div class="nav_chore col-sm-6 col-xs-6 col-md-6 col-lg-6">
-                        <a id="choresBtn" href="/homepage">
+                <div class="nav_chore col-sm-6 col-xs-6 col-md-6 col-lg-6"  style="border-bottom: 5px solid #F2BE18">
+                        <a id="choresBtn" href="/homepage" style="color: #F2BE18">
                             <div class="nav">
                                 Chores
                             </div>
@@ -69,7 +69,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                     <div class="nav_expense col-sm-6 col-xs-6 col-md-6 col-lg-6">
                         <a id="expensesBtn" href="/expenseHomepage">
                             <div class="nav">
-                                Expenses
+                                Shopping
                             </div>
                         </a>
                     </div>
@@ -91,14 +91,14 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
                             <div class="done col-xs-12 col-sm-12 col-md-12 col-lg-12" style="top: 0px;">
                              {{#if done}}
-                                 <button class="btn btn-danger doneBtn" index="{{@index}}" type="submit">Revive</button>
+                                 <button class="btn doneBtn" index="{{@index}}" type="submit">Revive</button>
                             {{else}}
-                              <button class="btn btn-success doneBtn" index="{{@index}}" type="submit">Done</button>
+                              <button class="btn  doneBtn" index="{{@index}}" type="submit">Done</button>
                             {{/if}}
 
                             </div>
 
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:center">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:center; margin-top: 10px;">
                                 <span class="glyphicon glyphicon-chevron-down" style="font-size:15px"></span>
                             </div>
                         </div>
@@ -133,13 +133,13 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                         </div>
                             <div class="done col-xs-4 col-sm-4 col-md43 col-lg-4">
                                 {{#if done}}
-                                <button class="btn btn-danger doneBtn" state="{{done}}" index="{{@index}}" type="submit">Revive</button>
+                                <button class="btn doneBtn" state="{{done}}" index="{{@index}}" type="submit">Revive</button>
                                 {{else}}
-                                <button class="btn btn-success doneBtn" state="{{done}}" index="{{@index}}" type="submit" >Done</button>
+                                <button class="btn doneBtn" state="{{done}}" index="{{@index}}" type="submit" >Done</button>
                                 {{/if}}
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:center">
-                                <span class="glyphicon glyphicon-chevron-down" style="font-size:15px"></span>
+                                <span class="glyphicon glyphicon-chevron-down" style="font-size:15px; margin-top: 15px; color: white"></span>
                             </div>
                         </div>
                         <canvas width="400" height="400" id="{{@index}}" Karanbir="{{Karanbir}}" Alex="{{Alex}}" All="{{All}}" Youxi="{{Youxi}}" Guest="{{Guest}}" > </canvas>
