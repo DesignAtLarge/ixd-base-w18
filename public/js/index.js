@@ -46,12 +46,12 @@ function initializePage(){
         let id = '#' + idx;
         let name = $("#fbProfilePic").attr('user');
         console.log("what is the text?", $(this).text());
-         
+
         if ($(this).text() == "Done"){
             console.log("the state is ",$(this).attr('state'));
             $(this)
-                .text("Revive")
-                .toggleClass('btn-success btn-danger')
+                .text("Re-Add")
+                //.toggleClass('btn-success btn-danger')
                 .attr( "state", "true" )
                 .parent().parent().parent().toggleClass('chore_content doneGray');
             if(name == 'Karanbir'){
@@ -85,7 +85,7 @@ function initializePage(){
             console.log("the state is ",$(this).attr('state'));
             $(this)
                 .text("Done")
-                .toggleClass('btn-danger btn-success')
+                //.toggleClass('btn-danger btn-success')
                 .attr( "state", "false")
                 .parent().parent().parent().toggleClass('doneGray chore_content');
             let index = idx;
