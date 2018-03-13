@@ -23,7 +23,9 @@ exports.addChore = function(req, res){
 			jasonDB.chores.push(chore);
 		};
 	}
-	res.render('index', jasonDB);
+	let arr = order(jasonDB.chores)
+	jasonDB.chores = arr;
+  res.render('index', jasonDB);
 }
 
 
@@ -34,4 +36,18 @@ function init(obj, arr){
 		}
 	}
 	return false;
+}
+
+function order(arr){
+	console.log("we are in teh order function and the arr is", arr);
+	let arrToReturn = []
+	for (var i = 0; i < arr.length; i++) {
+		if(arr[i].done){
+			arrToReturn.push(arr[i]);
+		}else{
+			arrToReturn.unshift(arr[i]);
+		}
+	}
+	console.log("THis is at the end of order function and the array to return is..", arrToReturn)
+	return arrToReturn;
 }

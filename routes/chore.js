@@ -1,5 +1,7 @@
 var jasonDB = require("../data/DB.json");
 exports.view = function(req, res){
+	let arr = order(jasonDB.chores)
+	jasonDB.chores = arr;
   res.render('createChore', jasonDB);
 };
 
@@ -18,9 +20,7 @@ exports.edit = function(req, res){
 	console.log("The points are", pts);
   	var chore = jasonDB.chores[choreID]; // of by one, our first project has index 0
   	console.log("the chore BEFORE the incremnet is", chore);
-  	
-
-
+  
   	if(!chore.done){
   		chore.done = true;
   	} 
@@ -63,4 +63,24 @@ exports.done = function (req, res){
   	}
   	console.log("the chore in DONE is", chore);
   	jasonDB.chores[choreID] = chore;
+}
+exports.delete = function (req, res){
+	let choreID = req.params.id;
+	console.log("the array before the splice is ", jasonDB.chores);
+	jasonDB.chores.splice(choreID, 1);
+	console.log("The array after the splice is ", jasonDB.chores);
+}
+
+function order(arr){
+	console.log("we are in teh order function and the arr is", arr);
+	let arrToReturn = []
+	for (var i = 0; i < arr.length; i++) {
+		if(arr[i].done){
+			arrToReturn.push(arr[i]);
+		}else{
+			arrToReturn.unshift(arr[i]);
+		}
+	}
+	console.log("THis is at the end of order function and the array to return is..", arrToReturn);
+	return arrToReturn;
 }
