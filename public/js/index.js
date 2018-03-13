@@ -59,13 +59,13 @@ function initializePage(){
                 .attr( "state", "true" )
                 .parent().parent().parent().toggleClass('chore_content doneGray');
             
-            var buttonToAppend = $("button");
+            /*var buttonToAppend = $("button");
                 buttonToAppend
                     .addClass("btn-danger")
                     .text("delete")
                     addId("deleteBtn");
 
-            $(".done").append(buttonToAppend);
+            $(".done").append(buttonToAppend);*/
             
             if(name == 'Karanbir'){
                 let pts = $(id).attr('Karanbir');
@@ -109,11 +109,11 @@ function initializePage(){
         //TODO: REMOVE FROM THE DATABSE!!!
     });
 
-    $('#delete').click(function (e){
-        console.log("the deleteBtn has been pressed");
-        ajax3(idx);
-        $(this).parent().parent().parent().hide();
-    });
+    // $('#delete').click(function (e){
+    //     console.log("the deleteBtn has been pressed");
+    //     ajax3(idx);
+    //     $(this).parent().parent().parent().hide();
+    // });
 }
 
 function makeChart(graphId){

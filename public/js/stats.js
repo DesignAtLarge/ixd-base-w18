@@ -1,3 +1,4 @@
+Chart.defaults.global.defaultFontColor = "#fff";
 var ctx = document.getElementById("myChart_expense").getContext('2d');
 var kb = $("#myChart_expense").attr('Karanbir');
 var alex = $("#myChart_expense").attr('Alex');
@@ -18,7 +19,7 @@ var myChart_expense = new Chart(ctx, {
     data: {
         labels: label,
         datasets: [{
-            label: 'Amount spent in $',
+            label: '$ Spent',
             data: datas,
             backgroundColor: [
                 'rgba(255, 99, 132, 1)',
@@ -40,12 +41,27 @@ var myChart_expense = new Chart(ctx, {
         }]
     },
     options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
+         scales: {
+          xAxes: [{
+            display: true,
+            gridLines: {
+              color: "#FFFFFF"
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Month'
+            }
+          }],
+          yAxes: [{
+            display: true,
+            gridLines: {
+              color: "#FFFFFF"
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Value'
+            }
+          }]
         }
     }
 });
@@ -70,7 +86,7 @@ var myChart_chore = new Chart(ctx2, {
     data: {
         labels: label2,
         datasets: [{
-            label: 'Amount spent in $',
+            label: 'ChorePts earned',
             data: datas2,
             backgroundColor: [
                 'rgba(255, 99, 132, 1)',
@@ -93,11 +109,26 @@ var myChart_chore = new Chart(ctx2, {
     },
     options: {
         scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
+          xAxes: [{
+            display: true,
+            gridLines: {
+              color: "#FFFFFF"
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Month'
+            }
+          }],
+          yAxes: [{
+            display: true,
+            gridLines: {
+              color: "#FFFFFF"
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Value'
+            }
+          }]
         }
     }
 });
