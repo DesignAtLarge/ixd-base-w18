@@ -72,7 +72,7 @@ body{
 #choresBtn {
     display:inline-block;
     background-color: white;
-    color: black;
+    color: #9E9E9E;
 /*
     border-style: solid;
     border-color: white;
@@ -85,7 +85,7 @@ body{
 #expensesBtn {
     display:inline-block;
     background-color: white;
-    color: black;
+    color: #9E9E9E;
 
     /*border-style: solid;
     border-color: black;
