@@ -23,6 +23,12 @@ function ajax2(index){
     $.post(url);
 }
 
+
+function ajax3(index){
+    let url = "/chores/delete/" + index;
+    $.post(url);
+}
+
 function googleAnalytics(){
     console.log("the done button has been pressed");
     ga('create', 'UA-114995147-1', 'auto');
@@ -45,15 +51,22 @@ function initializePage(){
         let idx = $(this).attr('index');
         let id = '#' + idx;
         let name = $("#fbProfilePic").attr('user');
-        console.log("what is the text?", $(this).text());
 
         if ($(this).text() == "Done"){
             console.log("the state is ",$(this).attr('state'));
             $(this)
                 .text("Re-Add")
-                //.toggleClass('btn-success btn-danger')
                 .attr( "state", "true" )
                 .parent().parent().parent().toggleClass('chore_content doneGray');
+            
+            /*var buttonToAppend = $("button");
+                buttonToAppend
+                    .addClass("btn-danger")
+                    .text("delete")
+                    addId("deleteBtn");
+
+            $(".done").append(buttonToAppend);*/
+            
             if(name == 'Karanbir'){
                 let pts = $(id).attr('Karanbir');
                 pts++;
@@ -95,6 +108,12 @@ function initializePage(){
 
         //TODO: REMOVE FROM THE DATABSE!!!
     });
+
+    // $('#delete').click(function (e){
+    //     console.log("the deleteBtn has been pressed");
+    //     ajax3(idx);
+    //     $(this).parent().parent().parent().hide();
+    // });
 }
 
 function makeChart(graphId){

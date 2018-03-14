@@ -11,11 +11,12 @@
     border-radius: 25px;
 
 }
+
+body{
+    color: white;
+}
 . glyphicon-user{
     top: 18px;
-}
-body{
-    background-color: #555;
 }
 #title {
     color: white;
@@ -53,6 +54,7 @@ body{
     left:15px;
 }
 .graph_content_expense, .graph_content_chore{
+    color: white;
     background-color: #65AD3B;
     width: 90%;
     left: 5%;

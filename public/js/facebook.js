@@ -42,6 +42,9 @@ function addUser(response){
   //$.post( url, callback);
 }
 
+function fb_login() {
+  FB.login(function() {}, {scope: 'email, public_profile' } );
+}
 
 
 

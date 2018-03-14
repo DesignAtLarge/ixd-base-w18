@@ -8,36 +8,15 @@
 </head>
 <body>
 	<div class="loginForm container">
+    <form method="get" action="/homepage">
+      <legend><img src="/img/logo.png" width="210" height="80"></legend>
+      
+      <div id="tile">
+        <fb:login-button scope="public_profile,email" onLogin="checkLoginState();">Facebook</fb:login-button>
+        <!-- <a href="/homepage" onLogin="checkLoginState();" onclick="fb_login()"><img id="fbBtn" src="/img/Facebook.png" width="80" height="80" ></a> -->
+      </div>
 
-<form method="get" action="/homepage">
-	<legend><h1 id="LoginTitle">Login</h1></legend>
-
-   <div class="form-group">
-	    <label for="uname"><b>Username</b></label>
-	    <br>
-	    <input type="text" placeholder="Enter Username" name="uname" required>
-   </div>
-   
-   <div class="form-group">
-    <label for="psw"><b>Password</b></label>
-    <br>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-   </div> 
-
-	<div class="form-group">
-    	<button class="loginBtn" type="submit">Login</button>
-      <button class="loginBtn" type="button" class="cancelbtn">Cancel</button>
-    </div>
-
-   <label>
-      <input id="rememberId" type="checkbox" checked="checked" name="remember"> Remember me </input>
-      <br>
-      <span class="psw"> <a href="#">Forgot password?</a></span>
-    </label>
-    <fb:login-button scope="public_profile,email" onLogin="checkLoginState();"></fb:login-button>
-  </div>
-
-</form>
+    </form>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="application/json" src="../data/users.json"></script>

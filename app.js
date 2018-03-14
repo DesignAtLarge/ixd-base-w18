@@ -69,7 +69,7 @@ app.get('/homepageAlt', index.viewAlt);
 app.post('/addUser', addUser.addUser);
 app.get('/expenseHomepage', expenseHomepage.view);
 app.get('/signOut', signOut.signOut);
-app.get('chores/delete/:id',chore.delete);
+app.post('chores/delete/:id',chore.delete);
 // Example route
 // app.get('/users', user.list);
 
