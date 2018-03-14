@@ -1,52 +1,53 @@
 <html>
 <head>
-	<title>Create an Expense</title>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/form.css">
+	  <title>Create an Expense</title>
+	  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
-<body>
-	<div class="container">
-     <div class="row navbar">
-              <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon">
-                    <a href="/stats">
-                        <img src="/img/graph3.png" style="width: 50px; height: 50px; position: relative; top: -7px; left: -7px;">
-                    </a>
-                </li>
-                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon"><a href="/homepage"><img style="width: 150px; position:relative; left:-25px;" src="/img/logo.png" style="top: 18px"></a></li>
-                {{#if users}}
-                <li class=" col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon dropdown pull-right">
-                    <a  data-toggle="dropdown" class="dropdown-toggle"><img id="fbProfilePic" src="{{users.0.url}}" user="{{users.0.first}}"><b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li class="divider"></li>
-                        <li><a href="/signOut">Sign Off</a></li>
-                    </ul>
-                </li>
-                {{else}}
-                <a id="defaultProfile" href="/"><script class="glyphicon glyphicon-user" style="top: 18px" ></script></a>
-                {{/if}}
+<body style=" background-image: url('../img/expense_back.png');">
+	  <div class="container">
+        <div class="row navbar">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon">
+                <a href="/stats">
+                    <img src="/img/graph3.png" style="width: 50px; height: 50px; position: relative; top: -7px; left: -7px;">
+                </a>
+            </li>
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon"><a href="/homepage"><img style="width: 150px; position:relative; left:-25px;" src="/img/logo.png" style="top: 18px"></a></li>
+            {{#if users}}
+            <li class=" col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon dropdown pull-right">
+                <a  data-toggle="dropdown" class="dropdown-toggle"><img id="fbProfilePic" src="{{users.0.url}}" user="{{users.0.first}}"><b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li class="divider"></li>
+                    <li><a href="/signOut">Sign Off</a></li>
+                </ul>
+            </li>
+            {{else}}
+            <a id="defaultProfile" href="/"><script class="glyphicon glyphicon-user" style="top: 18px" ></script></a>
+            {{/if}}
+        </div>
+
+
+        <div class="row nav_bar">
+            <div class="nav_chore col-sm-6 col-xs-6 col-md-6 col-lg-6">
+                <a id="choresBtn" href="/homepage">
+                    <div class="nav">
+                        Chores
+                    </div>
+                </a>
             </div>
 
-
-            <div class="row nav_bar">
-                <div class="nav_chore col-sm-6 col-xs-6 col-md-6 col-lg-6">
-                    <a id="choresBtn" href="/homepage">
-                        <div class="nav">
-                            Chores
-                        </div>
-                    </a>
-                </div>
-
-                <div class="nav_expense col-sm-6 col-xs-6 col-md-6 col-lg-6">
-                    <a id="expensesBtn" href="/expenseHomepage">
-                        <div class="nav">
-                            Expenses
-                        </div>
-                    </a>
-                </div>
+            <div class="nav_expense col-sm-6 col-xs-6 col-md-6 col-lg-6" style="border-bottom: 5px solid #7DB85C ">
+                <a id="expensesBtn" href="/expenseHomepage" style="color: #7DB85C;">
+                    <div class="nav">
+                        Shopping
+                    </div>
+                </a>
             </div>
-    <form id="addExpenseForm" aria-hidden="false" role="form" method="get" action="/addExpense">
+        </div>
+        <form id="addExpenseForm" aria-hidden="false" role="form" method="get" action="/addExpense">
         <legend><h1>Create an Expense</h1></legend>
         <div class="form-group">
             <label for="name">Name of Expense</label>
@@ -77,8 +78,8 @@
         </div>
 
         <div class="form-group">
-            <a class="btn btn-danger" href="/addexpense">Cancel</a>
-            <input id="submitBtn" class="btn btn-success" value="Add the expense" type="submit" />
+            <a class="btn btn-danger form_Btn" href="/addexpense">Cancel</a>
+            <input  class="btn btn-success form_Btn form_submitBtn" value="Add the expense" type="submit" />
         </div>
     </form>
     </div>

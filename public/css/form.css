@@ -2,36 +2,6 @@ legend {
 	text-align: center;
 	color: white;
 }
-.navbar{
-    margin-bottom: 20px;
-    text-align:center;
-    list-style-type: none;
-}
-.nav{
-    text-align: center;
-}
-
-.nav_icon{
-    margin-top: 20px;
-    text-align: center;
-}
-.nav_bar{
-    width:100%;
-    position:relative;
-    left:15px;
-}
-.nav_chore{
-    background-color: #cdcdcd;
-    border-color: white;
-    border-style: solid;
-    border-radius: 5px;
-}
-.nav_expense{
-    background-color: white;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: black;
-}
 #defaultProfile{
     font-size:50px;
     color: white;
@@ -51,4 +21,35 @@ body{
 #title {
     color: white;
     padding: 0 3% 0 0;
+}
+#addChoreForm{
+    background-color: #F2BE18;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin-top: 20px;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#addExpenseForm{
+    background-color: #65AD3B;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin-top: 20px;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.form_Btn{
+    //width: 48%;
+    left: 1%;
+    text-align: center;
+    bottom: 2%;
+    left: 2%;
+    font-size: 20px;
+    //background-color: #2F80ED;
+    border: none;
+}
+.form_submitBtn{
+    background-color: #2F80ED;
 }
