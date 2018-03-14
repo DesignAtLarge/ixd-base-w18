@@ -73,16 +73,17 @@ End of Google Analytics Content Experiment code -->
 		</div>
 
 		<div id="routes-title"><b></b></div>
-
+<br>
 		<div class="dropdown">
-			<p> Select stop: <button class="dropbtn trackstop" id="innerButt">Bus Stops &#9660;</button> </p> 
+		<div style="font-family: 'Verdana';">
+			<p> Select stop: <button class="dropbtn trackstop" id="innerButt" style="font-family: 'Verdana';">Bus Stops &#9660;</button> </p> 
             	
-            	<div id="myDropdown" class="dropdown-content">
+            	<div id="myDropdown" class="dropdown-content" style="font-family: 'Verdana';">
             		{{#each currentStops}}
-            		<a href="#" class="stopp" id="{{stop}}">{{stop}}</a>
+            		<a href="#" class="stopp" id="{{stop}}" style="font-family: 'Verdana';">{{stop}}</a>
             		{{/each}}
             	</div>
-         </div><br>
+         </div></div><br>
 
 		<div class="dropdown">
 			
@@ -93,16 +94,17 @@ End of Google Analytics Content Experiment code -->
   			</div>
   			
 		</div>
-
+		<br>
 		<div class="container">
             <div class="accessibility-section">
                 <form id="statusformId" onsubmit="notifyDriver();return false;">
                     <fieldset id="ridestatus">
                         <legend><h3> For this ride: </h3></legend>
-                        <input type="checkbox"> I have a wheelchair<br>
-                        <input type="checkbox"> I have a bike &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                        <div style="font-family: 'Verdana';">
+                        <input type="checkbox" > I have a wheelchair<br>
+                        <input type="checkbox"> I have a bike &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
                         <input type="checkbox"> I have a walker&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                        <input type="checkbox"> I have a stroller&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+                        <input type="checkbox"> I have a stroller&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br></div>
                         <!--<a href = "#">
                         <button id="notifybutton" class="tracknotify">Request Stop</button> 
                     	</a> -->
@@ -110,7 +112,7 @@ End of Google Analytics Content Experiment code -->
                 </form>
             </div>
         </div>
-
+<br>
         <div id="notify"
         <a href = "#">
                         <button id="notifybutton" class="tracknotify">Request Stop</button>
