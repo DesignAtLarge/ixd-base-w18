@@ -4,7 +4,7 @@
 			"name": "Wash Dishes",
 			"description": "rinse dishes before putting them in dishwasher",
 			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg",
-			"priority": "1",
+			"priority": "low",
 			"done": false,
 			"Karanbir": 0,
 			"All": 5,

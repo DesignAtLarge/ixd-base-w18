@@ -15,6 +15,10 @@
 #titleText{
     font-family: 'Libre Franklin';
 }
+#priorityText{
+    font-family: 'Libre Franklin';
+    color: white;
+}
 #descriptionText{
     font-family: 'Libre Franklin';
 }
