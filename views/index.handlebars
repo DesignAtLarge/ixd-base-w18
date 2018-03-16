@@ -33,6 +33,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Libre Franklin' rel='stylesheet'>
         <link rel="stylesheet" href="/css/index.css">
     </head>
     <body>
@@ -85,8 +86,8 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                             {{/if}}
                         <div class="row">
                             <div class="des col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <h3>{{name}}</h3>
-                            <p>{{description}}</p>
+                            <h3 id="titleText">{{name}}</h3>
+                            <p id="descriptionText">{{description}}</p>
                         </div>
 
                             <div class="done col-xs-12 col-sm-12 col-md-12 col-lg-12" style="top: 0px;">
@@ -128,8 +129,8 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                             {{/if}}
                         <div class="row">
                             <div class="des col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                            <h3>{{name}}</h3>
-                            <p>{{description}}</p>
+                            <h3 id="titleText">{{name}}</h3>
+                            <p id="descriptionText">{{description}}</p>
                         </div>
                             <div class="done col-xs-4 col-sm-4 col-md43 col-lg-4">
                                 {{#if done}}

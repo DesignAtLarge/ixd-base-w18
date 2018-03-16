@@ -12,6 +12,12 @@
     border-radius: 25px;
 
 }
+#titleText{
+    font-family: 'Libre Franklin';
+}
+#descriptionText{
+    font-family: 'Libre Franklin';
+}
 . glyphicon-user{
     top: 18px;
 }
