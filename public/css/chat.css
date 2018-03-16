@@ -83,7 +83,7 @@ div.fb-comments.fb_iframe_widget{
 
 
 #notifybutton{
-    background-color: #DE600B;
+    background-color: #e23030;
     width: 50%;
     height: 33px;
     font-size: 15px;
@@ -92,7 +92,7 @@ div.fb-comments.fb_iframe_widget{
 
 fieldset#ridestatus{
     background-color: #ffffff;
-    border-color: #ed785f;
+    border-color: #ffc9cd;
     padding-bottom: 0%;
     padding-top: 0%;
 }

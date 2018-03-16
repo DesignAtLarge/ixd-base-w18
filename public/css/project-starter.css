@@ -416,7 +416,7 @@ input#search-p{
 #routes-title {
   text-align: center;
   font-size: 31px;
-  font-family: 'Galindo';
+  font-family: 'Bernard MT Condensed';
   /*font-style: italic;*/
   margin-top: -10px;
 }
@@ -526,7 +526,7 @@ span.glyphicon.glyphicon-log-out{
 }
 
 .dropbtn {
-    background-color: #DE600B;
+    background-color: #fd4451;
     color: white;
     padding: 12px;
     font-size: 16px;
@@ -537,7 +537,7 @@ span.glyphicon.glyphicon-log-out{
 
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #58D5C8;
+    background-color: #f14753;
 }
 
 .dropdown {
@@ -548,6 +548,7 @@ span.glyphicon.glyphicon-log-out{
 }
 .dropdown p{
   font-size: 18px;
+  font-family: 'Bernard MT Condensed';
   margin-right: 26%;
   /*text-align: left;*/
   padding-top: 0px;
@@ -558,11 +559,12 @@ span.glyphicon.glyphicon-log-out{
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #ffe3e3;
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border: 1px solid #000000;
 }
 
 .dropdown-content a {
@@ -570,6 +572,7 @@ span.glyphicon.glyphicon-log-out{
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    border: 1px solid #000000;
 }
 
 .dropdown a:hover {background-color: #ddd}
@@ -605,7 +608,7 @@ div.nearby{
   border: 1px solid #fff;
   margin-top: 20px;
   border-radius: 25px;
-  background: #f3af906e;
+  background: #ffc9cd;
   width: 90%;
   margin-left: 5%;
 }
@@ -615,7 +618,7 @@ div.nearby h4 {
   text-align: left;
   margin-left: 5%;
   font-size: 24px;
-  font-family: 'Galindo';
+  font-family: 'Bernard MT Condensed';
 }
 
 div.nearby a{
@@ -636,7 +639,7 @@ div.nearby ul{
 
 div.nearby ul li {
   margin: 2.5%;
-  background-color: #de6030;
+  background-color: #e23030;
   border-radius: 10px;
   padding-top: 1px;
   padding-bottom:1px;
@@ -731,7 +734,7 @@ div.nearby ul li {
 /************************************************************/
 
 h3 {
-  font-family: 'Galindo';
+  font-family: 'Bernard MT Condensed';
 }
 
 
