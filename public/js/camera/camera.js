@@ -43,8 +43,15 @@ function renderFrame() {
     }).catch(console.log);
 }
 
-const connectedPartNames = [ ['leftHip', 'leftShoulder'], ['leftElbow', 'leftShoulder'], ['leftElbow', 'leftWrist'], ['leftHip', 'leftKnee'], ['leftKnee', 'leftAnkle'], ['rightHip', 'rightShoulder'], ['rightElbow', 'rightShoulder'], ['rightElbow', 'rightWrist'], ['rightHip', 'rightKnee'], ['rightKnee', 'rightAnkle'], ['leftShoulder', 'rightShoulder'], ['leftHip', 'rightHip'] ];
-const partNames = [ 'nose', 'leftEye', 'rightEye', 'leftEar', 'rightEar', 'leftShoulder', 'rightShoulder', 'leftElbow', 'rightElbow', 'leftWrist', 'rightWrist', 'leftHip', 'rightHip', 'leftKnee', 'rightKnee', 'leftAnkle', 'rightAnkle' ];
+const connectedPartNames = [ ['leftHip', 'leftShoulder'], ['leftElbow', 'leftShoulder'], ['leftElbow', 'leftWrist'],
+                            ['leftHip', 'leftKnee'], ['leftKnee', 'leftAnkle'], ['rightHip', 'rightShoulder'], 
+                            ['rightElbow', 'rightShoulder'], ['rightElbow', 'rightWrist'], ['rightHip', 'rightKnee'], 
+                            ['rightKnee', 'rightAnkle'], ['leftShoulder', 'rightShoulder'], ['leftHip', 'rightHip'] ];
+
+const partNames = [ 'nose', 'leftEye', 'rightEye', 'leftEar', 'rightEar', 'leftShoulder', 
+                   'rightShoulder', 'leftElbow', 'rightElbow', 'leftWrist', 'rightWrist', 
+                   'leftHip', 'rightHip', 'leftKnee', 'rightKnee', 'leftAnkle', 'rightAnkle' ];
+
 const partIds = partNames.reduce((result, jointName, i) => { result[jointName] = i; return result; }, {});
 const connectedPartIndices = connectedPartNames.map(([jointNameA, jointNameB]) => ([partIds[jointNameA], partIds[jointNameB]]));
 
@@ -145,7 +152,9 @@ function voiceDidSpeak() {
           responsiveVoice.speak(text);
       }
 }
+// Takes in the angle, and returns the angle and what needs to be fixed
 function angleMeasurement(keypoints) {
+    // Shoulder angles 5 = left shoulder, 6 = Rt. Shoulder, 11 = Lt. hip
     var firstAngle = Math.atan2((keypoints.keypoints[5]["position"].y - keypoints.keypoints[11]["position"].y),(keypoints.keypoints[5]["position"].x - keypoints.keypoints[11]["position"].x));
     var secondAngle = Math.atan2((keypoints.keypoints[6]["position"].y - keypoints.keypoints[11]["position"].y),(keypoints.keypoints[6]["position"].x - keypoints.keypoints[11]["position"].x));
     var angle = (firstAngle - secondAngle);
