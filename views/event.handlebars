@@ -1,6 +1,9 @@
 <html>
 <head>
 	<title>Bringit! - Event Title</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -11,13 +14,49 @@
 	{{!-- <script src="js/event.js"></script> --}}
 </head>
 <body>
-    <div class="container"><div class="row">
-        <div class="col-sm-1"><a alt="back" href="/"><i class="material-icons">arrow_back</i></a></div>
-        <div class="col-xl-1"><h2 class="page-title">Event Title</h2></div>
-        <div class="col-sm-1"><a alt="point totals" href="/points"><i class="material-icons">people_alt</i></a></div>
-        <div class="col-sm-1"><a alt="event settings" href="/points"><i class="material-icons">settings</i></a></div>
-    </div></div>
+    <div class="container toolbar">
+        <div class="toolbar-back"><a alt="back" href="/"><i class="material-icons">arrow_back</i></a></div>
+        <div class="toolbar-title"><h2 class="page-title">{{title}}</h2></div>
+        <div class="toolbar-btn"><a alt="point totals" href="/points"><i class="material-icons">people_alt</i></a></div>
+        <div class="toolbar-btn"><a alt="event settings" href="/event-settings"><i class="material-icons">settings</i></a></div>
+    </div>
 
-    
+<div id="items-list">
+    {{#each categories}}
+    <div class="card">
+    <div class="card-header" id="headingOne">
+        <p>{{category-name}}</p>
+      {{!-- <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Collapsible Group Item #1
+        </button>
+      </h5> --}}
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+      <div class="card-body">
+
+          <table class="table">
+            <tbody>
+                {{#each items}}
+                <tr>
+                <td>{{item-name}}</td>
+                <td>x{{quantity}}</td>
+                <td>{{points}}pts</td>
+                <td>{{claimed-by}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+            </table>
+
+
+        <a alt="event settings" href="#"><i class="material-icons">add</i></a>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+   
 </body>
 </html>
