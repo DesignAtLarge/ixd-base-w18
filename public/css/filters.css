@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+}
+
+.theader {
+  background-color: #AAAAAA;
+  padding: 5% 10% 10% 10%;
+  text-align: center;
+  max-width: 100vw;
+}
+
+.theader img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 8rem;
+}
+
+.search-form {
+  background: #fff;
+  border-radius: 10px;
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  appearance: none;
+  background: none;
+  border: none;
+  color: #333333;
+  font-size: 14px;
+  height: 20px;
+  left: 10%;
+  outline: none;
+  position: absolute;
+  top: 15px;
+  width: 80%;
+}
+
+.filter-button {
+  position: absolute;
+  padding: 15px 0;
+  right: 20px;
+}
+
+.filter-button > img {
+  max-height: 20px;
+}
+
+.header {
+  text-align: center;
+}
+
+.filters {
+  background: white;
+  border-radius: 20px;
+  position: relative;
+  padding: 5% 10% 5% 10%;
+  top: -20px;
+}
+
+.subheading {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.checkboxes {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-left: 10%;
+  width: 100%;
+}
+
+.container {
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  position: relative;
+  width: 50%;
+}
+
+.container > span {
+  padding: 0.3rem 0.35rem;
+}
+
+.container > input {
+  appearance: none;
+  background-color: white;
+  border: 1px solid #A2D3C7;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 25px;
+  outline: none;
+  transition-duration: 0.3s;
+  width: 25px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+}
+
+.container > input:checked {
+  background-color: #A2D3C7;
+  border: 1px solid #A2D3C7;
+}
+
+.container > input:checked + span::before {
+  color: white;
+  content: '\2713';
+  display: block;
+  left: 0.7rem;
+  position: absolute;
+  text-align: center;
+  top: 0.2rem;
+}
+
+.container > input:active {
+  border: 2px solid #A2D3C7;
+}
+
+button {
+  background-color: gray;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 50px;
+}
+
+.center {
+  text-align: center;
+}

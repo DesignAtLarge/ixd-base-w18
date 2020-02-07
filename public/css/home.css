@@ -39,6 +39,16 @@ body {
   width: 80%;
 }
 
+.filter-button {
+  position: absolute;
+  padding: 15px 0;
+  right: 20px;
+}
+
+.filter-button > img {
+  max-height: 20px;
+}
+
 .header {
   text-align: center;
 }
