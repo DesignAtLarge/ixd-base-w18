@@ -42,11 +42,12 @@ body {
 .filter-button {
   position: absolute;
   padding: 15px 0;
-  right: 20px;
+  right: 5%;
 }
 
 .filter-button > img {
   max-height: 20px;
+  width: 20px;
 }
 
 .header {
