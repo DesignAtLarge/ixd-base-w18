@@ -4,9 +4,9 @@ import './style.less';
 import Header from '../Header';
 import Menu from '../Menu';
 
-const HomePage = (props) => {
+const MenuPage = (props) => {
   return (
-    <div className="homepage">
+    <div className="menupage">
       <Header store="Ding Tea"/>
       <div className="content">
         <h1> Milk Tea </h1>
@@ -18,4 +18,4 @@ const HomePage = (props) => {
   );
 };
 
-export default HomePage;
+export default MenuPage;

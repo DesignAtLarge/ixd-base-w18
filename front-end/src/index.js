@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 
 import configureStore, { history } from './store';
 
+import HomePage from './containers/HomePage';
 import LoginPage from './containers/LoginPage';
 import MenuPage from './containers/MenuPage';
 
@@ -18,7 +19,8 @@ const App = () => {
         <>
           <Switch>
             <Route path="/login" component={LoginPage} />
-            <Route path="/" component={MenuPage} />
+            <Route path="/menu" component={MenuPage} />
+            <Route path="/" component={HomePage} />
           </Switch>
         </>
       </ConnectedRouter>

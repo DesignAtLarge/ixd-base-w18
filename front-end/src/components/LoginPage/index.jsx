@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { Button, Form, Input } from 'antd';
 
 import boba from '../../assets/boba.svg';
@@ -34,7 +35,9 @@ const LoginPage = props => {
             />
           </Form.Item>
           <Form.Item>
-            <Button className="button">Login</Button>
+            <NavLink to="/">
+              <Button className="button">Login</Button>
+            </NavLink>
           </Form.Item>
         </form>
       </div>
