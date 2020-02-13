@@ -5,7 +5,7 @@ import './style.less';
 
 const LoginPage = props => {
   return (
-    <form onSubmit={props.handleSubmit} className="input-form">
+    <form onSubmit={props.handleSubmit} className="login-form">
       <Form.Item>
         <Input
           name="username"

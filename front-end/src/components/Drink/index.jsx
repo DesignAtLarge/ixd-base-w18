@@ -2,10 +2,10 @@ import React from 'react';
 
 import './style.less';
 
-const MenuDrink = (props) => {
+const Drink = (props) => {
   return (
-    <div className="menu-drink">
-     <div className="top-layer" style={{backgroundColor: props.topColor}}>
+    <div className="drink">
+     <div className="top-layer" style={{backgroundColor: props.color}}>
      </div>
      <div className="middle-layer">
      </div>
@@ -15,4 +15,4 @@ const MenuDrink = (props) => {
   );
 };
 
-export default MenuDrink;
+export default Drink;
