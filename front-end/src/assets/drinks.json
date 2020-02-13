@@ -1,0 +1,34 @@
+{
+  "Jasmine": {
+    "type": "milk",
+    "color": "#FBE1BE"
+  },
+  "Oolong": {
+    "type": "milk",
+    "color": "#EE9E31"
+  },
+  "Wintermelon": {
+    "type": "milk",
+    "color": "#DBF3DD"
+  },
+  "Taro": {
+    "type": "milk",
+    "color": "#D4C5E2"
+  },
+  "Strawberry": {
+    "type": "fruit",
+    "color": "#FBBEC2"
+  },
+  "Mango": {
+    "type": "fruit",
+    "color": "#F7C181"
+  },
+  "Pineapple": {
+    "type": "fruit",
+    "color": "FFF48D"
+  },
+  "Lychee": {
+    "type": "fruit",
+    "color": "#FFEBEC"
+  }
+}
