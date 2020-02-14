@@ -35,12 +35,13 @@ const HomePage = (props) => {
             </Form.Item>
           </form>
       </div>
-      <h1>Favorites</h1>
-      <BobaCarousel onClick={props.onSubmit}/>
-      <Button className="carousel-button" onClick={props.onSubmit}>Select</Button>
-      <NavLink to="/menu">
-        <Button className="all-button">All Drinks</Button>
-      </NavLink>
+      <div className="content">
+        <BobaCarousel onClick={props.onSubmit}/>
+        <NavLink to="/menu">
+          <Button className="all-button">All</Button>
+        </NavLink>
+        <Button className="carousel-button" onClick={props.onSubmit}>Select</Button>
+      </div>
       <DrinkDrawer visible={props.visible}/>
     </div>
   );

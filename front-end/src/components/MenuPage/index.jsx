@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'antd';
+import { Icon, Button } from 'antd';
 import { NavLink } from 'react-router-dom';
 
 import './style.less';
@@ -16,7 +16,7 @@ const MenuPage = (props) => {
         <h1> Fruit Tea</h1>
         <Menu setDrink={props.setDrink} onClick={props.onSubmit} drinks={props.fruit}/>
         <NavLink to="/">
-          <Button className="top-button">Top Drinks</Button>
+          <Button className="top-button"><Icon type="caret-left" /></Button>
         </NavLink>
       </div>
     </div>

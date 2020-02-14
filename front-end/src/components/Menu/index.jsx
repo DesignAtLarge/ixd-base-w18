@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import WOW from "wow.js";
 
 import './style.less';
 import Drink from '../Drink';
 import DrinkDrawer from '../../containers/DrinkDrawer';
-import { setDrink } from '../../actions/drinkActions';
 
 const Menu = (props) => {
   const submit = (values) => {
@@ -11,11 +11,16 @@ const Menu = (props) => {
     props.onClick();
   }
 
+  useEffect(() => {
+    const wow = new WOW();
+    wow.init();
+  }, []);
+
   return (
     <div className="menu">
       {props.drinks.map((drink) => {
         return (
-          <div className="menu-drink" onClick={() => {submit(drink)}} key={`menu-${drink[0]}`}>
+          <div className="menu-drink wow bounceIn" onClick={() => {submit(drink)}} key={`menu-${drink[0]}`}>
             <Drink
               color={drink[1].color}
             />
