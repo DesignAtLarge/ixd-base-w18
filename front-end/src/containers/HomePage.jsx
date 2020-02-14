@@ -1,12 +1,20 @@
+import { connect } from 'react-redux';
 import React from 'react';
 
 import HomePage from '../components/HomePage';
+import { openDrawer } from '../actions/drawerActions';
 
-const HomePageContainer = () => {
+const HomePageContainer = (props) => {
+  const onSubmit = () => {
+    props.openDrawer();
+  }
 
   return (
-    <HomePage />
+    <HomePage onSubmit={onSubmit} />
   );
 };
 
-export default HomePageContainer;
+export default connect(
+  null,
+  { openDrawer }
+)(HomePageContainer);
