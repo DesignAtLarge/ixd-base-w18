@@ -25,7 +25,7 @@
   },
   "Pineapple": {
     "type": "fruit",
-    "color": "FFF48D"
+    "color": "#FFF48D"
   },
   "Lychee": {
     "type": "fruit",

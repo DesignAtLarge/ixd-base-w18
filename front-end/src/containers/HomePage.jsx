@@ -10,11 +10,15 @@ const HomePageContainer = (props) => {
   }
 
   return (
-    <HomePage onSubmit={onSubmit} />
+    <HomePage onSubmit={onSubmit} username={props.username} />
   );
 };
 
+const mapStateToProps = state => ({
+  username: state.user.username
+});
+
 export default connect(
-  null,
+  mapStateToProps,
   { openDrawer }
 )(HomePageContainer);

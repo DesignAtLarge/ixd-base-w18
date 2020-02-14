@@ -12,7 +12,7 @@ const HomePage = (props) => {
       <div className="home-header">
         <h2>Hi {props.username}</h2>
       </div>
-      <BobaCarousel />
+      <BobaCarousel onClick={props.onSubmit}/>
       <Button className="carousel-button" onClick={props.onSubmit}>Select</Button>
       <DrinkDrawer visible={props.visible}/>
     </div>

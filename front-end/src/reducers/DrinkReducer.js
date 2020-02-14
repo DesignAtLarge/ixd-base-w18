@@ -2,8 +2,8 @@ import { SET_DRINK } from '../actions/types';
 
 const initialState = {
   currDrink: {
-    name: "Default Drink",
-    color: ""
+    name: "Jasmine",
+    color: "#FBE1BE"
   }
 };
 

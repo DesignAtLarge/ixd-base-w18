@@ -19,6 +19,7 @@ const BobaCarouselContainer = props => {
     <BobaCarousel
       drinks={props.drinks}
       onChange={onChange}
+      onClick={props.onClick}
       />
   );
 };

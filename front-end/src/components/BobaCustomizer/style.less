@@ -1,0 +1,53 @@
+.custom-drink {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  z-index: 200;
+
+  .custom-drink-cup {
+    position: absolute;
+    top: 20vh;
+    height: 45vw;
+    width: 36vw;
+
+    .sugar-layer {
+      border: 0.14vw solid #000000;
+      height: 40%;
+    }
+
+    .tea-layer {
+      border: 0.14vw solid #000000;
+      height: 30%;
+    }
+
+    .milk-layer {
+      background-color: #FBE1BE;
+      border: 0.14vw solid #000000;
+      border-radius: 0 0 100% 100%;
+      height: 30%;
+    }
+  }
+
+  .slider {
+    position: absolute;
+    top: calc(20vh - 14px);
+    right: 10vw;
+    height: 45vw !important;
+
+    .ant-slider-handle::after {
+      content: "";
+      width: 70vw;
+      border: solid 0.28vw black;
+      background-color: black;
+      position: absolute;
+      left: -70vw;
+      top: 50%;
+      z-index: 1;
+    }
+  }
+
+  .inputs {
+    position: relative;
+    top: calc(45vw + 50px);
+  }
+}

@@ -9,6 +9,7 @@ import configureStore, { history } from './store';
 import HomePage from './containers/HomePage';
 import LoginPage from './containers/LoginPage';
 import MenuPage from './containers/MenuPage';
+import requireAuth from './containers/requireAuth';
 
 const store = configureStore();
 
@@ -19,8 +20,8 @@ const App = () => {
         <>
           <Switch>
             <Route path="/login" component={LoginPage} />
-            <Route path="/menu" component={MenuPage} />
-            <Route path="/" component={HomePage} />
+            <Route path="/menu" component={requireAuth(MenuPage)} />
+            <Route path="/" component={requireAuth(HomePage)} />
           </Switch>
         </>
       </ConnectedRouter>
