@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Button, Carousel } from 'antd';
+import { Carousel } from 'antd';
 import Drink from '../Drink';
 
 import './style.less';
+import { setDrink } from '../../actions/drinkActions'
 
 const BobaCarousel = (props) => {
   const drinks = props.drinks;
-  const [currDrink, setDrink] = useState(drinks[0]);
 
   function onChange(index) {
     setDrink(drinks[(index + drinks.length - 1) % drinks.length]);
@@ -14,7 +14,7 @@ const BobaCarousel = (props) => {
 
   return (
     <div className="boba-carousel">
-      <Carousel dotPosition="bottom" afterChange={onChange}>
+      <Carousel dotPosition="bottom" afterChange={props.onChange}>
         {drinks.map((drink) => {
           return (
             <div className="carousel-item" key={'caro' + drink[0]}>
@@ -28,7 +28,6 @@ const BobaCarousel = (props) => {
           );
         })}
       </Carousel>
-      <Button className="carousel-button">Select</Button>
     </div>
   );
 };

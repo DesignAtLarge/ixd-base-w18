@@ -11,12 +11,13 @@ const DrinkDrawerContainer = props => {
   }
 
   return (
-    <DrinkDrawer visible={props.visible} onClose={onClose}/>
+    <DrinkDrawer visible={props.visible} onClose={onClose} currDrink={props.currDrink}/>
   );
 };
 
 const mapStateToProps = state => ({
-  visible: state.drawer.visible
+  visible: state.drawer.visible,
+  currDrink: state.drink.currDrink
 });
 
 export default connect(

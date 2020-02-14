@@ -6,15 +6,17 @@ import './style.less';
 const DrinkDrawer = (props) => {
   return (
     <Drawer
-      title="Basic Drawer"
+      title={props.currDrink.name}
       placement="bottom"
       closable={false}
       onClose={props.onClose}
       visible={props.visible}
+      maskStyle={{
+        "background": "rgb(0,0,0,0)"
+      }}
+      className="drink-drawer"
+      height="85%"
     >
-      <p>Some contents...</p>
-      <p>Some contents...</p>
-      <p>Some contents...</p>
     </Drawer>
   );
 };
