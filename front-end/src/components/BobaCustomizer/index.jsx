@@ -10,6 +10,14 @@ const style = {
   marginLeft: 70,
 };
 
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1.5,
+  slidesToScroll: 1
+};
+
 const CustomDrink = (props) => {
   return (
     <div className="custom-drink">
@@ -39,8 +47,11 @@ const CustomDrink = (props) => {
           range
           defaultValue={[20, 50]}
           onChange={props.sliderChange}
-          style={{
-            color: props.color
+          tipFormatter={(value) => {
+            if(value === 100 - props.values.sugar.replace('%', '')) {
+              return `${props.values.sugar}`
+            }
+            return `${value}%`;
           }}
         />
       </div>
@@ -85,6 +96,16 @@ const CustomDrink = (props) => {
         <p>Carbs</p>
       </div>
     </div>
+    <style dangerouslySetInnerHTML={{__html: `
+      .ant-slider-rail {
+        background: ${props.color} !important;
+        opacity: .5 !important;
+      }
+
+      .ant-slider-track {
+        background: ${props.color} !important;
+      }
+    `}} />
    </div>
   );
 };
