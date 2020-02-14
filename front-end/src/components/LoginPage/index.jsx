@@ -1,14 +1,14 @@
 import React from 'react';
 import { Button, Form, Input } from 'antd';
 
-import boba from '../../assets/boba.svg';
 import './style.less';
 
 const LoginPage = props => {
   return (
     <div className="login-page">
       <div className="content">
-        <img src={boba} alt="boba"/>
+        <div className="login-drink">
+        </div>
         <h1> bubbl•t</h1>
         <form onSubmit={props.handleSubmit} className="login-form">
           <Form.Item>

@@ -18,7 +18,7 @@ const BobaCarousel = (props) => {
   return (
     <div className="boba-carousel">
       <Carousel dotPosition="bottom" afterChange={props.onChange} {...settings}>
-        {props.drinks.map((drink) => {
+        {props.drinks.slice(0, 5).map((drink) => {
           return (
             <div className="carousel-item" key={'caro' + drink[0]} onClick={props.onClick}>
               <h1>{drink[0]}</h1>
