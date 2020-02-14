@@ -9,8 +9,12 @@ const BobaCustomizerContainer = props => {
     props.setValues(values);
   }
 
-  const onChange = (values) => {
-    console.log(values);
+  const onMilkChange = (milk) => {
+    console.log('milk');
+  }
+
+  const onSugarChange = (sugar) => {
+    console.log('sugar');
   }
 
   return (
@@ -18,7 +22,8 @@ const BobaCustomizerContainer = props => {
       values={props.values}
       sliderChange={sliderChange}
       color={props.currDrink.color}
-      onChange={onChange}
+      onMilkChange={onSugarChange}
+      onSugarChange={onMilkChange}
       />
   );
 };

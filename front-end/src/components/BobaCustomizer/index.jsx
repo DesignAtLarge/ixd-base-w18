@@ -39,19 +39,52 @@ const CustomDrink = (props) => {
           range
           defaultValue={[20, 50]}
           onChange={props.sliderChange}
+          style={{
+            color: props.color
+          }}
         />
       </div>
     </div>
-    <Form className="inputs" onChange={props.onChange}>
-      <Form.Item>
-        <InputNumber min={1} max={100} value={props.values.sugar} />
-      </Form.Item>
-      <h1>Sugar</h1>
-      <Form.Item>
-        <InputNumber min={1} max={100} value={props.values.milk} />
-      </Form.Item>
-      <h1>Milk</h1>
+    <Form className="inputs">
+      <div className="input">
+        <InputNumber min={1} max={100} value={props.values.sugar} onChange={props.onSugarChange}/>
+        <h1>Sugar</h1>
+      </div>
+      <div className="input">
+        <InputNumber min={1} max={100} value={props.values.milk} onChange={props.onMilkChange}/>
+        <h1>Milk</h1>
+      </div>
     </Form>
+    <div className="information">
+      <div className="info-container">
+        <div className="info"
+          style={{
+            backgroundColor: props.color
+          }}
+          >
+          <p>{props.values.calories}</p>
+        </div>
+        <p>Calories</p>
+      </div>
+      <div className="info-container">
+        <div className="info">
+          <p>{props.values.protein}g</p>
+        </div>
+        <p>Protein</p>
+      </div>
+      <div className="info-container">
+        <div className="info">
+          <p>{props.values.fat}g</p>
+        </div>
+        <p>Fat</p>
+      </div>
+      <div className="info-container">
+        <div className="info">
+          <p>{props.values.carbs}g</p>
+        </div>
+        <p>Carbs</p>
+      </div>
+    </div>
    </div>
   );
 };
