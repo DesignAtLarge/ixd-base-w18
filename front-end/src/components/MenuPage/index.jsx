@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button } from 'antd';
+import { NavLink } from 'react-router-dom';
 
 import './style.less';
 import Header from '../Header';
@@ -10,9 +12,12 @@ const MenuPage = (props) => {
       <Header store="Ding Tea"/>
       <div className="content">
         <h1> Milk Tea </h1>
-        <Menu drinks={props.milk}/>
+        <Menu setDrink={props.setDrink} onClick={props.onSubmit} drinks={props.milk}/>
         <h1> Fruit Tea</h1>
-        <Menu drinks={props.fruit}/>
+        <Menu setDrink={props.setDrink} onClick={props.onSubmit} drinks={props.fruit}/>
+        <NavLink to="/">
+          <Button className="top-button">Top Drinks</Button>
+        </NavLink>
       </div>
     </div>
   );

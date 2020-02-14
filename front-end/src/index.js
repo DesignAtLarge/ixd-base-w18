@@ -21,7 +21,7 @@ const App = () => {
           <Switch>
             <Route path="/login" component={LoginPage} />
             <Route path="/menu" component={requireAuth(MenuPage)} />
-            <Route path="/" component={HomePage} />
+            <Route path="/" component={requireAuth(HomePage)} />
           </Switch>
         </>
       </ConnectedRouter>
