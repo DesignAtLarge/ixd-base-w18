@@ -20,6 +20,10 @@ export const loginUser = (credentials) => async dispatch => {
               userid: credentials.id,
               username: credentials.username
             })
+            dispatch({
+              type: LOGIN_USER,
+              username: credentials.username
+            });
             dispatch(replace('/'));
           }
           else {
@@ -40,7 +44,6 @@ export const loginUser = (credentials) => async dispatch => {
 
       // Normal login
   } else {
-    console.log('hello')
     // If user can be found
     userDB.where("username", "==", credentials.username)
       .get()
@@ -49,6 +52,10 @@ export const loginUser = (credentials) => async dispatch => {
             userDB.add({
               username: credentials.username,
               password: credentials.password
+            });
+            dispatch({
+              type: LOGIN_USER,
+              username: credentials.username
             });
             dispatch(replace('/'));
           }
