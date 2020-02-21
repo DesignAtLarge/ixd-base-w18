@@ -9,8 +9,11 @@ const FacebookLoginButton = (props) => {
     appId="138298770714181"
     autoLoad={true}
     fields="name,email,picture"
+    cssClass="facebook-button"
     onClick={props.componentClicked}
-    callback={props.responseFacebook} />
+    callback={props.responseFacebook}
+    textButton=""
+    icon="fa-facebook" />
   )
 }
 

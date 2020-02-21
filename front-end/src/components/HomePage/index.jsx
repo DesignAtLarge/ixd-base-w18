@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Form, Input, Button } from 'antd';
+import { Form, Input, Icon, Button } from 'antd';
 
 import './style.less';
 import BobaCarousel from '../../containers/BobaCarousel';
@@ -36,7 +36,7 @@ const HomePage = (props) => {
           </form>
       </div>
       <div className="content">
-        <h1>Suggested</h1>
+        <h1><Icon type="star" /> Favorites</h1>
         <BobaCarousel onClick={props.onSubmit}/>
         <NavLink to="/menu">
           <Button className="all-button">All</Button>

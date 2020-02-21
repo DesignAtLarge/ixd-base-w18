@@ -1,7 +1,8 @@
 import { UPDATE_DRINKS } from '../actions/types';
 
 const initialState = {
-  drinks: []
+  drinks: [],
+  fav: []
 };
 
 const MenuReducer = (state = initialState, action) => {

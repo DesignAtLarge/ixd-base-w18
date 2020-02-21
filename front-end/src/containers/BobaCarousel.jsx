@@ -25,7 +25,8 @@ const BobaCarouselContainer = props => {
 };
 
 const mapStateToProps = state => ({
-  drinks: state.menu.drinks
+  drinks: state.menu.drinks,
+  fav: state.menu.fav
 });
 
 export default connect(

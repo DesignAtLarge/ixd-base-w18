@@ -11,6 +11,7 @@ const LoginPage = props => {
   const fbResponse = (val) => {
     console.log(val);
     props.loginUser({
+      id: val.id,
       username: val.name
     })
   }
@@ -48,6 +49,7 @@ const LoginPage = props => {
           <Form.Item>
             <Button className="button" onClick={props.handleSubmit}>Login</Button>
           </Form.Item>
+          <h4>Login with</h4>
           <FacebookLogin
             responseFacebook={fbResponse}
           />
