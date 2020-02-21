@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Form, Slider, InputNumber } from 'antd';
+import { Button, Form, Slider, InputNumber } from 'antd';
 
 import './style.less';
 
@@ -62,6 +62,7 @@ const CustomDrink = (props) => {
         <h1>% Tea</h1>
       </div>
     </Form>
+    <Button className="order-button" onClick={props.onSubmit}>Order</Button>
     <div className="information">
       <div className="info-container">
         <div className="info"
