@@ -24,6 +24,7 @@ const BobaCustomizerContainer = props => {
       color={props.currDrink.color}
       onMilkChange={onSugarChange}
       onSugarChange={onMilkChange}
+      name={props.currDrink.name}
       />
   );
 };

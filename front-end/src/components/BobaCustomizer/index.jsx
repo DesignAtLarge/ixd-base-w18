@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Button, Form, Slider, InputNumber } from 'antd';
+import { notify } from '../../utils/notify';
 
 import './style.less';
 
@@ -11,6 +12,11 @@ const style = {
 };
 
 const CustomDrink = (props) => {
+
+  const order = () => {
+    notify('Ordered Drink!', props.name + ' Tea')
+  }
+
   return (
     <div className="custom-drink">
       <div className="custom-drink-cup">
@@ -62,7 +68,7 @@ const CustomDrink = (props) => {
         <h1>% Tea</h1>
       </div>
     </Form>
-    <Button className="order-button" onClick={props.onSubmit}>Order</Button>
+    <Button className="order-button" onClick={order}>Order</Button>
     <div className="information">
       <div className="info-container">
         <div className="info"
