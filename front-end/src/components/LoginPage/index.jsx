@@ -1,9 +1,20 @@
 import React from 'react';
-import { Button, Form, Input } from 'antd';
+import { connect } from 'react-redux';
+import { Button, Form, Icon, Input } from 'antd';
 
 import './style.less';
+import FacebookLogin from '../FacebookLogin';
+
+import { loginUser } from '../../actions/userActions';
 
 const LoginPage = props => {
+  const fbResponse = (val) => {
+    console.log(val);
+    props.loginUser({
+      username: val.name
+    })
+  }
+
   return (
     <div className="login-page">
       <div className="content">
@@ -37,10 +48,16 @@ const LoginPage = props => {
           <Form.Item>
             <Button className="button" onClick={props.handleSubmit}>Login</Button>
           </Form.Item>
+          <FacebookLogin
+            responseFacebook={fbResponse}
+          />
         </form>
       </div>
     </div>
   );
 };
 
-export default LoginPage;
+export default connect(
+null,
+{loginUser}
+)(LoginPage);

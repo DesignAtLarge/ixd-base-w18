@@ -35,23 +35,35 @@
 
     .ant-slider-handle::after {
       content: "";
-      width: 70vw;
+      width: calc(36vw + 62px);
       border: solid 2px black;
       background-color: black;
       position: absolute;
-      left: -70vw;
+      left:calc(-36vw - 62px);
       top: 50%;
       z-index: 1;
     }
   }
 
+  form {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    white-space: nowrap;
+  }
+
   .inputs {
     position: relative;
     top: calc(45vw + 50px);
+    font-size: .6rem;
 
     .input {
       align-items: center;
       display: flex;
+      justify-content: center;
+      width: 40vw;
+      margin-bottom: 20px;
 
       h1 {
         margin-left: 10px;
@@ -65,7 +77,7 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 5vh;
+    bottom: 10vh;
 
     .info-container {
 
@@ -83,5 +95,20 @@
     p {
       margin: 0;
     }
+  }
+}
+
+.ant-input-number {
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+
+  .ant-input-number-input {
+    font-size: .8rem;
+    font-weight: 700;
+    text-align: center;
   }
 }

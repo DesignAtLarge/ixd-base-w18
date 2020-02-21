@@ -10,14 +10,6 @@ const style = {
   marginLeft: 70,
 };
 
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1.5,
-  slidesToScroll: 1
-};
-
 const CustomDrink = (props) => {
   return (
     <div className="custom-drink">
@@ -59,11 +51,15 @@ const CustomDrink = (props) => {
     <Form className="inputs">
       <div className="input">
         <InputNumber min={1} max={100} value={props.values.sugar} onChange={props.onSugarChange}/>
-        <h1>Sugar</h1>
+        <h1>% Sugar</h1>
       </div>
       <div className="input">
         <InputNumber min={1} max={100} value={props.values.milk} onChange={props.onMilkChange}/>
-        <h1>Milk</h1>
+        <h1>% Milk</h1>
+      </div>
+      <div className="input">
+        <InputNumber min={1} max={100} value={props.values.tea} onChange={props.onMilkChange}/>
+        <h1>% Tea</h1>
       </div>
     </Form>
     <div className="information">

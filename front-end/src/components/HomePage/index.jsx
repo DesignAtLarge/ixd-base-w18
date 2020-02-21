@@ -36,6 +36,7 @@ const HomePage = (props) => {
           </form>
       </div>
       <div className="content">
+        <h1>Suggested</h1>
         <BobaCarousel onClick={props.onSubmit}/>
         <NavLink to="/menu">
           <Button className="all-button">All</Button>

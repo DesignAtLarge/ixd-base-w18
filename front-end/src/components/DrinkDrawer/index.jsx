@@ -20,7 +20,7 @@ const DrinkDrawer = (props) => {
     >
       <h1>{props.currDrink.name}</h1>
       <hr/>
-      <h2>Make Level Adjustments</h2>
+      <h2>Customize</h2>
       <BobaCustomizer />
     </Drawer>
   );

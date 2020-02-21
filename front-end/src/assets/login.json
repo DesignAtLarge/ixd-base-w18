@@ -1,0 +1,11 @@
+{
+  "Emily": {
+    "password": "notauth"
+  },
+  "Kendall": {
+    "password": "defnotauth"
+  },
+  "Amy": {
+    "password": "stilldefnotauth"
+  }
+}
