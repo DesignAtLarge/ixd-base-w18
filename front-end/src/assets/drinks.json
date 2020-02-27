@@ -1,34 +1,42 @@
 {
   "Jasmine": {
     "type": "milk",
-    "color": "#FBE1BE"
+    "color": "#FBE1BE",
+    "shop": "dingtea"
   },
   "Oolong": {
     "type": "milk",
-    "color": "#EE9E31"
+    "color": "#EE9E31",
+    "shop": "dingtea"
   },
   "Wintermelon": {
     "type": "milk",
-    "color": "#DBF3DD"
+    "color": "#DBF3DD",
+    "shop": "dingtea"
   },
   "Taro": {
     "type": "milk",
-    "color": "#D4C5E2"
+    "color": "#D4C5E2",
+    "shop": "dingtea"
   },
   "Strawberry": {
     "type": "fruit",
-    "color": "#FBBEC2"
+    "color": "#FBBEC2",
+    "shop": "dingtea"
   },
   "Mango": {
     "type": "fruit",
-    "color": "#F7C181"
+    "color": "#F7C181",
+    "shop": "dingtea"
   },
   "Pineapple": {
     "type": "fruit",
-    "color": "#FFF48D"
+    "color": "#FFF48D",
+    "shop": "dingtea"
   },
   "Lychee": {
     "type": "fruit",
-    "color": "#FFEBEC"
+    "color": "#FFEBEC",
+    "shop": "dingtea"
   }
 }

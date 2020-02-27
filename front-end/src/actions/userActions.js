@@ -14,7 +14,7 @@ export const loginUser = (credentials) => async dispatch => {
       .get()
       .then(function(querySnapshot) {
         console.log(querySnapshot)
-          if(querySnapshot.size == 0) {
+          if(querySnapshot.size === 0) {
             console.log('hi')
             userDB.add({
               userid: credentials.id,
@@ -48,7 +48,7 @@ export const loginUser = (credentials) => async dispatch => {
     userDB.where("username", "==", credentials.username)
       .get()
       .then(function(querySnapshot) {
-          if(querySnapshot.size == 0) {
+          if(querySnapshot.size === 0) {
             userDB.add({
               username: credentials.username,
               password: credentials.password
@@ -61,7 +61,7 @@ export const loginUser = (credentials) => async dispatch => {
           }
           else {
             querySnapshot.forEach(function(doc) {
-                if(doc.data().password != credentials.password) {
+                if(doc.data().password !== credentials.password) {
                   notify('Unable to login!', 'Incorrect password');
                 } else {
                   dispatch({

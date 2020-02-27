@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import configureStore, { history } from './store';
 
 import HomePage from './containers/HomePage';
+import HomePage2 from './containers/HomePage2';
 import LoginPage from './containers/LoginPage';
 import MenuPage from './containers/MenuPage';
 import requireAuth from './containers/requireAuth';
@@ -20,8 +21,9 @@ const App = () => {
         <>
           <Switch>
             <Route path="/login" component={LoginPage} />
-            <Route path="/menu" component={requireAuth(MenuPage)} />
-            <Route path="/" component={requireAuth(HomePage)} />
+            <Route path="/menu" component={MenuPage} />
+            <Route path="/2" component={HomePage2} />
+            <Route path="/" component={HomePage} />
           </Switch>
         </>
       </ConnectedRouter>

@@ -56,15 +56,24 @@ const CustomDrink = (props) => {
     </div>
     <Form className="inputs">
       <div className="input">
-        <InputNumber min={1} max={100} value={props.values.sugar} onChange={props.onSugarChange}/>
+        <InputNumber min={1} max={100} value={props.values.sugar} onChange={props.onSugarChange}
+        />
         <h1>% Sugar</h1>
       </div>
       <div className="input">
-        <InputNumber min={1} max={100} value={props.values.milk} onChange={props.onMilkChange}/>
+        <InputNumber min={1} max={100} value={props.values.milk} onChange={props.onMilkChange}
+          style={{
+            backgroundColor: '#EEEEEE'
+          }}
+        />
         <h1>% Milk</h1>
       </div>
       <div className="input">
-        <InputNumber min={1} max={100} value={props.values.tea} onChange={props.onMilkChange}/>
+        <InputNumber min={1} max={100} value={props.values.tea} onChange={props.onMilkChange}
+          style={{
+            backgroundColor: props.color
+          }}
+        />
         <h1>% Tea</h1>
       </div>
     </Form>
@@ -81,19 +90,31 @@ const CustomDrink = (props) => {
         <p>Calories</p>
       </div>
       <div className="info-container">
-        <div className="info">
+        <div className="info"
+          style={{
+            backgroundColor: props.color
+          }}
+          >
           <p>{props.values.protein}g</p>
         </div>
         <p>Protein</p>
       </div>
       <div className="info-container">
-        <div className="info">
+        <div className="info"
+          style={{
+            backgroundColor: props.color
+          }}
+          >
           <p>{props.values.fat}g</p>
         </div>
         <p>Fat</p>
       </div>
       <div className="info-container">
-        <div className="info">
+        <div className="info"
+          style={{
+            backgroundColor: props.color
+          }}
+          >
           <p>{props.values.carbs}g</p>
         </div>
         <p>Carbs</p>

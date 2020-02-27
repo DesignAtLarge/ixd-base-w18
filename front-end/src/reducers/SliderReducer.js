@@ -15,13 +15,13 @@ const SliderReducer = (state = initialState, action) => {
       case SET_VALUES:
         return {
           ...state,
-          sugar: action.sugar,
-          milk: action.milk,
-          tea: action.tea,
-          calories: action.calories,
-          fat: action.fat,
-          protein: action.protein,
-          carbs: action.carbs
+          sugar: action.sugar || state.sugar,
+          milk: action.milk || state.milk,
+          tea: action.tea || state.tea,
+          calories: action.calories || state.calories,
+          fat: action.fat || state.fat,
+          protein: action.protein || state.protein,
+          carbs: action.carbs || state.carbs
         };
     default:
         return state;
