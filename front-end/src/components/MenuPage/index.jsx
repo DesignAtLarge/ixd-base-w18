@@ -9,7 +9,7 @@ import Menu from '../Menu';
 const MenuPage = (props) => {
   return (
     <div className="menupage">
-      <Header store="Ding Tea"/>
+      <Header store="All Drinks"/>
       <div className="content">
         <h1> Milk Tea </h1>
         <Menu setDrink={props.setDrink} onClick={props.onSubmit} drinks={props.milk}/>

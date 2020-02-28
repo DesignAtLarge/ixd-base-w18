@@ -38,5 +38,85 @@
     "type": "fruit",
     "color": "#FFEBEC",
     "shop": "dingtea"
+  },
+  "Cheese": {
+    "type": "milk",
+    "color": "#FFFBC2",
+    "shop": "happylemon"
+  },
+  "Matcha": {
+    "type": "milk",
+    "color": "#69BF64",
+    "shop": "happylemon"
+  },
+  "Oreo": {
+    "type": "milk",
+    "color": "#DDDDDD",
+    "shop": "happylemon"
+  },
+  "Chocolate": {
+    "type": "milk",
+    "color": "#D49E85",
+    "shop": "happylemon"
+  },
+  "Passion Fruit": {
+    "type": "fruit",
+    "color": "#FFDF52",
+    "shop": "happylemon"
+  },
+  "Apple": {
+    "type": "fruit",
+    "color": "#D3FFCF",
+    "shop": "happylemon"
+  },
+  "Lemon": {
+    "type": "fruit",
+    "color": "#FFF761",
+    "shop": "happylemon"
+  },
+  "Kumquat": {
+    "type": "fruit",
+    "color": "#FCBA03",
+    "shop": "happylemon"
+  },
+  "Brown Sugar": {
+    "type": "milk",
+    "color": "#D1B89F",
+    "shop": "gongcha"
+  },
+  "Panda": {
+    "type": "milk",
+    "color": "#FFF8E0",
+    "shop": "gongcha"
+  },
+  "Thai": {
+    "type": "milk",
+    "color": "#FFBF40",
+    "shop": "gongcha"
+  },
+  "Earl Grey": {
+    "type": "milk",
+    "color": "#F0D7BD",
+    "shop": "gongcha"
+  },
+  "Longan" : {
+    "type": "fruit",
+    "color": "#F7F0B7",
+    "shop": "gongcha"
+  },
+  "Peach": {
+    "type": "fruit",
+    "color": "#FFD6FA",
+    "shop": "gongcha"
+  },
+  "Blueberry" : {
+    "type": "fruit",
+    "color": "#F5C7FF",
+    "shop": "gongcha"
+  },
+  "Rainbow" : {
+    "type": "fruit",
+    "color": "#FCCFB1",
+    "shop": "gongcha"
   }
 }

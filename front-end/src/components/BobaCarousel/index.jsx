@@ -20,7 +20,7 @@ const BobaCarousel = (props) => {
       <Carousel dotPosition="bottom" afterChange={props.onChange} {...settings}>
         {props.drinks.slice(0, 5).map((drink) => {
           return (
-            <div className="carousel-item" key={'caro' + drink[0]} onClick={props.onClick}>
+            <div className="carousel-item wow bounceIn" key={'caro' + drink[0]} onClick={props.onClick}>
               <h1>{drink[0]}</h1>
               <div className="carousel-drink">
                 <Drink

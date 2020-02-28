@@ -9,6 +9,11 @@ const HomePageContainer = (props) => {
     props.openDrawer();
   }
 
+  const onCascade = (value) => {
+    console.log('hi');
+    console.log(value);
+  }
+
   return (
     <HomePage onSubmit={onSubmit} username={props.username} />
   );

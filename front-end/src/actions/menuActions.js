@@ -2,7 +2,7 @@ import drinks from '../assets/drinks.json';
 
 import { UPDATE_DRINKS } from './types';
 
-export const getDrinks = () => async dispatch => {
+export const getDrinks = (shop) => async dispatch => {
   let milk = [];
   let fruit = [];
   let all = [];
@@ -14,7 +14,13 @@ export const getDrinks = () => async dispatch => {
     else {
       fruit.push([drink, drinks[drink]]);
     }
-    all.push([drink, drinks[drink]])
+    if ( shop ) {
+      if( drinks[drink]['shop'] === shop ) {
+        all.push([drink, drinks[drink]])
+      }
+    } else {
+      all.push([drink, drinks[drink]]);
+    }
   }
 
   dispatch({
