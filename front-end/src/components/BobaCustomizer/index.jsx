@@ -63,7 +63,7 @@ const CustomDrink = (props) => {
       <div className="input">
         <InputNumber min={1} max={100} value={props.values.milk} onChange={props.onMilkChange}
           style={{
-            backgroundColor: '#EEEEEE'
+            backgroundColor: '#D1D1D1'
           }}
         />
         <h1>% Milk</h1>
