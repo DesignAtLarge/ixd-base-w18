@@ -21,6 +21,8 @@ const HomePage = (props) => {
                 onChange={props.handleChange}
                 onBlur={props.handleBlur}
                 size="large"
+                list="stores"
+                autoComplete="off"
               />
             </Form.Item>
             <Form.Item>
@@ -28,9 +30,11 @@ const HomePage = (props) => {
                 name="drink"
                 className="form-input"
                 placeholder="Drink"
-                onChange={props.handleChange}
+                onChange={props.handleDrinkChange}
                 onBlur={props.handleBlur}
                 size="large"
+                list="drinks"
+                autoComplete="off"
               />
             </Form.Item>
           </form>
@@ -44,6 +48,18 @@ const HomePage = (props) => {
         <Button className="carousel-button" onClick={props.onSubmit}>Select</Button>
       </div>
       <DrinkDrawer visible={props.visible}/>
+      <datalist id="stores">
+        <option value="Ding Tea"/>
+        <option value="Happy Lemon"/>
+        <option value="Gong Cha"/>
+      </datalist>
+      <datalist id="drinks">
+        {props.drinks.map((drink) => {
+          return (
+            <option value={drink[0]} key={`${drink[0]} option`} />
+          );
+        })}
+      </datalist>
     </div>
   );
 };
