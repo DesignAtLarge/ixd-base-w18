@@ -9,8 +9,12 @@ const HomePageContainer = (props) => {
     props.openDrawer();
   }
 
+  const handleChange = (event) => {
+    console.log(event.target);
+  }
+
   return (
-    <HomePage onSubmit={onSubmit} username={props.username} />
+    <HomePage handleChange={handleChange} onSubmit={onSubmit} username={props.username} />
   );
 };
 

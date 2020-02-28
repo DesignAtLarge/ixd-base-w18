@@ -21,10 +21,10 @@ const App = () => {
         <>
           <Switch>
             <Route path="/login" component={LoginPage} />
-            <Route path="/menu" component={requireAuth(MenuPage)} />
+            <Route path="/menu" component={MenuPage} />
             <Route path="/a" component={HomePage} />
             <Route path="/b" component={HomePage2} />
-            <Route path="/" component={requireAuth(HomePage)} />
+            <Route path="/" component={HomePage} />
           </Switch>
         </>
       </ConnectedRouter>
