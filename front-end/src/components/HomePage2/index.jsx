@@ -20,7 +20,7 @@ const HomePage = (props) => {
       <div className="home-header">
         <h2>Hi {props.username},</h2>
         <div className="cascade">
-          <Cascader />
+          <Cascader onCascade={props.onCascade} />
         </div>
       </div>
       <div className="content">

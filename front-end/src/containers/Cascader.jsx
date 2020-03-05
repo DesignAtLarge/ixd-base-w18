@@ -7,6 +7,7 @@ import { getDrinks } from '../actions/menuActions.js';
 const CascaderContainer = (props) => {
 
   const onChange = (value) => {
+    props.onCascade(value);
     props.getDrinks(value[0]);
   }
 
