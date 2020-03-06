@@ -1,11 +1,15 @@
 import { connect } from 'react-redux';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import MenuPage from '../components/MenuPage';
 import { openDrawer } from '../actions/drawerActions';
 import { setDrink } from '../actions/drinkActions';
 
 import drinks from '../assets/drinks.json';
+
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-146957007-2');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 let milk = [];
 let fruit = [];
@@ -20,6 +24,11 @@ for (let drink in drinks) {
 }
 
 const MenuPageContainer = (props) => {
+
+  useEffect(() => {
+    ReactGA.ga('send', 'pageview', '/menu');
+  }, []);
+
   const onSubmit = () => {
     props.openDrawer();
   }

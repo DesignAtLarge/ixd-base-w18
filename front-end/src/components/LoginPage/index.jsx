@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Button, Form, Icon, Input } from 'antd';
 
@@ -7,9 +7,17 @@ import FacebookLogin from '../FacebookLogin';
 
 import { loginUser } from '../../actions/userActions';
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-146957007-2');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 const LoginPage = props => {
+
+  useEffect(() => {
+    ReactGA.ga('send', 'pageview', '/login');
+  }, []);
+
   const fbResponse = (val) => {
-    console.log(val);
     props.loginUser({
       id: val.id,
       username: val.name

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import HomePage from '../components/HomePage';
 import { getDrinks } from '../actions/menuActions';
@@ -11,6 +11,11 @@ ReactGA.initialize('UA-146957007-2');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 const HomePageContainer = (props) => {
+
+  useEffect(() => {
+    ReactGA.ga('send', 'pageview', '/home');
+  }, []);
+
   const onSubmit = () => {
     props.openDrawer();
   }
