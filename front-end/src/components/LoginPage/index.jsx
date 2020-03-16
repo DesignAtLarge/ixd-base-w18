@@ -29,7 +29,7 @@ const LoginPage = props => {
       <div className="content">
         <div className="login-drink">
         </div>
-        <h1> bubbl•t</h1>
+        <h1> intelli•t</h1>
         <form onSubmit={props.handleSubmit} className="login-form">
           <Form.Item>
             <Input

@@ -42,10 +42,10 @@ const HomePage = (props) => {
       <div className="content">
         <h1>Favorites</h1>
         <BobaCarousel onClick={props.onSubmit}/>
-        <NavLink to="/menu">
-          <Button className="all-button">All</Button>
-        </NavLink>
         <Button className="carousel-button" onClick={props.onSubmit}>Select</Button>
+        <NavLink to="/menu">
+          <Button className="all-button">View All</Button>
+        </NavLink>
       </div>
       <DrinkDrawer visible={props.visible}/>
       <datalist id="stores">
