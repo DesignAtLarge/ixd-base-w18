@@ -8,11 +8,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link href="css/form.css" rel="stylesheet">
+
 </head>
 
 <body>
 	<main>
-		<img id="back" src="../images/left-arrow.svg" alt="back arrow">
+        <button id="back" onclick="history.back()"></button>
+        <!-- 	<img id="back" src="../images/left-arrow.svg" alt="back arrow">-->
+	
+        <!--can we set two actions of the form?-->
 		<form>
 			<!--Product Information-->
 			<h1>Product Info</h1><br />
@@ -31,7 +35,7 @@
 			</datalist> <br /><br />
 			<hr /><br />
 			<label for="name">dimension:&nbsp;</label>
-			<input class="input" list="dimensions" id="dimension" name="dimension" placeholder="inch">
+			<input class="input" list="dimensions" id="dimension" name="dimension" value="inch">
 			<datalist id="dimensions">
 				<option value="inch"></option>
 				<option value="cm"></option>

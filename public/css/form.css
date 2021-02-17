@@ -15,10 +15,16 @@ body{
  }
 
 #back{
-    width: 30px;
+    background-image: url(../images/left-arrow.svg);
+    border: none;
+    width: 40px;
     height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
     float: left;
-    padding-left: 20px;
+    padding-left: 30px;
+    
 }
 
  h1 {
