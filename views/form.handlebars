@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	{{!--
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> --}}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="css/form.css" rel="stylesheet">
+</head>
+
+<body>
+	<main>
+		<img id="back" src="../images/left-arrow.svg" alt="back arrow">
+		<form>
+			<!--Product Information-->
+			<h1>Product Info</h1><br />
+			<label for="name">product name:&nbsp;</label>
+			<input class="input" type="text" id="name" name="name" placeholder="Name"><br /><br />
+			<label for="price">price:&nbsp;</label>
+			<input class="input" type="text" id="price" name="price" placeholder="eg. $20"><br /><br />
+			<label for="condition">condition:&nbsp;</label>
+			<input class="input" list="conditions" id="condition" name="condition" value="new">
+			<datalist id="conditions">
+				<option value="new"></option>
+				<option value="like new"></option>
+				<option value="good"></option>
+				<option value="fair"></option>
+				<option value="poor"></option>
+			</datalist> <br /><br />
+			<hr /><br />
+			<label for="name">dimension:&nbsp;</label>
+			<input class="input" list="dimensions" id="dimension" name="dimension" placeholder="inch">
+			<datalist id="dimensions">
+				<option value="inch"></option>
+				<option value="cm"></option>
+				<option value="m"></option>
+			</datalist> <br /><br />
+			<label for="length">length:&nbsp;</label>
+			<input class="input" type="text" id="length" name="length" placeholder="eg. 20"><br /><br />
+			<label for="length">width:&nbsp;</label>
+			<input class="input" type="text" id="width" name="width" placeholder="eg. 40"><br /><br />
+			<label for="length">height:&nbsp;</label>
+			<input class="input" type="text" id="height" name="height" placeholder="eg. 30"><br /><br />
+			<input class="pictures" id="picture" type="submit" value="Upload Picture"><br /><br />
+			<input class="pictures" id="diagram" type="submit" value="Create 2D Diagram"><br /><br />
+
+			<p>Description:</p>
+			<textarea rows="10" cols="50">you can leave additional comments if you want.</textarea>
+			<br /><br />
+
+			<!--Contact Information-->
+			<h1>Contact Info</h1>
+			<input list="contacts" class="contact" name="contact" value="phone">
+			<datalist id="contacts">
+				<option value="phone"></option>
+				<option value="email"></option>
+			</datalist><b>:&nbsp;</b>
+			<input type="text" class="contact">
+		
+
+			<div class="btn">
+				<div><input class="bottom_btn" id="save" type="submit" value="Save for later"></div>
+				<div><input class="bottom_btn" id="preview" type="submit" value="Preview"></div>
+			</div>
+
+
+
+		</form>
+
+	</main>
+</body>
+
+</html>
