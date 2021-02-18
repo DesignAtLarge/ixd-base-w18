@@ -1,0 +1,67 @@
+.head{
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+   margin: 30px;
+}
+
+.phone{
+    display: flex;
+    justify-content: space-between;
+    margin:auto;
+    margin-top: 100px;
+    max-width: 500px;
+    height: 800px;
+    background-color: white;
+    border-style:solid;
+    }
+.gallery{
+    width: 80%;
+    height: 20%;
+    background-color: white;
+    text-align: center;
+    font-size: 48px;
+    margin: auto;
+    border-style: dashed;
+}
+
+.description{
+    width: 80%;
+    height: 8%;
+    margin: auto;
+    margin-top: 2%;
+}
+
+.events{
+    width: 80%;
+    height: 16%;
+    margin: auto;
+    margin-top: 2%;
+}
+
+.board{
+    width: 80%;
+    height: 16%;
+    margin: auto;
+    margin-top: 2%;
+}
+
+.social{
+    width: 80%;
+    height: 16%;
+    margin: auto;
+    margin-top: 2%;
+}
+.con{
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.e{
+    margin: auto;
+    border-style: solid;
+    height: 100px;
+    width: 40%;
+    text-align: center;
+}
