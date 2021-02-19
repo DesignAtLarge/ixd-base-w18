@@ -4,7 +4,8 @@
     {
       "id": 1,
 			"name": "Cheese Cake",
-			"image": "cheesecake.jpg"
+			"image": "cheesecake.jpg",
+      "description": "A sweet dessert consisting of one or more layers. The main, and thickest, layer consists of a mixture of a soft, fresh cheese, eggs, and sugar."
     },
     {
       "id": 2,
@@ -27,22 +28,22 @@
 			"image": "french-fries.jpg"
     },
     {
-      "id": 4,
+      "id": 6,
 			"name": "Lasagna",
 			"image": "lasagna.jpg"
     },
     {
-      "id": 5,
+      "id": 7,
 			"name": "Cheese Cake",
 			"image": "cheesecake.jpg"
     },
     {
-      "id": 6,
+      "id": 8,
 			"name": "Fish and Chips",
 			"image": "fish-and-chips.jpg"
     },
     {
-      "id": 7,
+      "id": 9,
 			"name": "Chicken Soup",
 			"image": "chicken-soup.jpg"
     }

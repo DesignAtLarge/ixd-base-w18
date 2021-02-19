@@ -1,16 +1,53 @@
+.container {
+  margin-top:20px;
+}
+
+.recipe{
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.img{
+  object-fit: contain;
+  height: 100%;
+  width: auto;
+  float: left;
+}
+
 .recipe_info{
-  height: 100px;
-  overflow: auto;
+  width: 180px;
+  float: left;
+  margin-left: 20px;
 }
 
-.recipe_name{
-  float:left;
-}
-
-.recipe_des{
-  float:left;
+.name{
+  font-size: 15px;
 }
 
 .likeBtn{
-  float:right;
+  margin-top: 36px;
+  float: right;
+}
+
+
+.content{
+  height: calc(100vh - 80px);
+  overflow:scroll;
+}
+
+.bottomBtn{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+
+.startBtn{
+  display: block;
+  margin: 2px auto;
+  width:100px;
+  margin-bottom: 10px;;
 }

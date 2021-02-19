@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="/css/recipe.css">
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-  <link href="/css/introHCI.css" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="/js/bootstrap.min.js"></script>
@@ -16,22 +15,69 @@
 
 <body>
   <div class="container">
-    <div class="recipe_info">
-      <img src="/image/{{image}}" alt="{{name}} pic" class="img">
-      <div class="recipe_name">{{recipeName}}</div>
-      <div class="recipe_des">{{description}}</div>
-      <button class="likeBtn">Like</button>
+
+    <div class="content">
+      <div class="recipe">
+        <img src="/images/{{image}}" alt="{{name}} pic" class="img">
+        <div class="recipe_info">
+          <div class="name">{{name}}</div>
+          <div class="des">{{description}}</div>
+        </div>
+        <button class="likeBtn">Like</button>
+      </div>
+
+      <hr>
+      <div class="ingredient">Ingredients:
+        <ul>
+          <li>6 tablespoons unsalted butter</li>
+          <li>1 1/2 cups graham cracker crumbs</li>
+          <li>2 tablespoons granulated sugar</li>
+          <li>Pinch fine salt</li>
+          <li>2 pounds cream cheese, at room temperature</li>
+          <li>1 1/4 cups granulated sugar</li>
+          <li>1 1/4 cups sour cream</li>
+          <li>6 large eggs, lightly beaten</li>
+          <li>1 tablespoon vanilla paste (see Cook's Note) or extract</li>
+          <li>1 teaspoon finely grated lemon zest</li>
+          <li>1 teaspoon finely grated orange zest</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="steps">Steps:
+        <ol>
+          <li>Position a rack in the middle of the oven and preheat to 325 degrees F.</li>
+          <li>For the crust: Melt the butter, covered in the microwave, in a medium microwave-safe bowl, or a saucepan.
+            Brush a 9-inch springform pan with some of the butter. Stir the remaining butter together with the crumbs,
+            sugar, and salt. Press the crumb mixture over the bottom of the pan, taking care to get the crust evenly
+            into
+            the edges. Bake until golden brown, 15 to 18 minutes. Cool. Wrap the bottom and up the sides of the pan with
+            foil and put in a roasting pan.</li>
+          <li>For the filling: Beat the cream cheese on medium speed with a hand-held mixer until smooth. Add the
+            granulated sugar and beat just until light and fluffy, scraping the sides of the bowl and beaters as needed.
+            Slowly beat in the sour cream, then eggs, vanilla and both citrus zests; take care not to over whip. Pour
+            into
+            the cooled crust.</li>
+          <li>Bring a medium saucepan or kettle of water to a boil. Gently place the roasting pan in the oven (don't
+            pull
+            the rack out of the oven). Pour in enough hot water to come about halfway up the side of the springform pan.
+            Bake the cheesecake for about 1 hour and 10 minutes---the outside of the cake will set but the center will
+            still be loose.</li>
+          <li>For the topping: Stir together the sour cream, confectioners' sugar and vanilla. Spread over the top of
+            the
+            cooked cheesecake and return to the oven for 5 minutes. Turn the oven off, cook the cheesecake in the
+            residual
+            heat in the oven for about 1 hour. This gentle finish minimizes the risk of the dreaded crack in your
+            cheesecake.</li>
+          <li>Remove cheesecake from the roasting pan to a rack. Run a knife around the edges and cool to room
+            temperature. Cover and refrigerate at least 8 hours or overnight.</li>
+          <li>Bring cheesecake to room temperature 30 minutes before serving. Remove the springform ring. Dip a knife in
+            warm water, wipe dry before slicing each piece. Serve with berries, if desired.</li>
+
+        </ol>
+      </div>
     </div>
-    <div class="ingredient">
-      <ul>
-        <li></li>
-      </ul>
-    </div>
-    <div class="steps">
-      <ul>
-        <li></li>
-      </ul>
-    </div>
+    <div class="bottomBtn"><button class="startBtn">Start Cooking</button></div>
+
   </div>
 
 </body>
