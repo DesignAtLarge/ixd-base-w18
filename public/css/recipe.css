@@ -1,0 +1,16 @@
+.recipe_info{
+  height: 100px;
+  overflow: auto;
+}
+
+.recipe_name{
+  float:left;
+}
+
+.recipe_des{
+  float:left;
+}
+
+.likeBtn{
+  float:right;
+}

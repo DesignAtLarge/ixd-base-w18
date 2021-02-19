@@ -1,8 +1,38 @@
 <html>
+
 <head>
-	<title>Test Page</title>
+	<title>EasyCook</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/home.css" rel="stylesheet">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/introHCI.css" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-Begin here (or replace this with any static code already written).
+	<div class="recipe_list">
+		{{#each recipes}}
+		<div class="recipe" id="{{id}}">
+			<a href="/recipe/{{name}}">
+				<img src="images/{{image}}" alt="{{name}} pic" class="img">
+				<div class="recipe_name">{{name}}</div>
+			</a>
+			<button class="likeBtn">Like</button>
+		</div>
+		{{/each}}
+	</div>
+	<div class="nav_bar">
+		<div class="row">
+			<div class="col-xs-4 nav_option home_tab active"><a href="#">Home</a></div>
+			<div class="col-xs-4 nav_option like_tab"><a href="#">Like</a></div>
+			<div class="col-xs-4 nav_option profile_tab"><a href="#">Profile</a></div>
+		</div>
+
+	</div>
 </body>
+
 </html>

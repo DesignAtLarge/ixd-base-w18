@@ -1,0 +1,63 @@
+a, a:active, a:visited, a:link{
+  text-decoration: none;
+  color: black;
+}
+
+.recipe_list{
+  height: calc(100% - 50px);
+  overflow: scroll;
+}
+
+.recipe {
+  height: 120px;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.recipe + .recipe{
+  border-top: 1px solid black;
+}
+
+.recipe a {
+  overflow: auto;
+  width: calc(100% - 50px);
+}
+
+.recipe a .img{
+  object-fit: contain;
+  height: 100%;
+  width: auto;
+  float: left;
+}
+
+.recipe_name{
+  font-size: 20px;
+  float: left;
+  margin-left: 20px;
+  margin-top: 36px;
+}
+
+.likeBtn{
+  margin-top: 36px;
+  float: right;
+}
+
+
+/* nav bar */
+.nav_bar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  border-top: 1px solid gray;
+}
+
+.nav_option{
+  line-height: 50px;
+}
+
+.row .active{
+  text-shadow: 1px 1px gray;
+}
