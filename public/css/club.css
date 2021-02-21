@@ -1,3 +1,6 @@
+.main{
+    background-color: gray;
+}
 .head{
     display: flex;
     justify-content: space-between;
