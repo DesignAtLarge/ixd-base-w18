@@ -1,6 +1,24 @@
-.main{
-    background-color: gray;
-}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: whitesmoke;
+  }
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 505px;
+    height: 900px;
+    background-color: white;
+    border-style:solid;
+  }
+
 .head{
     display: flex;
     justify-content: space-between;
@@ -8,16 +26,6 @@
    margin: 30px;
 }
 
-.phone{
-    display: flex;
-    justify-content: space-between;
-    margin:auto;
-    margin-top: 100px;
-    max-width: 500px;
-    height: 800px;
-    background-color: white;
-    border-style:solid;
-    }
 .gallery{
     width: 80%;
     height: 20%;
