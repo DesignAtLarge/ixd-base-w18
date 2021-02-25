@@ -39,7 +39,19 @@
         </div>
       </div>
 
-      <section>
+      {{#each club}}
+        <section>
+          <div class="sectionUnit" id="{{id}}">
+            <h2>{{name}}</h2>
+            <p>{{description}}</p>
+          </div>
+          <div class="sectionUnit2">
+            <img src="../images/heart_outline.png">
+          </div>
+        </section>
+      {{/each}}
+
+    <!--  <section>
         <div class="sectionUnit">
           <h2>Design Co.</h2>
           <p>pre-professional design org</p>
@@ -91,6 +103,7 @@
           <img src="../images/heart_outline.png">
         </div>
       </section>
+    -->
 
     </div>
 

@@ -39,11 +39,8 @@ if ('development' == app.get('env')) {
 
 app.get('/', index.view);
 app.get('/club', club.view);
-<<<<<<< HEAD
 app.get('/login', login.view);
-=======
 app.get('/event', event.view);
->>>>>>> 10b10782e056e9cba5ca67001e6aa8458fa98b0b
 // Example route
 // app.get('/users', user.list);
 
