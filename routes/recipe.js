@@ -1,18 +1,18 @@
 var recipes = require('../recipes.json')['recipes'];
 
 exports.viewRecipe = function(req, res) {
-  var id = req.params.id;
-  console.log(id);
-  var recipe = getRecipe(id);
+  var name = req.params.name;
+  console.log(name);
+  var recipe = getRecipe(name);
   res.render('recipe', recipe);
 };
 
-function getRecipe(id) {
-  if (id == "random") {
-    id = Math.floor(Math.random() * projects.length) + 1;
-  } else {
-    id = parseInt(id);
+function getRecipe(name) {
+  var i = 0;
+  var target = recipes[i];
+  while (target.name !== name) {
+    i++;
+    target = recipes[i];
   }
-  var recipe = recipes[id - 1]; // of by one, our first project has index 0
-  return recipe;
+  return target;
 }

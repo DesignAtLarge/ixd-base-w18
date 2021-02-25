@@ -5,7 +5,9 @@
       "id": 1,
 			"name": "Cheese Cake",
 			"image": "cheesecake.jpg",
-      "description": "A sweet dessert consisting of one or more layers. The main, and thickest, layer consists of a mixture of a soft, fresh cheese, eggs, and sugar."
+      "description": "A sweet dessert consisting of one or more layers. The main, and thickest, layer consists of a mixture of a soft, fresh cheese, eggs, and sugar.",
+      "ingredient": ["ingre1", "ingre2"],
+      "steps": ["step1", "step2"]
     },
     {
       "id": 2,

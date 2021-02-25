@@ -4,34 +4,46 @@
 	<title>EasyCook</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="/css/home.css" rel="stylesheet">
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
+
+	<link href="/css/home.css" rel="stylesheet">
+
 </head>
 
 <body>
-	<div class="recipe_list">
-		{{#each recipes}}
-		<div class="recipe" id="{{id}}">
-			<a href="/recipe/{{id}}">
-				<img src="images/{{image}}" alt="{{name}} pic" class="img">
-				<div class="recipe_name">{{name}}</div>
-			</a>
-			<button class="likeBtn">Like</button>
+	<div class="tab-content">
+		<div id="home" class="tab-pane fade in active">
+			<div class="recipe_list">
+				{{#each recipes}}
+				<div class="recipe" id="{{id}}">
+					<a href="/recipe/{{name}}">
+						<img src="images/{{image}}" alt="{{name}} pic" class="img">
+						<div class="recipe_name">{{name}}</div>
+					</a>
+					<button class="likeBtn">Like</button>
+				</div>
+				{{/each}}
+			</div>
 		</div>
-		{{/each}}
+		<div id="like" class="tab-pane fade">
+			<h3>Recipes you like</h3>
+		</div>
+		<div id="inv" class="tab-pane fade">
+			<h3>Inventory</h3>
+		</div>
 	</div>
-	<div class="nav_bar">
-		<div class="row">
-			<div class="col-xs-4 nav_option home_tab active"><a href="#">Home</a></div>
-			<div class="col-xs-4 nav_option like_tab"><a href="#">Like</a></div>
-			<div class="col-xs-4 nav_option profile_tab"><a href="#">Profile</a></div>
-		</div>
 
-	</div>
+
+	{{!-- navbar starts here --}}
+	<ul class="nav nav-pills">
+		<li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+		<li><a data-toggle="pill" href="#like">Like</a></li>
+		<li><a data-toggle="pill" href="#inv">Inventory</a></li>
+	</ul>
 </body>
 
 </html>

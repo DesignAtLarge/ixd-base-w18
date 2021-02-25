@@ -44,7 +44,7 @@ a, a:active, a:visited, a:link{
 
 
 /* nav bar */
-.nav_bar{
+.nav{
   position: fixed;
   bottom: 0;
   left: 0;
@@ -54,10 +54,11 @@ a, a:active, a:visited, a:link{
   border-top: 1px solid gray;
 }
 
-.nav_option{
+.nav li{
   line-height: 50px;
+  width: 33%;
 }
 
-.row .active{
-  text-shadow: 1px 1px gray;
+.nav li a{
+  padding: 0;
 }
