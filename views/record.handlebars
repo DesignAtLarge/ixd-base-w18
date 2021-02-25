@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>Wellness Tracker</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<script src="/js/bar.js"></script>
+</head>
+
+<body>
+	<div id="main" class="screen">
+		<div class="dropdown">
+		<button onClick="openMenu()" class="dropbtn">&#9776;</button>
+		<div id="sidebar" class="dropdown-content">
+      <a class="selected" href="/">Home</a>
+      <a href="record">Record</a>
+      <a href="forum">Forum</a>
+      <a href="profile">Profile</a>
+      <a href="help">Help</a>
+		</div>
+  </div>
+    <h3 class="title">Record Data</h3>
+		<div class="submitform">
+				<form>
+					<label class="formlabels" for="date">Date:</label>
+					<input type="text" id="date" name="date"><br>
+
+					<label class="formlabels" for="title">Title:</label>
+					<input type="text" id="title" name="title"><br>
+
+					<label class="formlabels2" for="subject" class="recordlabel">Subject:</label>
+					<select name="Subject" id="subject" class="recordsel">
+						<option value="sleep">Sleeping</option>
+						<option value="Mood">Mood</option>
+						<option value="Excercise">Excercise</option>
+					</select><br>
+				</form>
+
+		</div><br>
+		<p> How many hours did you sleep last night?</p>
+		<select name="time" id="time" class="recordsel">
+			<option value="6 hours">6 hours</option>
+			<option value="7 hours">7 hours</option>
+			<option value="8 hours">8 hours</option>
+		</select><br>
+		<p>&#160;</p>
+		<p> On a scale of 1 to 10 how stressed were you yesterday?</p>
+		<input type="text" id="title" name="title"><br>
+		<p>&#160;</p>
+		
+		<button type="button" class="cancel">Cancel</button>
+		<button type="button" class="save">Save</button>
+	</div>
+
+
+</body>
+</html>

@@ -6,9 +6,13 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars')
+var handlebars = require('express3-handlebars');
 
 var index = require('./routes/index');
+var record = require('./routes/record');
+var forum = require('./routes/forum');
+var help = require('./routes/help');
+var profile = require('./routes/profile');
 // Example route
 // var user = require('./routes/user');
 
@@ -37,7 +41,10 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 // Example route
 // app.get('/users', user.list);
-
+app.get("/record",record.viewR);
+app.get("/help",help.viewHelp);
+app.get("/forum",forum.viewForum);
+app.get("/profile",profile.viewProfile);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

@@ -25,7 +25,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
  * limitations under the License.
  * ======================================================================== */
 
-
+ 
 +function ($) { "use strict";
 
   // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)

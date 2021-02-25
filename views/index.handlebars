@@ -1,8 +1,50 @@
 <html>
 <head>
-	<title>Test Page</title>
+	<title>Wellness Tracker</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<script src="/js/bar.js"></script>
 </head>
+
 <body>
-Begin here (or replace this with any static code already written).
+	<div id="main" class="screen">
+		<div class="dropdown">
+		<button onClick="openMenu()" class="dropbtn">&#9776;</button>
+		<div id="sidebar" class="dropdown-content">
+				<a class="selected" href="#">Home</a>
+				<a href="record">Record</a>
+				<a href="forum">Forum</a>
+				<a href="profile">Profile</a>
+				<a href="help">Help</a>
+		</div>
+	</div>
+		<h3 class="welcome"> Welcome,</h3>
+		<h3 class="name">John</h3>
+		<p>Check out your stats for the day!:</p>
+		<div class="data">
+			<button onClick="graph()" class="dropmenu">&#x22EE;</button>
+			<div id="options" class="graph-content">
+				<label for="graph">Graph Type</label>
+					<select name="graph" id="graph">
+					<option value="sleep">Sleep</option>
+					</select>
+					<label for="graph">Graph Type</label>
+					<select name="X-axis" id="graph">
+					<option value="day">day</option>
+					</select>
+					<label for="graph">Graph Type</label>
+					<select name="Y-axis" id="graph">
+					<option value="mood">mood</option>
+					</select>
+			</div>
+	  </div>
+		<div class="graph">
+			<p></p>
+			<img src="images/img_graph.JPG" alt="Record some data" width="300" height="300">
+		</div>
+	</div>
 </body>
 </html>

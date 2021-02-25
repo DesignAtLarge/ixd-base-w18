@@ -42,7 +42,34 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
-
+.screen {
+  margin: auto;
+  text-align: center;
+  width: 350px;
+  height: 600px;
+  border: 5px solid black;
+  padding: 10px;
+  justify-content: center;
+  align-items: flex-end;
+}
+.nav{
+  float: right;
+  color: gray;
+}
+.data{
+  text-align: right;
+}
+.graph{
+  height: 25px;
+  margin: auto;
+}
+.welcome{
+  padding: 10px;
+  height:35px;
+}
+.name{
+  height: 50px;
+}
 body {
   margin: 0;
 }
@@ -96,7 +123,70 @@ samp {
   font-family: monospace, serif;
   font-size: 1em;
 }
+.dropbtn {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+.dropmenu{
+  background-color: white;
+  color: black;
+  padding: 10px;
+  font-size: 30px;
+  border: none;
+  outline: none;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  float: left;
+}
+.data {
+  position: relative;
+  display: inline-block;
+  float: left;
+  left: 2px;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 
+}
+.graph-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.title{
+  line-height: 100px;
+  margin-left: -950px;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {color: blue;}
+.data:hover .dropmenu {color: blue;}
+s
 pre {
   white-space: pre-wrap;
 }
@@ -165,8 +255,9 @@ input {
 button,
 select {
   text-transform: none;
-}
 
+}
+s
 button,
 html input[type="button"],
 input[type="reset"],
@@ -1871,10 +1962,41 @@ legend {
 
 label {
   display: inline-block;
+
   margin-bottom: 5px;
   font-weight: bold;
-}
 
+
+}
+.recordsel{
+  width: 179px;
+  height: 27px;
+}
+.formlabels{
+  margin-top: 20px;
+  text-align: left;
+
+}
+.formlabels2{
+margin-top: 20px;
+margin-left: -20px;
+}
+.submitform{
+  border: solid;
+}
+.cancel{
+  background-color: grey;
+  color: white;
+  border: none;
+  outline: none;
+  margin-right: 30px;
+}
+.save{
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none;
+}
 input[type="search"] {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
