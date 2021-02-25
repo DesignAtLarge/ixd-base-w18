@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/club.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/calendar.css">
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    <title>Calendar</title>
+</head>
+
+<body>
+    <div class="main">
+        <header>
+            <a href="/">
+                <div class="headerUnit">
+                    <h1>Clubs</h1>
+                </div>
+            </a>
+            <div class="headerUnit">
+                <a href="/event">
+                    <h1 class="longTitle">Upcoming Events</h1>
+                </a>
+            </div>
+            <div id="divImg">
+                <a href="/calendar"></a>
+                <img src="../images/heart calendar.png">
+            </div>
+        </header>
+
+        {{#each savedEvent}}
+        <h2>{{weekNum}}</h2>
+        {{#each events}}
+        <section>
+            <div class="sectionUnit">
+
+                
+                <h3>{{clubEvent}}</h3>
+                <p>{{clubName}}</p>
+                <h4>{{location}}</h4>
+                <h4>{{date}}</h4>
+            </div>
+            <div class="sectionUnit2">
+                <img src="../images/heart_fill.png">
+            </div>
+        </section>
+        {{/each}}
+        {{/each}}
+
+    </div>
+
+</body>
+
+
+</html>
