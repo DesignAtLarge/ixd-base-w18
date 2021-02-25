@@ -34,10 +34,16 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', index.view);
+// landing page
+app.get('/', index.landing);
+// handle user login or signup
+app.get('/register', index.register);
+app.post('/register', index.handleRegister);
+app.get('/login', index.login);
+app.post('/login', index.handleLogin);
+// handle view recipes
+app.get('/recipes', recipe.view);
 app.get('/recipe/:name', recipe.viewRecipe);
-// Example route
-// app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));

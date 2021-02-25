@@ -1,4 +1,8 @@
-var recipes = require('../recipes.json')['recipes'];
+var recipes = require('../recipes.json');
+
+exports.view = function(req, res) {
+  res.render('index', recipes);
+};
 
 exports.viewRecipe = function(req, res) {
   var name = req.params.name;
@@ -9,10 +13,10 @@ exports.viewRecipe = function(req, res) {
 
 function getRecipe(name) {
   var i = 0;
-  var target = recipes[i];
+  var target = recipes['recipes'][i];
   while (target.name !== name) {
     i++;
-    target = recipes[i];
+    target = recipes['recipes'][i];
   }
   return target;
 }
