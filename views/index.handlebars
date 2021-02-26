@@ -19,16 +19,22 @@
 
     <header>
       <div class="headerUnit">
+        <a href="/">
         <h1>Clubs</h1>
+        </a>
       </div>
       <div class="headerUnit">
         <a href="/event">
           <h1 class="longTitle">Upcoming Events</h1>
         </a>
       </div>
+      
       <div id="divImg">
+        <a href="/calendar">
         <img src="../images/heart calendar.png">
+        </a>
       </div>
+    
     </header>
 
     <div id="formInput">
@@ -37,16 +43,16 @@
           <input type="text" id="keyword" name="keyword"><br>
         </form>
       </div>
-      <div id="box2">
+      <!-- <div id="box2">
         <img src="../images/filter.png">
-      </div>
+      </div> -->
     </div>
 
       {{#each club}}
         <section>
           <a href="/club">
             <div class="sectionUnit" id="{{id}}">
-              <h2>{{name}}</h2>
+              <h3>{{name}}</h3>
               <p>{{description}}</p>
             </div>
           </a>

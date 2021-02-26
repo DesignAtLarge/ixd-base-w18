@@ -1,17 +1,11 @@
 {
 	"club":
 	[
+
 		{
-			"id": "mus",
-			"name": "Musicians Club @ UCSD",
-			"description": "Our purpose is to give an outlet for music lovers to share and express their passion for music.",
-			"image": "http://upload.wikimedia.org/wikipedia/commons/3/3b/Bowery_men_waiting_for_bread_in_bread_line,_New_York_City,_Bain_Collection.jpg",
-			"idH": "clubHeart"
-		},
-		{
-			"id": "ACMH",
-			"name": "ACM Hack",
-			"description": "ACM Hack aims to spread the knowledge of Software Engineering and general computing.",
+			"id": "ACM",
+			"name": "ACM UCSD",
+			"description": "ACM UC San Diego is a computing focused organization on campus.",
 			"image": "http://www.google.com/think/images/prototyping-for-success_articles_lg.jpg",
 			"idH": "clubHeart1"
 		},
@@ -30,9 +24,9 @@
 			"idH": "clubHeart3"
 		},
 		{
-			"id": "artnmedia",
-			"name": "Digital Arts and Media",
-			"description": "In the 21st century, social media advertising is vital to the success of cooperations.",
+			"id": "dsgn",
+			"name": "Design Co",
+			"description": "We’re a strong and scrappy design community at UC San Diego, bridging the gap between young designers and industry. ",
 			"image": "http://regmedia.co.uk/2011/03/01/node_code.png",
 			"idH": "clubHeart4"
 		},
