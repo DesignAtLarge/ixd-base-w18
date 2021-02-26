@@ -1,0 +1,249 @@
+/* applies to anything of class "example-class-selector" */
+body {
+	font-family: 'Rubik', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.example-class-selector {
+	margin-top: 2em;
+}
+
+/* applies to any <p> descendants of an element of class "example-class-selector" */
+.example-class-selector p {
+	/* Colors are in hexadecimal: http://www.colorpicker.com/ */
+	color: #cc00aa;
+}
+
+.jumbotron {
+	background-color: white !important;
+}
+
+/*
+.jumbotron {
+	position: relative;
+	background: none;
+}
+
+.jumbotron:after {
+     content:"";
+     background: url("../images/lorempixel.jumbotron.jpeg");
+     opacity: 0.2;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     position: absolute;
+     z-index: -1;	
+}
+
+.jumbotron p {
+     color: #6e6e6e;
+}
+*/
+
+/*menu fixed at top & dropdown items*/
+#name {
+	color: black;
+}
+
+.name {
+	margin-top: 1rem;
+	margin-left: 1rem;
+	<<<<<<<: #657dc4 !important;
+	font-family: ;
+	=======: #212529 !important;
+	font-family: >>>>>>> 16e7ced543a86fc96f9ac44d4b93123f62594bcf;
+}
+
+.arrow {
+	position: absolute;
+	margin-top: 2rem;
+	margin-left: -1rem;
+}
+
+.top-button {
+	margin-top: 5%;
+	margin-right: 5%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.btn-secondary {
+	background-color: white !important;
+	border-color: white !important;
+}
+
+.dropdown-item {
+	font-size: 14pt;
+}
+
+.active,
+.dropdown-item:hover {
+	font-weight: 800 !important;
+	background-color: white !important;
+	color: #657dc4 !important;
+}
+
+/*primarybtn on the bottom of home page*/
+.primarybtn {
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+
+/*the bottom button background*/
+.home-bottom {
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	box-shadow: 0px 5px 15px gray;
+}
+
+/*for general buttons*/
+.btn-primary {
+	font-size: 20pt;
+	background-color: #657dc4 !important;
+	border-color: #657dc4 !important;
+	border-radius: 4px;
+	background-image: none;
+	box-shadow: none;
+	text-shadow: none;
+	background-position-y: 0;
+}
+.btn {
+	font-size: 12pt !important;
+}
+
+.btn-spacing {
+	margin: 8px 0;
+}
+
+/*things for the card on home page*/
+.card {
+	margin-bottom: 10%;
+}
+
+.card-link {
+	/*bottom part of the card*/
+	color: gray !important;
+	font-size: 12pt;
+}
+
+.card-iteminline {
+	/*top part of the card*/
+	display: flex;
+	justify-content: space-between;
+}
+
+/*for filter only*/
+.bottom-nav {
+	margin-top: 10%;
+	margin-bottom: 10%;
+	background-color: white;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+/* choice */
+.multiple-unselect {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 10px;
+
+	position: relative;
+	width: 70%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+
+	background: #ffffff;
+	border: 1px solid #bdbdbd;
+	box-sizing: border-box;
+	border-radius: 80px;
+	margin-bottom: 5%;
+}
+/*filter 2*/
+.select-all {
+	padding: 10px 20px;
+	margin: 10px 0px;
+	<<<<<<<: inline-block;
+	align-items: flex-start;
+	position: relative;
+
+	width: 150px;
+	height: 46px;
+	left: 10px;
+	top: 10px;
+
+	background: #ffffff;
+	border: 1px solid #bdbdbd;
+	box-sizing: border-box;
+	border-radius: 80px;
+}
+
+/*center aligned*/
+/*used in About: name card*/
+.center-aligned {
+	text-align: center;
+}
+
+.bg-modal {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+
+	position: absolute;
+	top: 0;
+}
+
+.modal-content {
+	width: 300px;
+	height: 300px;
+	background-color: white;
+	opacity: 1;
+}
+
+.form-content {
+	padding: 1rem;
+}
+
+.footer {
+	margin-top: 16px;
+	display: flex;
+	flex-direction: column;
+	/* justify-content: space-between; */
+}
+
+.content-spacing {
+	padding: 1rem;
+}
+
+.row-content {
+	padding: 1rem;
+}
+
+a {
+	display: block;
+}
+
+.header-display {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.aboutProject {
+	margin-top: 35%;
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.row {
+	overflow: hidden;
+}

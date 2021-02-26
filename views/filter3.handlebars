@@ -1,0 +1,149 @@
+<!doctype html>
+<head>
+	<title>Filter</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/introHCI.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+	<!-- this is a comment in HTML -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+<!--FB account log in -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/introHCI.js"></script>
+	<script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+
+</head>
+<body>
+
+	<div class="container">
+		<!--fixed menu top--> 
+			<!--Navbar-->
+		<div class="jumbotron fixed-top">
+		<a href="/index">
+			<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#212529" class="bi bi-chevron-left" viewBox="0 0 24 24">
+				<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+			</svg>
+			<h1 id="name" style ="display:inline;">Filter</h1>
+		</a>   
+		</div>		
+
+<br><br><br><br><br><br><br><br>
+
+<h2 class="center-aligned">
+	Would you prefer...?
+</h2>
+
+<br><br><br><br>
+
+
+		<div id = "out" class = "multiple-unselect">
+			<h2>Outdoor</h2>
+		</div>
+
+		<div id = "in" class = "multiple-unselect">
+			<h2>Indoor</h2>
+		</div>
+
+		<div id = "no" class = "multiple-unselect">
+			<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M13.5 1.6875C6.97676 1.6875 1.6875 6.97676 1.6875 13.5C1.6875 20.0232 6.97676 25.3125 13.5 25.3125C20.0232 25.3125 25.3125 20.0232 25.3125 13.5C25.3125 6.97676 20.0232 1.6875 13.5 1.6875ZM7.59375 11.1006C7.60051 10.7694 7.73682 10.454 7.97344 10.2222C8.21005 9.99038 8.52811 9.86053 8.85938 9.86053C9.19064 9.86053 9.5087 9.99038 9.74531 10.2222C9.98193 10.454 10.1182 10.7694 10.125 11.1006C10.1182 11.4318 9.98193 11.7471 9.74531 11.979C9.5087 12.2108 9.19064 12.3406 8.85938 12.3406C8.52811 12.3406 8.21005 12.2108 7.97344 11.979C7.73682 11.7471 7.60051 11.4318 7.59375 11.1006V11.1006ZM13.5 18.2725C11.2456 18.2725 9.39727 16.4979 9.28125 14.2752C9.27982 14.2466 9.28422 14.2181 9.29418 14.1912C9.30413 14.1644 9.31944 14.1399 9.33918 14.1192C9.35891 14.0985 9.38265 14.082 9.40895 14.0707C9.43526 14.0595 9.46358 14.0537 9.49219 14.0537H10.7604C10.8712 14.0537 10.9661 14.1381 10.974 14.2488C11.0742 15.554 12.1685 16.585 13.5 16.585C14.8315 16.585 15.9284 15.554 16.026 14.2488C16.0339 14.1381 16.1288 14.0537 16.2396 14.0537H17.5078C17.5364 14.0537 17.5647 14.0595 17.591 14.0707C17.6174 14.082 17.6411 14.0985 17.6608 14.1192C17.6806 14.1399 17.6959 14.1644 17.7058 14.1912C17.7158 14.2181 17.7202 14.2466 17.7188 14.2752C17.6027 16.4979 15.7544 18.2725 13.5 18.2725ZM18.1406 12.3662C17.8094 12.3595 17.4941 12.2231 17.2623 11.9865C17.0304 11.7499 16.9006 11.4318 16.9006 11.1006C16.9006 10.7693 17.0304 10.4513 17.2623 10.2146C17.4941 9.97803 17.8094 9.84172 18.1406 9.83496C18.4718 9.84172 18.7872 9.97803 19.019 10.2146C19.2508 10.4513 19.3807 10.7693 19.3807 11.1006C19.3807 11.4318 19.2508 11.7499 19.019 11.9865C18.7872 12.2231 18.4718 12.3595 18.1406 12.3662V12.3662Z" fill="black"/>
+			</svg>
+			<h2>&nbsp;No preference</h2>
+		</div>
+			
+		</div>
+
+		<!--button nav-->
+		<div class="fixed-bottom bottom-nav card-iteminline">
+            <a href = "/filter2">
+           <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#657DC4" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+            </svg>
+            </a>
+			
+			<!--<a href="/activity"> </a>-->
+				<div class = "btn btn-primary filter_button">
+					Let's do it!
+				</div>
+			
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>
+
+
+<script>
+	$(".filter_button").click(function(){
+		console.log(localStorage.getItem("currentId"));
+		console.log(localStorage.getItem("currentSelect"));
+		console.log(localStorage.getItem("selectedCategory"));
+	});
+</script>
+
+
+<script>
+	
+	$(".multiple-unselect").click(function(){
+		var currentSelect = $(this).attr("id");
+		var currentBg = $(this).css("background-color");
+		var currentText = $(this).css("color");
+
+		//check whether selected already
+		if (currentBg === "rgb(101, 125, 196)"){
+			localStorage.setItem("currentSelect", 'no');
+			$(this).css("background-color", "#FFFFFF");
+			$(this).css("color", "#212529");
+		} else {
+			localStorage.setItem("currentSelect", currentSelect);
+			$(this).css("background-color", "#657DC4");
+			$(this).css("color", "#FFFFFF");
+		}
+		
+		//multiple chioce: double click color disappear
+		$( ".multiple-unselect").each(function(){
+			if ($(this).attr("id") !== currentSelect){
+				$(this).css("background-color", "#FFFFFF");
+				$(this).css("color", "#212529");
+			}
+		})
+	});
+
+	//remember id when refresh
+	var selectId = localStorage.getItem("currentSelect");
+	if (selectId !== null){
+		$( ".multiple-unselect").each(function(){
+			if ($(this).attr("id") === selectId){
+				$(this).css("background-color", "#657DC4");
+                $(this).css("color", "#FFFFFF");
+			}
+		});
+	}
+</script>
+
+<!--
+<script>
+	$(".filter_button").click(function(){
+	window.location.href = '/filtered?time='+localStorage.getItem("currentId");
+	//window.location.href = '/filtered?time=category='+ JSON.parse(localStorage.getItem("selectedCategory"));
+	//window.location.href = '/filtered?time=category=tag='+ localStorage.getItem("currentSelect");
+
+	//console.log(localStorage.getItem("currentId"));
+	//console.log(localStorage.getItem("selectedCategory"));
+	//console.log(localStorage.getItem("currentSelect"));
+	});
+</script>-->

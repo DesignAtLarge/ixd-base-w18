@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/introHCI.css">
+    <title>Completion Screen</title>
+</head>
+<body>
+    <header class="jumbotron">
+        <div class="container header-display">
+           
+            <h1 class="fixed-top name">Complete</h1>
+    
+            <div class="w-80 top-button fixed-top">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+    
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#F59292"
+                            class="bi bi-grid-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z" />
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="/index"> <button class="dropdown-item active" type="button">Home</button> </a>
+                        <a href="/setting"> <button class="dropdown-item" type="button">Setting</button></a>
+                        <a href="/about"> <button class="dropdown-item" type="button">About</button></a>
+                        <a href="/logIn"> <button class="dropdown-item" type="button"
+                                style="background-color: grey; color: white;">Log Out</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="row row-content">
+        <div class="col-sm">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_5upjwxvm.json" background="transparent" speed="1"
+                style="width: 300px; height: 200px;" loop autoplay></lottie-player>
+        </div>
+        <div class="col-sm col">
+            <h3>Yay! You completed your first activity</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            
+            <button id="camera-button" class="btn btn-primary btn-block" type="button">Share</button>
+            
+            <p class="result"></p>
+            {{!-- <div id="camera" class="profile" style="max-width: 250px;">
+                <video autoplay id="camera-video"></video>
+                <button id="camera-button" class="btn btn-primary">Take Photo</button>
+            </div> --}}
+
+        </div>
+        <div class="col-sm footer content-spacing">
+            <a href="/index">
+                <button type="button" class="btn btn-outline-primary btn-block btn-spacing" id="back-home">Back to home</button>
+            </a>
+        </div>
+    </div>
+    {{!-- js --}}
+    
+    <script>
+        let shareData = {
+                title: 'share',
+                text: 'share event',
+                url: 'https://a6-lacuna.herokuapp.com/'
+            };
+
+        const btn = document.getElementById('camera-button');
+        const resultPara = document.querySelector('.result');
+        const backHome = document.getElementById("back-home");
+
+        btn.addEventListener('click', () => {
+            navigator.share({ title: 'title', text: 'thanks', url: window.location.href }).then(() => console.log('Successful share'),
+                error => console.log('Error sharing:', error));
+        });
+
+        btn.addEventListener('click', comingSoon)
+
+        function comingSoon(e) {
+            alert('Coming Soon!');
+        }
+
+
+    </script>
+    
+    {{!-- <script src="https://code.jquery.com/jquery.js"></script> --}}
+    {{!-- <script src="/js/bootstrap.min.js"></script> --}}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+</body>
+</html>

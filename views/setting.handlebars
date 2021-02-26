@@ -1,0 +1,133 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Settings</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/introHCI.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+<!--FB account log in -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/introHCI.js"></script>
+
+</head>
+
+<body>
+	<header class="jumbotron">
+		<div class="container header-display">
+			
+			<h1 class="fixed-top name">Setting</h1>
+			
+			<div class="w-80 top-button fixed-top">
+				<div class="btn-group">
+					<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false">
+						
+						<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#F59292" class="bi bi-grid-fill"
+							viewBox="0 0 16 16">
+							<path
+								d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z" />
+						</svg>
+					</button>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="/index"> <button class="dropdown-item active" type="button">Home</button> </a>
+						<a href="/setting"> <button class="dropdown-item active" type="button">Setting</button></a>
+						<a href="/about"> <button class="dropdown-item" type="button">About</button></a>
+						<a href="/logIn"> <button class="dropdown-item" type="button"
+								style="background-color: grey; color: white;">Log Out</button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-12">
+				<h2 class="card-title">Profile</h2>
+			</div>
+		</div>
+
+		<div class="row ">
+			<div class="col-12 col-sm row-content">
+				<h2>Reminders</h2>
+				<h4>How often do you want to get new ideas?</h4>
+				<div class="input-group">
+					<select class="custom-select" id="inputGroupSelect04">
+						<option selected>Choose One</option>
+						<option value="1">Daily</option>
+						<option value="2">Weekly</option>
+						<option value="3">Monthly</option>
+					</select>
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary" type="button" id="save-time">Save</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm form-content">
+				<h4>When do you want to get new ideas?</h4>
+				<div class="input-group">
+					<select class="custom-select" id="inputGroupSelect05">
+						<option selected>Choose One</option>
+						<option value="1">Morning</option>
+						<option value="2">Afternoon</option>
+						<option value="3">Evening</option>
+					</select>
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary" type="button" id="save-when">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm footer">
+				<button type="button" class="btn btn-primary btn" id="del">Delete Account</button>
+				<button type="button" class="btn btn-outline-primary btn-spacing" id="manage">Manage Account</button>
+			</div>
+		</div>
+
+	</div>
+
+	{{!-- js --}}
+	<script>
+		const manageBtn = document.getElementById('manage');
+		const delBtn = document.getElementById('del');
+		const saveBtn1 = document.getElementById('save-time');
+		const saveBtn2 = document.getElementById('save-when');
+		manageBtn.addEventListener('click', function (e) {
+				alert('Coming Soon!');
+		});
+		delBtn.addEventListener('click', function (e) {
+				alert('Coming Soon!');
+		});
+		saveBtn1.addEventListener('click', function (e) {
+				alert('Successfully Saved');
+		});
+		saveBtn2.addEventListener('click', function (e) {
+				alert('Successfully Saved');
+		});
+	</script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+		integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+		crossorigin="anonymous"></script>
+</body>
+</html>

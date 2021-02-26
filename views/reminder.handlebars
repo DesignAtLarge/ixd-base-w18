@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/introHCI.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-sm">
+        <div class="jumbotron fixed-top">
+            <h1 id="name">&nbsp;&nbsp;&nbsp;&nbsp;Reminders</h1>
+            <div class="w-80 top-button fixed-top">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-grid-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z" />
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="/"> <button class="dropdown-item active" type="button">Home</button> </a>
+                        <a href="/setting"> <button class="dropdown-item" type="button">Setting</button></a>
+                        <a href="/reminder" target="_blank"> <button class="dropdown-item" type="button">Reminder</button></a>
+                        <a href="/about"> <button class="dropdown-item" type="button">About</button></a>
+                        <a href="#"> <button class="dropdown-item" type="button"
+                                style="background-color: grey; color: white;">Log in</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{!-- reminders --}}
+        <div class="container form">
+            <h3>How often do you want to get new ideas?</h3>
+            <div class="input-group">
+                <select class="custom-select" id="select-days">
+                    <option selected>Choose Day Range</option>
+                    <option value="1">Daily</option>
+                    <option value="2">Weekly</option>
+                </select>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">Select</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container form">
+            <h3>When do you want to get new ideas</h3>
+            <div class="input-group">
+                <select class="custom-select" id="select-times">
+                    <option selected>Choose Time Range</option>
+                    <option value="1">8:00AM - 10:00AM</option>
+                    <option value="2">10:00AM - 12:00PM</option>
+                    <option value="3">12:00PM - 2:00PM</option>
+                    <option value="4">2:00PM - 4:00PM</option>
+                    <option value="5">4:00PM - 6:00PM</option>
+                    <option value="6">6:00PM - 8:00PM</option>
+                    <option value="7">8:00PM - 10:00PM</option>
+                </select>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">Select</button>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    {{!-- js --}}
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/introHCI.js"></script>
+</body>
+</html>

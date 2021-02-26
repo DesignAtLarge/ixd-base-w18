@@ -1,4 +1,4 @@
-repo
+Fluffy socks 120 app
 ====
 
-Project Description
+Team 4: app that reminds breaktime and offers breaktime ideas
