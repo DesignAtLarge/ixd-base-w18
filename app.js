@@ -12,6 +12,7 @@ var index = require('./routes/index');
 var club = require('./routes/club');
 var event = require('./routes/event');
 var calendar = require('./routes/calendar');
+var login = require('./routes/login');
 // Example route
 // var user = require('./routes/user');
 
