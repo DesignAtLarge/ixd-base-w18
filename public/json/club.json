@@ -34,11 +34,7 @@
 		{
 			"id": "food",
 			"name": "Food Cooperative at UCSD",
-<<<<<<< HEAD
 			"description": "The Food Cooperative at UCSD is a collective running a store serving vegan food and products, with the interest in fostering social, political, economic, and ecological change.</p>",
-=======
-			"description": "The Food Cooperative at UCSD is a collective running a store serving vegan food and products, with the interest in fostering social, political, economic, and ecological change.",
->>>>>>> 2a55509876d08b823d3b5fb190dc6a1837b60fde
 			"image": "http://torontopubliclibrary.typepad.com/.a/6a00e5509ea6a18834019b00ff4518970b-800wi"
 		}
 	]
