@@ -12,12 +12,23 @@
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script src="js/event.js"></script>
-
+    <script src="/js/event.js"></script>
     <title>Event</title>
 </head>
 
 <body>
+    <script type="text/javascript">
+        function clickHeart() {
+            var image = document.getElementById('clickHeart');
+
+            if (image.src.match("images/heart_outline.png")) {
+                image.src = "images/pink_heart.png";
+            }
+            else {
+                image.src = "images/heart_outline.png";
+            }
+        }
+    </script>
     <div class="main">
         <header>
             <div class="headerUnit">
@@ -43,7 +54,7 @@
                 <p>Cognitive Science Building</p>
             </div>
             <div class="sectionUnit2">
-                <img src="../images/heart_outline.png"id="clickHeart" onclick="clickHeart();"/>
+                <img src="../images/heart_outline.png" id="clickHeart" onclick=clickHeart(); />
             </div>
         </section>
         <section>
@@ -54,7 +65,7 @@
                 <p>Cognitive Science Building</p>
             </div>
             <div class="sectionUnit2">
-                <img src="../images/heart_outline.png" id="clickHeart" onclick="clickHeart();"/>
+                <img src="../images/heart_outline.png" id="clickHeart" onclick=clickHeart(); />
             </div>
         </section>
         <section>
@@ -65,7 +76,7 @@
                 <p>Cognitive Science Building</p>
             </div>
             <div class="sectionUnit2">
-                <img src="../images/heart_outline.png" id="clickHeart" onclick="clickHeart();"/>
+                <img src="../images/heart_outline.png" id="clickHeart" onclick=clickHeart(); />
             </div>
         </section>
         <h2>1/28 - 2/5</h2>
