@@ -1,8 +1,10 @@
-function clickHeart(){
-    var img1 = "../images/heart_outline.png";
-   var img2 = "../images/pink_heart.png";
-   
-   var imgElement = document.getElementById('clickHeart');
+function clickHeart() {
+    var image = document.getElementById('clickHeart');
 
-   imgElement.src = (imgElement.src === img1)? img2 : img1;
+    if (image.src.match("images/heart_outline.png")) {
+        image.src = "images/pink_heart.png";
+    }
+    else {
+        image.src = "images/heart_outline.png";
+    }
 }
