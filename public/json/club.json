@@ -1,41 +1,48 @@
 {
 	"club":
 	[
+
 		{
-			"id": "mus",
-			"name": "Musicians Club @ UCSD",
-			"description": "Our purpose is to give an outlet for music lovers to share and express their passion for music, to allow musicians to collaborate and learn from one another, and to give musicians of all levels the experience of performing with others in front of an audience.",
-			"image": "http://upload.wikimedia.org/wikipedia/commons/3/3b/Bowery_men_waiting_for_bread_in_bread_line,_New_York_City,_Bain_Collection.jpg"
-		},
-		{
-			"id": "ACMH",
-			"name": "ACM Hack",
-			"description": "ACM Hack aims to spread the knowledge of Software Engineering and general computing and help its members develop technical skills. ACM Hack also aims to foster an inclusive and open community within UC San Diego.",
-			"image": "http://www.google.com/think/images/prototyping-for-success_articles_lg.jpg"
+			"id": "ACM",
+			"name": "ACM UCSD",
+			"description": "ACM UC San Diego is a computing focused organization on campus.",
+			"image": "http://www.google.com/think/images/prototyping-for-success_articles_lg.jpg",
+			"idH": "clubHeart1"
 		},
 		{
 			"id": "astro",
 			"name": "Astronomy Club at UCSD",
-			"description": "Astronomy Club at UCSD aims to promote the interest of astronomy and astrophysics among UCSD undergraduates. Our organization will focus on the exploration of the universe. We hope to help students, who are interested in astronomy, make observations, know each other and get more access to professional faculty.",
-			"image": "http://searchwide.com/wp-content/uploads/2013/11/evaluation.jpg"
+			"description": "Astronomy Club at UCSD aims to promote the interest of astronomy and astrophysics.",
+			"image": "http://searchwide.com/wp-content/uploads/2013/11/evaluation.jpg",
+			"idH": "clubHeart2"
 		},
 		{
 			"id": "beatz",
 			"name": "Beat @ UCSD",
-			"description": "To provide a fun and lively atmosphere to continue our passion for a cappella music at the collegiate level; to immerse members into the a cappella community on-campus and beyond; to strengthen and improve vocal and musical ability; to provide entertaining performances; and to foster close-knit relationships within the group.",
-			"image": "http://www.quality-wars.com/wp-content/uploads/Gantt-Chart-Example-2-NO-LETTERS1.jpg"
+			"description": "To provide a fun and lively atmosphere to continue our passion for a cappella music.",
+			"image": "http://www.quality-wars.com/wp-content/uploads/Gantt-Chart-Example-2-NO-LETTERS1.jpg",
+			"idH": "clubHeart3"
 		},
 		{
-			"id": "artnmedia",
-			"name": "Digital Arts and Media",
-			"description": "In the 21st century, social media advertising is vital to the success of cooperations. Many start-ups and fully developed companies are looking for media teams to help keep up with the booming industry that is social advertising. The purpose of Digital Arts and Media is to experience what it is like to be apart of a social media team and how to channel creative skills into a lucrative job.",
-			"image": "http://regmedia.co.uk/2011/03/01/node_code.png"
+			"id": "dsgn",
+			"name": "Design Co",
+			"description": "We’re a strong and scrappy design community at UC San Diego, bridging the gap between young designers and industry. ",
+			"image": "http://regmedia.co.uk/2011/03/01/node_code.png",
+			"idH": "clubHeart4"
 		},
 		{
+<<<<<<< HEAD
 			"id": "food",
 			"name": "Food Cooperative at UCSD",
 			"description": "The Food Cooperative at UCSD is a collective running a store serving vegan food and products, with the interest in fostering social, political, economic, and ecological change.",
 			"image": "http://torontopubliclibrary.typepad.com/.a/6a00e5509ea6a18834019b00ff4518970b-800wi"
+=======
+			"id": "vsa",
+			"name": "Vietnamese Student Association",
+			"description": "VSA is an Vietnamese culture org that celebrates inclusivity and community.",
+			"image": "http://torontopubliclibrary.typepad.com/.a/6a00e5509ea6a18834019b00ff4518970b-800wi",
+			"idH": "clubHeart5"
+>>>>>>> 99e79c6dadb520a52b71881aede7c593d26a35e1
 		}
 	]
 }

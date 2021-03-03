@@ -12,6 +12,7 @@
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/event.js"></script>
 
     <title>Event</title>
 </head>
@@ -26,49 +27,63 @@
             </div>
 
             <div class="headerUnit">
+                <a href="/event">
                 <h1 class="longTitle">Upcoming Events</h1>
+                </a>
             </div>
             <div id="divImg">
+                <a href="/calendar">
                 <img src="../images/heart calendar.png">
+                </a>
             </div>
         </header>
         <h2>1/20-1/27</h2>
 
         <section>
             <div class="sectionUnit">
-                <h3 class="date">1/21</h3>
-                <h2 class="event-name">GBM #1</h2>
-                <p class="org">Design Co</p>
+                <h4 class="date">1/21</h4>
+                <h3 class="event-name">GBM #1</h3>
+                <p class="org">ACM</p>
                 <p>Cognitive Science Building</p>
             </div>
             <div class="sectionUnit2">
-                <img src="../images/heart_outline.png">
+                <img src="../images/heart_outline.png" id="clickHeart" onclick=clickHeart(); />
             </div>
         </section>
         <section>
             <div class="sectionUnit">
-                <h3 class="date">1/21</h3>
-                <h2 class="event-name">GBM #1</h2>
+                <h4 class="date">1/24</h4>
+                <h3 class="event-name">Portofolio Review</h3>
                 <p class="org">Design Co</p>
-                <p>Cognitive Science Building</p>
+                <p>Rady's School of Management</p>
             </div>
             <div class="sectionUnit2">
-                <img src="../images/heart_outline.png">
+                <img src="../images/heart_outline.png" id="clickHeart1" onclick=clickHeart1(); />
             </div>
         </section>
         <section>
             <div class="sectionUnit">
-                <h3 class="date">1/21</h3>
-                <h2 class="event-name">GBM #1</h2>
-                <p class="org">Design Co</p>
-                <p>Cognitive Science Building</p>
+                <h4 class="date">1/24</h4>
+                <h3 class="event-name">Bonfire</h3>
+                <p class="org">VSA</p>
+                <p>Geisel Loop (pickup)</p>
             </div>
             <div class="sectionUnit2">
-                <img src="../images/heart_outline.png">
+                <img src="../images/heart_outline.png" id="clickHeart2" onclick=clickHeart2(); />
             </div>
         </section>
-        <h2>1/28 - 2/5</h2>
-
+        <h3>1/28 - 2/5</h3>
+        <section>
+            <div class="sectionUnit">
+                <h4 class="date">2/2</h4>
+                <h3 class="event-name">GBM #1</h3>
+                <p class="org">VSA</p>
+                <p>Geisel Loop (pickup)</p>
+            </div>
+            <div class="sectionUnit2">
+                <img src="../images/heart_outline.png" id="clickHeart3" onclick=clickHeart3(); />
+            </div>
+        </section>
     </div>
 </body>
 
