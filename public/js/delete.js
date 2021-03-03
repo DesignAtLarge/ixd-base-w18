@@ -1,5 +1,3 @@
-var json = JSON.parse(saved_events);
-
 function search(idKey, myArray){
     for (var i=0; i < myArray.length; i++) {
         if (myArray[i].id === idKey) {
@@ -8,10 +6,8 @@ function search(idKey, myArray){
     }
 }
 
-function deleteHeart(dId, json) {
+function deleteHeart(dId) {
     var image = document.getElementById(dId);
-    var position = search(dId, json);
-    json.splice(position, 1);
     image.parentNode.parentNode.parentNode.removeChild(image.parentNode.parentNode);
 
 }
