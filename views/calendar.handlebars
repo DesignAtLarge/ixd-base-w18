@@ -13,6 +13,8 @@
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="../json/calendar.json"></script>
+    <script src="/js/delete.js"></script>
 
     <title>Calendar</title>
 </head>
@@ -39,23 +41,19 @@
             </div>
         </header>
 
-        {{#each savedEvent}}
-        <h2>{{weekNum}}</h2>
-        {{#each events}}
-        <section>
+        {{#each saved_events}}
+        <section id="{{dId}}">
             <div class="sectionUnit">
-
-                
+                <h4>{{month}}/{{day}}</h4>
                 <h3>{{clubEvent}}</h3>
                 <p>{{clubName}}</p>
-                <h4>{{location}}</h4>
-                <h4>{{date}}</h4>
+                <p>{{location}}</p>
+
             </div>
             <div class="sectionUnit2">
-                <img src="../images/pink_heart.png">
+                <img src="../images/pink_heart.png" id="{{id}}" onclick=deleteHeart('{{id}}');>
             </div>
         </section>
-        {{/each}}
         {{/each}}
 
     </div>

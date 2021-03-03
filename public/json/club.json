@@ -11,7 +11,7 @@
 		},
 		{
 			"id": "astro",
-			"name": "Astronomy Club at UCSD",
+			"name": "Astronomy Club",
 			"description": "Astronomy Club at UCSD aims to promote the interest of astronomy and astrophysics.",
 			"image": "http://searchwide.com/wp-content/uploads/2013/11/evaluation.jpg",
 			"idH": "clubHeart2"
@@ -26,7 +26,7 @@
 		{
 			"id": "dsgn",
 			"name": "Design Co",
-			"description": "We’re a strong and scrappy design community at UC San Diego, bridging the gap between young designers and industry. ",
+			"description": "We’re a strong and scrappy design community, bridging the gap between designers and industry.",
 			"image": "http://regmedia.co.uk/2011/03/01/node_code.png",
 			"idH": "clubHeart4"
 		},
@@ -38,7 +38,7 @@
 			"image": "http://torontopubliclibrary.typepad.com/.a/6a00e5509ea6a18834019b00ff4518970b-800wi"
 =======
 			"id": "vsa",
-			"name": "Vietnamese Student Association",
+			"name": "VSA",
 			"description": "VSA is an Vietnamese culture org that celebrates inclusivity and community.",
 			"image": "http://torontopubliclibrary.typepad.com/.a/6a00e5509ea6a18834019b00ff4518970b-800wi",
 			"idH": "clubHeart5"

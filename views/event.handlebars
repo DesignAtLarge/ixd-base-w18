@@ -37,53 +37,22 @@
                 </a>
             </div>
         </header>
-        <h2>1/20-1/27</h2>
+        
+        
+        {{#each events}}
+        <section>
+            <div class="sectionUnit">
+                <h4 class = "date">{{month}}/{{day}}</h4>
+                <h3 class = "event-name">{{clubEvent}}</h3>
+                <p class="org">{{clubName}}</p>
+                <p>{{location}}</p>
 
-        <section>
-            <div class="sectionUnit">
-                <h4 class="date">1/21</h4>
-                <h3 class="event-name">GBM #1</h3>
-                <p class="org">ACM</p>
-                <p>Cognitive Science Building</p>
             </div>
             <div class="sectionUnit2">
-                <img src="../images/heart_outline.png" id="clickHeart" onclick=clickHeart(); />
+                <img src="../images/heart_outline.png" id="{{id}}" onclick=clickHeart('{{id}}');>
             </div>
         </section>
-        <section>
-            <div class="sectionUnit">
-                <h4 class="date">1/24</h4>
-                <h3 class="event-name">Portofolio Review</h3>
-                <p class="org">Design Co</p>
-                <p>Rady's School of Management</p>
-            </div>
-            <div class="sectionUnit2">
-                <img src="../images/heart_outline.png" id="clickHeart1" onclick=clickHeart1(); />
-            </div>
-        </section>
-        <section>
-            <div class="sectionUnit">
-                <h4 class="date">1/24</h4>
-                <h3 class="event-name">Bonfire</h3>
-                <p class="org">VSA</p>
-                <p>Geisel Loop (pickup)</p>
-            </div>
-            <div class="sectionUnit2">
-                <img src="../images/heart_outline.png" id="clickHeart2" onclick=clickHeart2(); />
-            </div>
-        </section>
-        <h3>1/28 - 2/5</h3>
-        <section>
-            <div class="sectionUnit">
-                <h4 class="date">2/2</h4>
-                <h3 class="event-name">GBM #1</h3>
-                <p class="org">VSA</p>
-                <p>Geisel Loop (pickup)</p>
-            </div>
-            <div class="sectionUnit2">
-                <img src="../images/heart_outline.png" id="clickHeart3" onclick=clickHeart3(); />
-            </div>
-        </section>
+        {{/each}}
     </div>
 </body>
 

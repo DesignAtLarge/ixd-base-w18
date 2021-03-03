@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="../css/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src = "/js/index.js"></script>
   </head>
 </head>
 
@@ -28,25 +27,14 @@
           <h1 class="longTitle">Upcoming Events</h1>
         </a>
       </div>
-      
+
       <div id="divImg">
         <a href="/calendar">
         <img src="../images/heart calendar.png">
         </a>
       </div>
-    
-    </header>
 
-    <div id="formInput">
-      <div id="box1">
-        <form>
-          <input type="text" id="keyword" name="keyword"><br>
-        </form>
-      </div>
-      <!-- <div id="box2">
-        <img src="../images/filter.png">
-      </div> -->
-    </div>
+    </header>
 
       {{#each club}}
         <section>
@@ -57,10 +45,12 @@
             </div>
           </a>
           <div class="sectionUnit2">
-            <img src="../images/heart_outline.png" id="{{idH}}" onclick={{idH}}();>
+            <img src="../images/heart_outline.png" id="{{idH}}" onclick=clubHeart('{{idH}}');>
           </div>
         </section>
       {{/each}}
+          <script src = "/js/index.js"></script>
+
 
     <!--  <section>
         <div class="sectionUnit">
