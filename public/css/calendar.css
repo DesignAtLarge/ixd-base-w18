@@ -27,6 +27,7 @@ body {
   }
 
   section {
+    margin: auto; 
     display: flex;
     width: 80%;
     border: 1px solid;

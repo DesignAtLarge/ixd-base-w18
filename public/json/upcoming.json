@@ -1,0 +1,36 @@
+{
+    "events": [
+      {
+        "clubEvent": "GBM #1",
+        "clubName": "ACM",
+        "location": "Cognitive Science Building",
+        "month": "1",
+        "day": "21",
+        "id": "clickHeart"
+      },
+      {
+        "clubEvent": "Portfolio Review",
+        "clubName": "Design Co.",
+        "location": "Rady School of Management",
+        "month": "1",
+        "day": "24",
+        "id": "clickHeart1"
+      },
+      {
+        "clubEvent": "Bonfire",
+        "clubName": "VSA",
+        "location": "Geisel Loop(pickup)",
+        "month": "1",
+        "day": "24",
+        "id": "clickHeart2"
+      },
+      {
+        "clubEvent": "GBM #1",
+        "clubName": "VSA",
+        "location": "Center Hall",
+        "month": "2",
+        "day": "2",
+        "id": "clickHeart3"
+      }
+    ]
+  }
