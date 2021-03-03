@@ -13,6 +13,7 @@
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/event.js"></script>
 
     <title>Calendar</title>
 </head>
@@ -52,7 +53,7 @@
                 <h4>{{date}}</h4>
             </div>
             <div class="sectionUnit2">
-                <img src="../images/pink_heart.png">
+                <img src="../images/pink_heart.png" id="{{id}}" onclick=clickHeart('{{id}}');>
             </div>
         </section>
         {{/each}}
