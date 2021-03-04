@@ -13,6 +13,8 @@ var club = require('./routes/club');
 var event = require('./routes/event');
 var calendar = require('./routes/calendar');
 var login = require('./routes/login');
+var astro = require('./routes/astro');
+var acm = require('./routes/acm');
 // Example route
 // var user = require('./routes/user');
 
@@ -43,6 +45,8 @@ app.get('/club', club.view);
 app.get('/login', login.view);
 app.get('/event', event.view);
 app.get('/calendar', calendar.view);
+app.get('/astro', astro.view);
+app.get('/acm', acm.view);
 // Example route
 // app.get('/users', user.list);
 

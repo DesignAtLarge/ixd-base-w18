@@ -1,0 +1,173 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/club.css" rel="stylesheet">
+
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+
+	<title>Club</title>
+</head>
+
+<body>
+	<div class="main">
+		<div class="head">
+			<a href="/">
+				<span>
+					<button class="btn btn-light">
+						<img src="images/back.jpg">
+						Back
+					</button>
+				</span>
+			</a>
+			<span>
+				<img src="images/heart.png" id="vsaHeart" onclick=vsaHeart(); />
+            
+			</span>
+		</div>
+		<script type="text/javascript">
+			function vsaHeart() {
+				var image = document.getElementById('vsaHeart');
+
+				if (image.src.match("images/heart.png")) {
+					image.src = "images/pink_heart.png";
+				}
+				else {
+					image.src = "images/heart.png";
+				}
+			}
+
+
+		</script>
+
+		<div class="gallery">
+			ACM
+		</div>
+
+		<div class="description">
+			ACM UC San Diego is a computing focused organization at campus that seeks to establish and foster an inclusive member-first community for all who are interested in the field of computing.
+		</div>
+
+		<div class="events">
+			<h2>Club Events</h2>
+			<div class="con">
+				<div class="e">
+					Boba Run
+				</div>
+				<div class="e">
+					GBM #1
+				</div>
+				<img src="images/seeall.png">
+			</div>
+		</div>
+
+		<div class="board">
+			<h2>Board Members</h2>
+			<div class="con">
+				<a data-toggle="modal" href="#tylermodal">
+					<img src="images/tyler.png">
+				</a>
+				<a data-toggle="modal" href="#abagailmodal">
+					<img src="images/abagail.png">
+				</a>
+				<a data-toggle="modal" href="#katarinamodal">
+					<img src="images/katarina.png">
+				</a>
+				<img src="images/arrowright.png">
+			</div>
+		</div>
+
+		<div class="social">
+			<h2>Social</h2>
+			<div class="con">
+				<a href="https://www.facebook.com/">
+				<img src="images/facebook.png">
+				</a>
+				<a href="https://www.instagram.com/">
+				<img src="images/instagram.png">
+				</a>
+				<a href ="https://discord.com/">
+				<img src="images/discord.png">
+				</a>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Modal -->
+	<div id="tylermodal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<h2>Tyler Funke</h2>
+					<h4>President</h4>
+					<br>
+					<div> email: <a href="https://mail.google.com/mail/u/0/#inbox">tfunke@ucsd.edu</a></div>
+					<p> facebook: <a href="https://www.facebook.com/m">tinyurl.com/tfunke</a></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div id="abagailmodal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<h2>Abagail Bell</h2>
+					<h4>Vice President</h4>
+					<br>
+					<div> email: <a href="https://mail.google.com/mail/u/0/#inbox">ababell@ucsd.edu</a></div>
+					<p> facebook: <a href="https://www.facebook.com/m">tinyurl.com/abell</a></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div id="katarinamodal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<h2>Katarina Do</h2>
+					<h4>Social Chair</h4>
+					<br>
+					<div> email: <a href="https://mail.google.com/mail/u/0/#inbox">kdo@ucsd.edu</a></div>
+					<p> facebook: <a href="https://www.facebook.com/m">tinyurl.com/kdo</a></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</body>
+
+</html>
