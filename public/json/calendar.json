@@ -1,13 +1,15 @@
 {
-  "saved_events": [
-    {
-      "clubEvent": "Bonfire",
-      "clubName": "VSA",
-      "location": "Blacks Beach",
-      "month": "2",
-      "day": "27",
-      "id": "event1",
-      "dId": "bonfire"
-    }
-  ]
+  "saved_events": {
+    "vsa": [
+      {
+        "clubEvent": "Bonfire",
+        "clubName": "VSA",
+        "location": "Blacks Beach",
+        "month": "2",
+        "day": "27",
+        "id": "event1",
+        "dId": "bonfire"
+      }
+    ]
+  }
 }

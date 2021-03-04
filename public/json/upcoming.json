@@ -1,36 +1,44 @@
 {
-    "events": [
+  "events": {
+    "acm": [
       {
         "clubEvent": "GBM #1",
         "clubName": "ACM",
         "location": "Cognitive Science Building",
         "month": "1",
         "day": "21",
-        "id": "clickHeart"
-      },
+        "id": "acm"
+      }
+    ],
+    "desco": [
       {
         "clubEvent": "Portfolio Review",
         "clubName": "Design Co.",
         "location": "Rady School of Management",
         "month": "1",
         "day": "24",
-        "id": "clickHeart1"
-      },
+        "id": "desco"
+      }
+    ],
+    "vsa": [
       {
         "clubEvent": "Bonfire",
         "clubName": "VSA",
         "location": "Geisel Loop(pickup)",
         "month": "1",
         "day": "24",
-        "id": "clickHeart2"
-      },
+        "id": "vsa"
+      }
+    ],
+    "ted": [
       {
         "clubEvent": "GBM #1",
-        "clubName": "VSA",
+        "clubName": "TED@UCSD",
         "location": "Center Hall",
         "month": "2",
         "day": "2",
-        "id": "clickHeart3"
+        "id": "ted"
       }
     ]
   }
+}
