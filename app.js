@@ -40,9 +40,9 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', index.view);
+app.get('/', login.view);
 app.get('/club', club.view);
-app.get('/login', login.view);
+app.get('/index', index.view);
 app.get('/event', event.view);
 app.get('/calendar', calendar.view);
 app.get('/astro', astro.view);
