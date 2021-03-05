@@ -38,14 +38,14 @@
     {
       "id": "game",
       "name": "Triton Gaming",
-      "description": "Triton Gaming is a group of collegiate organizers that team up to create epic entertainment experiences for student gamers at the University of California, San Diego. Our organization is the product of several independent on-campus gaming organizations that each represent a different gaming genre and student community. Through Triton Gaming, our team strives to create an exciting, diverse, and all-inclusive gaming environment on campus through high-quality live events.",
+      "description": "Triton Gaming is a group of collegiate organizers that team up to create epic entertainment experiences for student gamers at the University of California, San Diego.",
       "image": "https://pbs.twimg.com/profile_images/1356821718279483393/yRq93Bcz_400x400.jpg"
     },
 
     {
       "id": "ted",
       "name": "TEDx@UCSD",
-      "description": "TEDxUCSD's mission is to bring together leading thinkers and doers to share ideas that matter in and to any discipline. Through a local forum, we hope to inspire people to change their lives, their futures, and ultimately, their world. We aim to engage, motivate, and celebrate all generations of the UCSD family.",
+      "description": "TEDxUCSD's mission is to bring together leading thinkers and doers to share ideas that matter in and to any discipline.",
       "image": "https://ucsdnews.ucsd.edu/news_uploads/ucsd-tedx-720.jpg"
     }
   ]

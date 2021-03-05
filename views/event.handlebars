@@ -12,7 +12,9 @@
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/event.js"></script>
+    <script src="/js/addEvent.js"></script>
+
+
 
     <title>Event</title>
 </head>
@@ -38,7 +40,6 @@
             </div>
         </header>
 
-
         {{#each events}}
         <section>
             <div class="sectionUnit">
@@ -49,7 +50,7 @@
 
             </div>
             <div class="sectionUnit2">
-                <img src="../images/heart_outline.png" class="heart" id="{{id}}" onclick=clickHeart('{{id}}');>
+                <img src="../images/heart_outline.png" class="heart" id="{{id}}" onclick=addHeart('{{id}}');>
             </div>
         </section>
         {{/each}}
