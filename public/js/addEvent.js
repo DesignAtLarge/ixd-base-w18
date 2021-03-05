@@ -1,31 +1,33 @@
-$(document).ready(function () {
-  var allEvents = {};
-  var saved = {};
-  var add;
-  initializePage();
-});
+const { json } = require("express");
+var savedJson = require("../json/calendar.json");
+var upcomingJson = require("../json/upcoming.json");
 
-function initializePage() {
-  $.getJSON("../json/upcoming.json", function(json){
-  $(".heart").click(function () {
-    var name = $(this).attr("id");
+function clubHeart(id,name) {
+    var image = document.getElementById(id);
+    var name = document.getElementById(id);
+    var event;
 
-$.each(json, function(i,item){
-    if(json[i] == name){
-        allEvents = json[i];
-        add = JSON.parse(allEvents);
+    if (image.src.match("../images/heart_outline.png")) {
+        image.src = "../images/pink_heart.png";
+
+        for(var i =0; i< upcomingJson.length; i++){        
+            if(upcomingJson[i].hasOwnProperty(name) == true){
+                event = upcomingJson[i];
+                console.log(event)
+            }
+        }
+
     }
-})
+    else {
+        image.src = "../images/heart_outline.png";
+    }
 
-  });
-});
-
-$.getJSON("../json/calendar.json", function(json){
-    json.push(allEvents);
-});
-
-
+    
 }
+
+
+json.push(allEvents);
+
 
 function addEvent(id) {}
 

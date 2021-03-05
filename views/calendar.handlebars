@@ -23,17 +23,17 @@
     <div class="main">
         <header>
                 <div class="headerUnit">
-            <a href="/">
+            <a href="/index">
                     <h1>Clubs</h1>
             </a>
                 </div>
-            
+
             <div class="headerUnit">
                 <a href="/event">
                     <h1 class="longTitle">Upcoming Events</h1>
                 </a>
             </div>
-            
+
             <div id="divImg">
                 <a href="/calendar">
                     <h1 class="longTitle">My Calendar</h1>
@@ -42,7 +42,7 @@
         </header>
 
         {{#each saved_events}}
-        <section id="{{dId}}">
+        <section id="{{dId}}" class="saved_event">
             <div class="sectionUnit">
                 <h4>{{month}}/{{day}}</h4>
                 <h3>{{clubEvent}}</h3>
@@ -51,7 +51,7 @@
 
             </div>
             <div class="sectionUnit2">
-                <img src="../images/pink_heart.png" id="{{id}}" onclick=deleteHeart('{{id}}');>
+                <img src="../images/pink_heart.png" class="heart" id="{{id}}" onclick=deleteHeart('{{id}}');>
             </div>
         </section>
         {{/each}}
