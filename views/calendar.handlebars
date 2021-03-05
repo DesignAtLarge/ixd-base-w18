@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="/css/club.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/calendar.css">
+    <link href="../css/calendar.css" rel="stylesheet">
 
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="../json/calendar.json"></script>
     <script src="/js/delete.js"></script>
+    <script src="/js/event.js"></script>
+    <script src="/js/addEvent.js"></script>
 
     <title>Calendar</title>
 </head>
@@ -22,21 +23,20 @@
 <body>
     <div class="main">
         <header>
-                <div class="headerUnit">
-            <a href="/index">
-                    <h1>Clubs</h1>
-            </a>
-                </div>
+            <div class="headerUnit">
+                <a href="/">
+                    <h1 class="longTitle">Clubs</h1>
+                </a>
+            </div>
 
             <div class="headerUnit">
                 <a href="/event">
                     <h1 class="longTitle">Upcoming Events</h1>
                 </a>
             </div>
-
             <div id="divImg">
                 <a href="/calendar">
-                <img src="../images/heart calendar.png">
+                    <h1 class="longTitle">My Calendar</h1>
                 </a>
             </div>
         </header>
