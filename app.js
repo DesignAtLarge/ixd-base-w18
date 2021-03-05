@@ -15,12 +15,9 @@ var calendar = require('./routes/calendar');
 var login = require('./routes/login');
 var astro = require('./routes/astro');
 var acm = require('./routes/acm');
-<<<<<<< HEAD
 var dsgn = require('./routes/dsgn');
 var beatz = require('./routes/beatz');
-=======
 var upcomingEvents = require('./routes/upcomingEvents');
->>>>>>> 6f07fb738aad88df965194d89c264eee1307bfb6
 // Example route
 // var user = require('./routes/user');
 
@@ -53,12 +50,9 @@ app.get('/event', event.view);
 app.get('/calendar', calendar.view);
 app.get('/astro', astro.view);
 app.get('/acm', acm.view);
-<<<<<<< HEAD
 app.get('/dsgn', dsgn.view);
 app.get('/beatz', beatz.view);
-=======
 app.get('/saved', upcomingEvents.upload);
->>>>>>> 6f07fb738aad88df965194d89c264eee1307bfb6
 // Example route
 // app.get('/users', user.list);
 

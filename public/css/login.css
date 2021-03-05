@@ -3,7 +3,6 @@ body {
     justify-content: center;
     align-items: center;
     background-color: whitesmoke;
-    height: 100vh;
     font-family: Helvetica, Arial, sans-serif;
     padding: 0;
     margin: 0;
@@ -19,24 +18,24 @@ body {
   }
 
   h1 {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: bold;
     width: 80%;
-    margin-left: 25px;
+    margin-left: 20px;
     margin-top: 200px;
     line-height: 1.2;
   }
 
   h2 {
-    margin-left: 25px;
+    margin-left: 20px;
   }
 
   .g-signin2 {
-    margin-left: 25px;
+    margin-left: 20px;
   }
 
   form {
-    margin-left: 25px;
+    margin-left: 20px;
   }
 
   input {
@@ -51,7 +50,7 @@ body {
   }
 
   .button {
-    margin-left: 25px;
+    margin-left: 20px;
     margin-top: 50px;
     background-color: black;
     color: white;
