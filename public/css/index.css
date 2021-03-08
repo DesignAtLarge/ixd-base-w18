@@ -16,9 +16,8 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 812px;
+    height: 850px;
     background-color: white;
-    border: solid;
     padding: 0;
     margin: 0;
   }
@@ -27,10 +26,11 @@ body {
     display: flex;
     width: 100%;
     height: 10%;
-    border: solid 1px;
+    border-bottom: solid 1px;
   }
 
   section {
+    margin: auto;
     display: flex;
     width: 80%;
     border: 1px solid;
@@ -67,7 +67,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 33%;
-    border: solid 1px;
+    border-right: solid 1px;
   }
 
   #divImg {
@@ -81,6 +81,7 @@ body {
   .longTitle {
     text-align: center;
     font-weight: normal;
+    font-size: 16px;
   }
 
   #formInput {

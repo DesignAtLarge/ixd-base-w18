@@ -20,9 +20,9 @@ section {
   flex-direction: column;
   align-items: center;
   width: 505px;
-  height: 900px;
+  height: 850px;
   background-color: white;
-  border-style: solid;
+  overflow: visible;
 }
 h2 {
   margin-bottom: 5px;
@@ -36,15 +36,12 @@ a {
   text-decoration: none;
   color: black;
 }
-h1 {
-  font-size: 24px;
-}
 
 header {
   display: flex;
   width: 100%;
   height: 10%;
-  border: solid 1px;
+  border-bottom: solid 1px;
 }
 
 .headerUnit {
@@ -54,19 +51,22 @@ header {
   text-decoration: none;
   text-align: center;
   width: 33%;
-  border: solid 1px;
+  border-right-style: solid;
+  border-right-width: 1px;
 }
 
 #divImg {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
   width: 20%;
 }
 
 .longTitle {
   text-align: center;
   font-weight: normal;
+  font-size: 16px;
 }
 
 .sectionUnit {
