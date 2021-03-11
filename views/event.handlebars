@@ -16,10 +16,17 @@
 
 
 
+
     <title>Event</title>
 </head>
 
 <body>
+    <script>
+        var upcoming = {{{upcoming.string}}};
+        var events = upcoming.events;
+
+        var calendar = {{{calendar}}};
+    </script>
     <div class="main">
         <header>
             <div class="headerUnit">
@@ -40,7 +47,7 @@
             </div>
         </header>
 
-        {{#each events}}
+        {{#each upcoming.events}}
         <section>
             <div class="sectionUnit">
                 <h4 class="date">{{month}}/{{day}}</h4>

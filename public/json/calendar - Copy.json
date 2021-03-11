@@ -6,7 +6,8 @@
       "location": "Blacks Beach",
       "month": "2",
       "day": "27",
-      "id": "bonfire"
+      "id": "event1",
+      "dId": "bonfire"
     }
   ]
 }

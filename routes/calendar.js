@@ -1,8 +1,8 @@
 /*
  * GET home page.
  */
-var event = require("../public/json/calendar.json");
-
 exports.view = function (req, res) {
-  res.render("calendar", event);
+  var fs = require('fs');
+  var calendar = JSON.parse(fs.readFileSync('public/json/calendar.json', 'utf8'));
+  res.render("calendar", {'calendar': calendar});
 };

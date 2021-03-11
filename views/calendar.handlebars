@@ -12,7 +12,6 @@
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script src="../json/calendar.json"></script>
     <script src="/js/delete.js"></script>
     <script src="/js/event.js"></script>
     <script src="/js/addEvent.js"></script>
@@ -41,8 +40,8 @@
             </div>
         </header>
 
-        {{#each saved_events}}
-        <section id="{{dId}}" class="saved_event">
+        {{#each calendar.saved_events}}
+        <section id="{{id}}" class="saved_event">
             <div class="sectionUnit">
                 <h4>{{month}}/{{day}}</h4>
                 <h3>{{clubEvent}}</h3>

@@ -3,6 +3,7 @@
  * Module dependencies.
  */
 
+const fs = require('fs')
 var express = require('express');
 var http = require('http');
 var path = require('path');
@@ -53,6 +54,16 @@ app.get('/acm', acm.view);
 app.get('/dsgn', dsgn.view);
 app.get('/beatz', beatz.view);
 app.get('/saved', upcomingEvents.upload);
+
+app.post('/addCalendar', function(req,res){
+  var string = JSON.stringify(req.body)
+  fs.writeFile('public/json/calendar.json', string, (err) => {
+    if (err) {
+        throw err;
+    }
+    console.log("JSON data is saved.");
+});
+});
 // Example route
 // app.get('/users', user.list);
 
