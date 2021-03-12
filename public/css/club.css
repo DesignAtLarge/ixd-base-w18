@@ -34,7 +34,10 @@ body {
     text-align: center;
     font-size: 48px;
     margin: auto;
-    border-style: dashed;
+}
+.picture{
+    height: 100%;
+    width: 100%;
 }
 
 .description{
@@ -76,4 +79,5 @@ body {
     height: 100px;
     width: 40%;
     text-align: center;
+    align-items:center;
 }
