@@ -36,6 +36,10 @@
 
     </header>
 
+    <div class="label">
+      <h1>Club Listings</h1>
+    </div>
+
     {{#each club}}
     <section>
       <a href="{{link}}">
@@ -44,9 +48,6 @@
           <p>{{description}}</p>
         </div>
       </a>
-      <div class="sectionUnit2">
-        <img src="../images/heart_outline.png" id="{{idH}}" onclick=clubHeart('{{idH}}');>
-      </div>
     </section>
     {{/each}}
     <script src="/js/index.js"></script>
