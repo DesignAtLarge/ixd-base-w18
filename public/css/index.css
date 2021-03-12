@@ -34,7 +34,9 @@ body {
     display: flex;
     width: 80%;
     border: 1px solid;
+    border-radius: 10px;
     height: 13%;
+    padding-left: 5px;
   }
 
   h1 {
