@@ -1,1 +1,12 @@
-{"saved_events":[{"clubEvent":"Bonfire","clubName":"VSA","location":"Blacks Beach","month":"2","day":"27","id":"bonfire"},{"clubEvent":"GBM #1","clubName":"ACM","location":"Cognitive Science Building","month":"1","day":"21","id":"acm"},{"clubEvent":"GBM #1","clubName":"TED@UCSD","location":"Center Hall","month":"2","day":"2","id":"ted"}]}
+{
+  "saved_events": [
+    {
+      "clubEvent": "Bonfire",
+      "clubName": "VSA",
+      "location": "Blacks Beach",
+      "month": "2",
+      "day": "27",
+      "id": "bonfire"
+    }
+  ]
+}
