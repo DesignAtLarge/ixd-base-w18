@@ -103,11 +103,14 @@ header {
 }
 
 .date {
+  padding-top: 3%;
   margin: auto;
 }
 
 .event-name {
   margin-top: auto;
+  font-weight: bold;
+  padding-top: 2%;
 }
 
 .label {
