@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 {
   "saved_events": [
     {
-      "clubEvent": "Bonfire",
-      "clubName": "VSA",
-      "location": "Blacks Beach",
-      "month": "2",
-      "day": "27",
-      "id": "bonfire"
+      "clubEvent": "Boba Run",
+      "clubName": "Design Co",
+      "location": "Tapioca Express",
+      "month": "1",
+      "day": "20",
+      "id": "boba"
     }
   ]
 }
-=======
-{"saved_events":[{"clubEvent":"Bonfire","clubName":"VSA","location":"Blacks Beach","month":"2","day":"27","id":"bonfire"},{"clubEvent":"GBM #1","clubName":"ACM","location":"Cognitive Science Building","month":"1","day":"21","id":"acm"},{"clubEvent":"GBM #1","clubName":"TED@UCSD","location":"Center Hall","month":"2","day":"2","id":"ted"},{"clubEvent":"Portfolio Review","clubName":"Design Co.","location":"Rady School of Management","month":"1","day":"24","id":"desco"},{"clubEvent":"GBM #1","clubName":"ACM","location":"Cognitive Science Building","month":"1","day":"21","id":"acm"},{"clubEvent":"Portfolio Review","clubName":"Design Co.","location":"Rady School of Management","month":"1","day":"24","id":"desco"},{"clubEvent":"Bonfire","clubName":"VSA","location":"Geisel Loop(pickup)","month":"1","day":"24","id":"vsa"},{"clubEvent":"GBM #1","clubName":"TED@UCSD","location":"Center Hall","month":"2","day":"2","id":"ted"}]}
->>>>>>> a35028260e1f3d3f6671f7d62ef7a6bec2246db3
