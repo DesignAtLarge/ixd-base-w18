@@ -1,0 +1,44 @@
+{
+  "club": [
+		{
+			"id": "ACM",
+			"name": "ACM UCSD",
+			"description": "ACM UC San Diego is a computing focused organization on campus.",
+			"image": "http://www.google.com/think/images/prototyping-for-success_articles_lg.jpg",
+			"idH": "clubHeart1",
+			"link": "/acm"
+		},
+		{
+			"id": "astro",
+			"name": "Astronomy Club",
+			"description": "Astronomy Club at UCSD aims to promote the interest of astronomy and astrophysics.",
+			"image": "http://searchwide.com/wp-content/uploads/2013/11/evaluation.jpg",
+			"idH": "clubHeart2",
+			"link": "/astro"
+		},
+		{
+			"id": "beatz",
+			"name": "Beat @ UCSD",
+			"description": "To provide a fun and lively atmosphere to continue our passion for a cappella music.",
+			"image": "http://www.quality-wars.com/wp-content/uploads/Gantt-Chart-Example-2-NO-LETTERS1.jpg",
+			"idH": "clubHeart3",
+			"link": "/beatz"
+		},
+		{
+			"id": "dsgn",
+			"name": "Design Co",
+			"description": "We’re a strong and scrappy design community, bridging the gap between designers and industry.",
+			"image": "http://regmedia.co.uk/2011/03/01/node_code.png",
+			"idH": "clubHeart4",
+			"link": "/dsgn"
+		},
+		{
+			"id": "vsa",
+			"name": "VSA",
+			"description": "VSA is an Vietnamese culture org that celebrates inclusivity and community.",
+			"image": "http://torontopubliclibrary.typepad.com/.a/6a00e5509ea6a18834019b00ff4518970b-800wi",
+			"idH": "clubHeart5",
+			"link": "/club"
+		}
+	]
+}

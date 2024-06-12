@@ -1,8 +1,125 @@
+<!DOCTYPE html>
+
 <html>
+
 <head>
-	<title>Test Page</title>
+
+  <head>
+    <title>COGS 120 - A5 Screen 1</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
 </head>
+
 <body>
-Begin here (or replace this with any static code already written).
+
+  <div class="main">
+
+    <header>
+      <div class="headerUnit">
+        <a href="/index">
+          <h1 class="longTitle">Clubs</h1>
+        </a>
+      </div>
+      <div class="headerUnit">
+        <a href="/event">
+          <h1 class="longTitle">Upcoming Events</h1>
+        </a>
+      </div>
+
+      <div id="divImg">
+        <a href="/calendar">
+          <h1 class="longTitle">My Calendar</h1>
+        </a>
+      </div>
+
+    </header>
+
+    <div class="label">
+      <h1>Club Listings</h1>
+    </div>
+
+    {{#each club}}
+    <section>
+      <a href="{{link}}">
+        <div class="sectionUnit" id="{{id}}">
+          <h3>{{name}}</h3>
+          <p>{{description}}</p>
+        </div>
+      </a>
+    </section>
+    {{/each}}
+    <script src="/js/index.js"></script>
+
+
+    <!--  <section>
+        <div class="sectionUnit">
+          <h2>Design Co.</h2>
+          <p>pre-professional design org</p>
+        </div>
+        <div class="sectionUnit2">
+          <img src="../images/heart_outline.png">
+        </div>
+      </section>
+>>>>>>> 2a55509876d08b823d3b5fb190dc6a1837b60fde
+
+    <section>
+      <div class="sectionUnit">
+        <h2>Design Co.</h2>
+        <p>pre-professional design org</p>
+      </div>
+      <div class="sectionUnit2">
+        <img src="../images/heart_outline.png">
+      </div>
+    </section>
+
+    <section>
+      <div class="sectionUnit">
+        <h2>arch@UCSD</h2>
+        <p>CMAA org promoting architecture</p>
+      </div>
+      <div class="sectionUnit2">
+        <img src="../images/heart_outline.png">
+      </div>
+    </section>
+
+    <section>
+      <div class="sectionUnit">
+        <h2>KASA</h2>
+        <p>Korean-American social club</p>
+      </div>
+      <div class="sectionUnit2">
+        <img src="../images/heart_outline.png">
+      </div>
+    </section>
+
+
+    <section>
+      <a href="/club">
+        <div class="sectionUnit">
+          <h2>VSA</h2>
+          <p>Promoting Vietnamese culture</p>
+        </div>
+      </a>
+      <div class="sectionUnit2">
+        <img src="../images/heart_outline.png">
+      </div>
+    </section>
+
+    <section>
+      <div class="sectionUnit">
+        <h2>CASA</h2>
+        <p>Chinese-American social club</p>
+      </div>
+      <div class="sectionUnit2">
+        <img src="../images/heart_outline.png">
+      </div>
+    </section>
+
+  </div>
+
 </body>
+
+
 </html>

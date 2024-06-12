@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../css/calendar.css" rel="stylesheet">
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/delete.js"></script>
+    <script src="/js/event.js"></script>
+    <script src="/js/addEvent.js"></script>
+
+    <title>Calendar</title>
+</head>
+
+<body>
+    <div class="main">
+        <header>
+            <div class="headerUnit">
+                <a href="/index">
+                    <h1 class="longTitle">Clubs</h1>
+                </a>
+            </div>
+
+            <div class="headerUnit">
+                <a href="/event">
+                    <h1 class="longTitle">Upcoming Events</h1>
+                </a>
+            </div>
+            <div id="divImg">
+                <a href="/calendar">
+                    <h1 class="longTitle">My Calendar</h1>
+                </a>
+            </div>
+        </header>
+
+        <div class="label">
+          <h1>Calendar</h1>
+        </div>
+
+        {{#each calendar.saved_events}}
+        <section id="{{id}}" class="saved_event">
+            <div class="sectionUnit">
+                <h4 class="date">{{month}}/{{day}}</h4>
+                <h3 class="event-name">{{clubEvent}}</h3>
+                <p class="org">{{clubName}}</p>
+                <p class="">{{location}}</p>
+
+            </div>
+            <div class="sectionUnit2">
+                <img src="../images/pink_heart.png" class="heart" id="{{id}}" onclick=deleteHeart('{{id}}');>
+            </div>
+        </section>
+        {{/each}}
+
+    </div>
+
+</body>
+
+
+</html>
