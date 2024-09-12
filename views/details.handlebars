@@ -1,0 +1,450 @@
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/c9acfba105.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/details.css">
+        <link rel="stylesheet" href="css/nav-bar.css">
+        <link rel="stylesheet" href="css/ptTimeSelect.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" rel="stylesheet">
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/ptTimeSelect.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id='root-div'>
+            <div id='content-div'>
+                <div id='title-bar'>
+                    <div id='hamburger-bar'>
+                        <i class="fas fa-bars" id='hamburger-button'></i>
+                    </div>
+                </div>
+
+				<div id='nav-bar' style='display:none;'>
+                    <i class="fas fa-times" id='nav-close'></i>
+                    <ul id='nav-bar-list'>
+                        <li><a href='/home'>Home</a></li>
+                        <li><a href='/add'>Add Activity</a></li>
+                        <li><a href='/report'>Report</a></li>
+                        <li><a href='/details'>All Activities</a></li>
+                        <li><a href='/settings'>Settings</a></li>
+                        <li><a href='/help'>Help</a></li>
+                        <li><a href='/'>Log Out</a></li>
+                    </ul>
+                </div>
+
+                <h1 id='details-title'>All Activities</h1>
+
+                <div id='control-buttons'>
+                    <select id="time-frame">
+                        <option value="-1">Today</option>
+                        <option value="0">This Week</option>
+                        <option value="1">Last Week</option>
+                        <option value="2">2 Weeks Ago</option>
+                        <option value="3">All Times</option>
+                    </select>
+                </div>
+
+                {{!-- <a href='/home'><div id='home-button'>Home</div></a> --}}
+
+                <div id='activities-list'>
+                    <!-- Dynamically generated -->
+                </div>
+
+                <div id='no-activities'>No past activities</div>
+
+                <div id='delete-confirmation-top'>
+                    <div id='delete-confirmation-div'>
+                        Are you sure you want to delete the activity?<br>
+                        <div id='delete-confirmation-submit'>Delete</div>
+                        <div id='delete-confirmation-cancel'>Cancel</div>
+                    </div>
+                </div>
+
+                <div id='edit-confirmation-top'>
+                    <div id='edit-confirmation-div'>
+                        Are you sure you want to submit the changes?<br>
+                        <div id='edit-confirmation-submit'>Submit</div>
+                        <div id='edit-confirmation-cancel'>Cancel</div>
+                    </div>
+                </div>
+
+                <!-- Template div
+                    <div id='activities-list'>
+                        <h2 class='activities-date'>2/17/2021</h2>
+                        <div class='activities-div'>
+                            <h2 class='activities-title'>Sleep</h2>
+                            <span class='activities-type'>Other</span>
+                            <p class='activities-time'>3:00 PM - 8:00 PM</p>
+                            <p class='activities-duration'>1.2h</p>
+                        </div>
+                    </div>
+                -->
+            </div>
+        </div>
+    </body>
+
+    <script src='js/navbar.js'></script>
+    <script src='js/cookies.js'></script>
+	<script>
+		var username = getCookie('username', document.cookie);
+		if(username === '') {
+			// Not logged in
+			window.location.href = '/';
+		}
+	</script>
+
+    <script>
+        const ONE_DAY_TIME = 1000 * 60 * 60 * 24;
+        var activities = undefined;
+        var types = undefined;
+        var settings = undefined;
+
+        // Ajax to retrieve activites
+        $(document).ready(() => {
+            // Default select week
+            var url = window.location.href;
+            if(url.indexOf('week=') !== -1) {
+                var week = url.substring(url.indexOf('week=') + 5);
+                $('#time-frame').val(week);
+            }
+
+            $.ajax({
+                type: "GET",
+                url: '/userGetActivities',
+                data: ({ username : username }),
+                dataType: "json",
+                success: function(data) {
+                    if(data['success']) {
+                        activities = data['activities'];
+                        console.log("Got activities:", activities);
+                        if(types !== undefined && settings !== undefined) updateActivities();
+                    } else {
+                        alert("Fail to get activities: " + data['reason']);
+                    }
+                },
+                error: function(e) {
+                    alert("Ajax error");
+                }
+            });
+
+            $.ajax({
+                type: "GET",
+                url: '/userGetTypes',
+                data: ({}),
+                dataType: "json",
+                success: function(data) {
+                    if(data['success']) {
+                        types = data['types'];
+                        console.log("Got types:", types);
+                        if(activities !== undefined && settings !== undefined) updateActivities();
+                    } else {
+                        alert("Fail to get activities: " + data['reason']);
+                    }
+                },
+                error: function(e) {
+                    alert("Ajax error");
+                }
+            });
+
+            $.ajax({
+                type: "GET",
+                url: '/userRetrieveSettings',
+                data: ({ username: username }),
+                dataType: "json",
+                success: function(data) {
+                    if(data['success']) {
+                        settings = data['settings'];
+                        console.log("Got settings:", settings);
+                        if(types !== undefined && activities !== undefined) updateActivities();
+                    } else {
+                        alert("Fail to get user setting: " + data['reason']);
+                    }
+                },
+                error: function(e) {
+                    alert("Ajax error");
+                }
+            });
+        });
+
+        function updateActivities() {
+            // Get time frame
+            var week = $('#time-frame').val();
+            var data;
+            if(week === '-1') {
+                data = getToday();
+            } else if(week === '3') {
+                data = activities;
+            } else {
+                data = getWeek(week);
+            }
+
+            // console.log(data);
+            updateView(data);
+        }
+
+        function updateView(data) {
+            // Clear first
+            $('#activities-list').html('');
+            $('#no-activities').css('visibility', 'hidden');
+
+            // No activities
+            if(data.length === 0) {
+                $('#no-activities').css('visibility', 'visible');
+                return;
+            }
+
+            // Get display time format
+            var durationFormat = settings['durationFmt'];
+
+            // Generate activities
+            var htmlString = '';
+            for(var i = 0; i < data.length; i++) {
+                htmlString += getDateTitle(data[i].date);
+                for(var j = 0; j < data[i].activities.length; j++) {
+                    var activity = data[i].activities[j];
+
+                    var durationStr = '';
+                    var hrs = activity['duration'] / 3600;
+                    if(durationFormat === 'hrs') {
+                        durationStr += hrs.toFixed(2);
+                        durationStr += " hrs";
+                    } else if(hrs < 1) {
+                        durationStr += activity['duration'] / 60;
+                        durationStr += " mins";
+                    } else {
+                        var hrs = Math.floor(hrs);
+                        durationStr += hrs;
+                        durationStr += "h";
+                        var mins = activity['duration'] - (hrs * 3600);
+                        if(mins !== 0){
+                            durationStr += " ";
+                            durationStr += Math.floor(mins / 60);
+                            durationStr += "m";
+                        }
+                    }
+                    htmlString += getActivityDiv(activity["name"], activity['type'], activity['start'], activity['end'], durationStr, data[i].date, j);
+                }
+            }
+            $('#activities-list').html(htmlString);
+            $('input[id^="activity-start-time-"]').ptTimeSelect();
+            $('input[id^="activity-end-time-"]').ptTimeSelect();
+        }
+
+        function getActivityDiv(title, type, startTime, endTime, duration, date, index, color) {
+            var idMark = date + "-" + index;
+            var typesSelect = '';
+            for(var i = 0; i < types.length; i++) {
+                if(types[i]['name'] === type) {
+                    typesSelect += "<option value='" + types[i]['name'] + "' selected>" + types[i]['name'] + "</option>";
+                } else {
+                    typesSelect += "<option value='" + types[i]['name'] + "'>" + types[i]['name'] + "</option>";
+                }
+                
+            }
+
+            var bgColor, textColor;
+            for(var i = 0; i < types.length; i++) {
+                if(types[i]['name'] === type) {
+                    bgColor = types[i]["bgColor"];
+                    textColor = types[i]["textColor"];
+                    break;
+                }
+            }
+            var str = 
+                "<div class='activities-div' id='activity-div-" + idMark + "'>" +
+                    "<h2 class='activities-title'>" + title + "</h2>" +
+                    "<span class='activities-type' style='background-color:" + bgColor + "; color:" + textColor + "'>" + type + "</span>" +
+                    "<p class='activities-time'>" + startTime + " - " + endTime + "</p>" +
+                    "<p class='activities-duration'>" + duration + "</p>" +
+                    "<i class='far fa-trash-alt activity-delete-button' id='activity-delete-" + idMark + "'></i>" +
+                    "<div class='activity-edit activity-edit-invisible' id='activity-edit-" + idMark + "'>" +
+                    "<h2>Edit Activity</h2>" +
+                    "<input class='activity-title-input' id='activity-title-" + idMark + "' autocomplete='off' value='" + title + "'/>" +
+                    "<select class='activity-type-input' id='activity-type-" + idMark + "' selected='" + type + "'>" + typesSelect + "</select>" +
+                    "<input class='activity-start-time-input' id='activity-start-time-" + idMark + "' value='" + startTime + "' autocomplete='off' />" +
+                    "<input class='activity-end-time-input' id='activity-end-time-" + idMark + "' value='" + endTime + "' autocomplete='off' />" +
+                    "<div class='activity-edit-button' id='button-edit-" + idMark + "'>Edit</div><div class='activity-cancel-button' id='button-cancel-" + idMark + "'>Cancel</div>" +
+                    "<h3 class='activity-error-text' id='activity-error-" + idMark + "'>Error</h3>" +
+                    "</div>" +
+                "</div>";
+            return str;
+        }
+
+        function getDateTitle(date) {
+            return "<h2 class='activities-date'>" + date + "</h2>";
+        }
+
+        // select time frame
+        $('#time-frame').on('change', () => {
+            updateActivities();
+        });
+
+        function getToday() {
+            var data = [];
+
+            var today = new Date();
+            var dateStr = (today.getMonth() + 1) + "/" + today.getDate() + "/" + today.getFullYear();
+
+            for(var i in activities) {
+                if(activities[i]['date'] === dateStr) {
+                    data.push(activities[i]);
+                    break;
+                }
+            }
+
+            return data;
+        }
+
+        function getWeek(weekBeforeToday) {
+            var today = new Date();
+
+            // Get user setting start day
+            var startDay = settings['startDay'];
+            var offsetDay;
+            if(startDay < today.getDay()) {
+                offsetDay = today.getDay() - startDay;
+            } else {
+                offsetDay = today.getDay() + 7 - startDay;
+            }
+
+            // Only store 3 weeks of activities
+            var startDate = new Date(today - (offsetDay*ONE_DAY_TIME));
+            startDate = new Date((startDate.getMonth() + 1) + "/" + startDate.getDate() + "/" + startDate.getFullYear());
+
+            var data = [];
+
+            // Get activities that is within given week range
+            for (var i in activities) {
+                var date = activities[i]['date'];
+
+                // Calculate how many day prior the activities are for
+                var lastDate = new Date(date);
+                var diffTime = startDate - lastDate;
+                var diffDays = Math.ceil(diffTime / ONE_DAY_TIME);
+
+                // Check within week range
+                if(diffDays > weekBeforeToday * 7 || diffDays <= (weekBeforeToday-1) * 7) continue;
+
+                // Store those activities
+                data.push(activities[i]);
+            }
+
+            return data;
+        }
+
+        // Register delete activities function
+        var date;
+        var index;
+        $(document).on('click', "[id^='activity-delete-']", (e) => {
+            e.stopPropagation();
+            var idParts = e.target.id.split('-');
+            date = idParts[2];
+            index = idParts[3];
+            console.log('To delete activity:', date, index);
+
+            // Show delete confirmation div
+            $('#delete-confirmation-top').css('visibility', 'visible');
+        });
+
+        $('#delete-confirmation-cancel').click(() => {
+            $('#delete-confirmation-top').css('visibility', 'hidden');
+        });
+
+        $('#delete-confirmation-submit').click(() => {
+            $.ajax({
+                type: "GET",
+                url: '/userDeleteActivity',
+                data: ({ username : username, date: date, index: index }),
+                dataType: "json",
+                success: function(data) {
+                    if(data['success']) {
+                        activities = data['activities'];
+                        console.log("Got activities after deletion:", activities);
+                        updateActivities();
+                        $('#delete-confirmation-top').css('visibility', 'hidden');
+                    } else {
+                        alert("Fail to get activities: " + data['reason']);
+                    }
+                },
+                error: function(e) {
+                    alert("Ajax error");
+                }
+            });
+        });
+    
+        // Register edit trigger event
+        $(document).on('click', "[id^='activity-div-']", (e) => {
+            var idParts = e.currentTarget.id.split('-');
+            date = idParts[2];
+            index = idParts[3];
+            var editDiv = document.getElementById('activity-edit-' + date + '-' + index);
+            e.currentTarget.scrollIntoView();
+            if(editDiv.classList.contains('activity-edit-invisible')) {
+                editDiv.classList.remove('activity-edit-invisible');
+            } else {
+                editDiv.classList.add('activity-edit-invisible');
+            }
+        });
+
+        $(document).on('click', "[id^='activity-edit-']", (e) => {
+            e.stopPropagation();
+        });
+
+        $(document).on('click', "[id^='button-cancel-']", (e) => {
+            var idParts = e.currentTarget.id.split('-');
+            date = idParts[2];
+            index = idParts[3];
+            var editDiv = document.getElementById('activity-edit-' + date + '-' + index);
+            editDiv.classList.add('activity-edit-invisible');
+        });
+
+        var name, type, startTime, endTime, idMark;
+
+        $(document).on('click', "[id^='button-edit-']", (e) => {
+            var idParts = e.currentTarget.id.split('-');
+            date = idParts[2];
+            index = idParts[3];
+            idMark = date + "-" + index;
+            console.log('activity-title-' + idMark);
+            name = document.getElementById('activity-title-' + idMark).value;
+            type = document.getElementById('activity-type-' + idMark).value;
+            startTime = document.getElementById('activity-start-time-' + idMark).value;
+            endTime = document.getElementById('activity-end-time-' + idMark).value;
+            console.log(name, type, startTime, endTime);
+
+            $('#edit-confirmation-top').css('visibility', 'visible');
+        });
+
+        $('#edit-confirmation-cancel').click(() => {
+            $('#edit-confirmation-top').css('visibility', 'hidden');
+        });
+
+        $('#edit-confirmation-submit').click(() => {
+            $.ajax({
+                type: "GET",
+                url: '/userEditActivity',
+                data: ({ username: username, date: date, index: index, name: name, type: type, startTime: startTime, endTime: endTime}),
+                dataType: "json",
+                success: function(data) {
+                    console.log("Got data:", data);
+                    if(data['success']) {
+                        activities = data['activities'];
+                        $('#edit-confirmation-top').css('visibility', 'hidden');
+                        updateActivities();
+                        var lastDiv = document.getElementById('activity-div-' + idMark);
+                        lastDiv.scrollIntoView();
+                    } else {
+                        var errorText = document.getElementById('activity-error-' + idMark);
+                        errorText.innerText = data['reason'];
+                        errorText.style.visibility = 'visible';
+                    }
+                },
+                error: function(e) {
+                    alert("Ajax error");
+                }
+            });
+        });
+    </script>
+</html>

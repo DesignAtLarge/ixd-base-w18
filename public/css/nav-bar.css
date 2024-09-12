@@ -1,0 +1,68 @@
+#title-bar {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+#back-bar, #hamburger-bar {
+    width: 90%;
+    display: inline-block;
+    box-sizing: content-box;
+}
+
+#back-bar {
+    text-align: left;
+}
+
+#back-arrow {
+    padding-left: 20px;
+}
+
+#hamburger-bar {
+    text-align: right;
+}
+
+#hamburger-button {
+    padding-right: 20px;
+}
+
+#back-arrow:hover {
+    cursor: pointer;
+}
+
+#hamburger-button:hover {
+    cursor: pointer;
+}
+
+#nav-bar {
+    position: absolute;
+    right: 0;
+    padding-right: 10%;
+    background-color: black;
+    color: white;
+    height: 100%;
+    top: 0;
+    text-align: left;
+    padding-top: 100px;
+    z-index: 2;
+}
+
+#nav-bar-list {
+    list-style: none;
+}
+
+#nav-bar-list li {
+    padding-left: 10px;
+    line-height: 2em;
+}
+
+#nav-bar-list li a {
+    text-decoration: none;
+    color: white;
+}
+
+#nav-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2em;
+}

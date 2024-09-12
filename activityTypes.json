@@ -1,0 +1,34 @@
+{
+    "types": [
+        {
+            "name": "Family",
+            "color": "#A2E1DD",
+            "bgColor": "#A2E1DD",
+            "textColor": "#000000"
+        },
+        {
+            "name": "Fun",
+            "color": "#EB8484",
+            "bgColor": "#EB8484",
+            "textColor": "#000000"
+        },
+        {
+            "name": "School",
+            "color": "#91AC7B",
+            "bgColor": "#91AC7B",
+            "textColor": "#000000"
+        },
+        {
+            "name": "Work",
+            "color": "#E9CD6A",
+            "bgColor": "#E9CD6A",
+            "textColor": "#000000"
+        },
+        {
+            "name": "Other",
+            "color": "#6C59DB",
+            "bgColor": "#6C59DB",
+            "textColor": "#000000"
+        }
+    ]
+}

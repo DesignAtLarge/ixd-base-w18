@@ -1,0 +1,115 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(169.02deg, #00B6F4 0.56%, #FDDCCD 62.16%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#root-div {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#content-div {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#title-bar {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+#back-bar, #hamburger-bar {
+    width: 90%;
+    display: inline-block;
+    box-sizing: content-box;
+}
+
+#back-bar {
+    text-align: left;
+}
+
+#back-arrow {
+    padding-left: 20px;
+}
+
+#hamburger-bar {
+    text-align: right;
+}
+
+#hamburger-button {
+    padding-right: 20px;
+}
+
+#back-arrow:hover {
+    cursor: pointer;
+}
+
+#hamburger-button:hover {
+    cursor: pointer;
+}
+
+#nav-bar {
+    position: absolute;
+    right: 0;
+    padding-right: 10%;
+    background-color: black;
+    color: white;
+    height: 100%;
+    top: 0;
+    text-align: left;
+    padding-top: 100px;
+}
+
+#nav-bar-list {
+    list-style: none;
+}
+
+#nav-bar-list li {
+    padding-left: 10px;
+    line-height: 2em;
+}
+
+#nav-bar-list li a {
+    text-decoration: none;
+    color: white;
+}
+
+#nav-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2em;
+}
+
+#suggestions-div {
+    width: 80%;
+    margin: 20px auto;
+}
+
+#suggestions-list {
+    text-align: left;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#back-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #009BCF;
+    border-radius: 50px;
+    width: 60%;
+    margin: 10px 0;
+    margin-top: 25px;
+    color: white;
+}

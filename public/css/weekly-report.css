@@ -1,0 +1,174 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(169.02deg, #00B6F4 0.56%, #FDDCCD 62.16%);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#root-div {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#content-div {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#title-bar {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+#hamburger-bar {
+    width: 90%;
+    display: inline-block;
+    box-sizing: content-box;
+}
+
+#back-bar {
+    text-align: left;
+}
+
+#hamburger-bar {
+    text-align: right;
+}
+
+#hamburger-button {
+    padding-right: 20px;
+}
+
+#hamburger-button:hover {
+    cursor: pointer;
+}
+
+#nav-bar {
+    position: absolute;
+    right: 0;
+    padding-right: 10%;
+    background-color: black;
+    color: white;
+    height: 100%;
+    top: 0;
+    text-align: left;
+    padding-top: 100px;
+}
+
+#nav-bar-list {
+    list-style: none;
+}
+
+#nav-bar-list li {
+    padding-left: 10px;
+    line-height: 2em;
+}
+
+#nav-bar-list li a {
+    text-decoration: none;
+    color: white;
+}
+
+#nav-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2em;
+}
+
+#options {
+    width: 100%;
+    margin: 10px 0;
+}
+
+#week, #scale {
+    /* background-color: lightgray; */
+    box-sizing: content-box;
+    border: none;
+    padding: 5px;
+    text-align: center;
+    background-color: white;
+    opacity: 70%;
+    margin: 2px 0;
+    /* padding: 5px; */
+    /* position: relative; */
+}
+
+#chart {
+    margin: 20px 0;
+    /* border: 5px solid red;
+    border-radius: 100px; */
+}
+
+#list {
+    list-style: none;
+    margin: 20px auto;
+}
+
+.list-entry {
+    text-align: left;
+    width: 300px;
+    margin: 0 auto;
+    padding-left: 100px;
+    font-size: 1.2em;
+}
+
+.list-entry span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+#buttons {
+    width: 100%;
+}
+
+#chart-type {
+    width: 60%;
+    padding: 5px;
+    box-sizing: content-box;
+    background-color: lightgray;
+    border: none;
+    text-align: center;
+    margin: 10px 0;
+}
+
+#detail-button, #suggestion-button {
+    display: inline-block;
+    margin: 10px 0;
+    background-color: #009BCF;
+    border-radius: 50px;
+    padding: 5px;
+    width: 60%;
+    color: white;
+}
+
+#has-data-div {
+    width: 100%;
+}
+
+#no-data-div {
+    width: 100%;
+    text-align: center;
+}
+
+#no-data-title {
+    margin: 20px;
+}
+
+#add-button {
+    background-color: lightgray;
+    padding: 5px;
+    display: inline-block;
+}

@@ -1,8 +1,145 @@
 <html>
-<head>
-	<title>Test Page</title>
-</head>
-<body>
-Begin here (or replace this with any static code already written).
-</body>
+	<head>
+		<title>Test Page</title>
+		<script src="https://kit.fontawesome.com/c9acfba105.js" crossorigin="anonymous"></script>
+		<script src="js/jquery.js"></script>
+		<link rel="stylesheet" href="css/login.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div id='root-div'>
+			<div id='content-div'>
+				<div id='title-bar'>
+					<div class="home-content">
+						<h1 id="mob-title">MobTrack</h1>
+					</div>
+				</div>
+				<div id='login-div'>
+					<div id='login-select'>
+						<div id='login-button' class='login-option-select'>Log In</div>
+						<div id='signup-button'>Sign Up</div>
+					</div>
+					<h2 id='login-title'>Log In</h2>
+					<div class='login-entry'>
+						<label class='login-label'>Username: </label>
+						<input type='text' id='username' placeholder='Enter email or username' />
+					</div>
+					<div class='login-entry'>
+						<label class='login-label'>Password: </label>
+						<input type='password' id='password' placeholder="Password" />
+					</div>
+					<div class='login-entry' id='retype-div'>
+						<label class='login-label'>Confirm Password: </label>
+						<input type='password' id='password-retype' placeholder="Confirm password" />
+					</div>
+					<div id='login-submit'>Log In</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script>
+		// Clear cookie whenever this page is visited
+		document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+
+		$('#login-button').click(function() {
+			$('#login-button').addClass('login-option-select');
+			$('#signup-button').removeClass('login-option-select');
+			$('#login-title').text("Log In");
+			$('#login-submit').text("Log In");
+			$('#retype-div').css('visibility', 'hidden');
+			$('#username').val('');
+			$('#password').val('');
+			$('#password-retype').val('');
+		});
+		$('#signup-button').click(function() {
+			$('#login-button').removeClass('login-option-select');
+			$('#signup-button').addClass('login-option-select');
+			$('#login-title').text("Sign Up");
+			$('#login-submit').text("Sign Up");
+			$('#retype-div').css('visibility', 'visible');
+			$('#username').val('');
+			$('#password').val('');
+			$('#password-retype').val('');
+		});
+
+		// Check login and signup logic
+		const inputRegex = "[a-zA-Z0-9]+";
+		$('#login-submit').click(function() {
+			// Sanity check
+			var username = $('#username').val();
+			var password = $('#password').val();
+
+			for(var i = 0; i < username.length; i++) {
+				if(username.charAt(i) === ' ') {
+					alert("Username has space");
+					return;
+				}
+				if(password.charAt(i) === ' ') {
+					alert("Password has space");
+					return;
+				}
+			}
+
+			if(username.length === 0 || password.length === 0) {
+				alert("Username and password can't be empty");
+				return;
+			}
+
+			console.log(username, password);
+
+			// Prioritize login
+			if($('#signup-button').hasClass('login-option-select')) {
+				var rePassword = $('#password-retype').val();
+
+				// Check password match
+				if(rePassword !== password) {
+					alert("Password mismatch");
+					return;
+				}
+
+				// Ajax make a user signup request
+				$.ajax({
+					type: "GET",
+					url: '/userSignUp',
+					data: ({ username : username, password : password }),
+					dataType: "json",
+					success: function(data) {
+						console.log("Returned data:", data);
+						if(data['success']) {
+							document.cookie = "username=" + username;
+							window.location.href = "/home";
+						} else {
+							alert("Fail to sign up due to: " + data['reason']);
+						}
+					},
+					error: function(e) {
+						alert("Ajax error");
+					}
+				});
+			} else {
+				// Ajax make a user login request
+				$.ajax({
+					type: "GET",
+					url: '/userLogIn',
+					data: ({ username : username, password : password }),
+					dataType: "json",
+					success: function(data) {
+						console.log("Returned data:", data);
+						if(data['success']) {
+							document.cookie = "username=" + username;
+							window.location.href = "/home";
+						} else {
+							alert("Fail to login due to: " + data['reason']);
+						}
+					},
+					error: function(e) {
+						alert("Ajax error");
+					}
+				});
+			}
+		});
+	</script>
 </html>

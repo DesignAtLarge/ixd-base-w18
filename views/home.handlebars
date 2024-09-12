@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>Test Page</title>
+		<script src="https://kit.fontawesome.com/c9acfba105.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div id='root-div'>
+			<div id='content-div'>
+				<div id='title-bar'>
+					<div class="home-content">
+						<h1 id="mob-title">MobTrack</h1>
+						<p>Hi! <b><span id='username'></span></b></p>
+						<p>Today is {{day}}</p>
+						<p>{{date}}</p>
+						{{#if singleActivity}}
+						<p>There is <span>{{activitiesCount}}</span> activity added so far today.</p>
+						{{else}}
+							{{#if noActivity}}
+							<p>No activities added today.</p>
+							{{else}}
+							<p>There are <span>{{activitiesCount}}</span> activities added so far today.</p>
+							{{/if}}
+						{{/if}}
+					</div>
+				</div>
+				<div id='buttons'>
+					<a href='/add'>
+						<div id='add-button'>Add Activity</div>
+					</a>
+					<br>
+					<a href='/report'>
+						<div id='report-button'>Report</div>
+					</a>
+					<a href='/details'>
+						<div id='report-button'>All Activities</div>
+					</a>
+					<a href='/settings'>
+						<div id='report-button'>Settings</div>
+					</a>
+					<a href='/help'>
+						<div id='report-button'>Help</div>
+					</a>
+					<a href='/'>
+						<div id='logout-button'>Log Out</div>
+					</a>
+					<br>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src='js/cookies.js'></script>
+	<script>
+		var username = getCookie('username', document.cookie);
+		if(username === '') {
+			// Not logged in
+			window.location.href = '/';
+		}
+		document.getElementById('username').innerText = username;
+	</script>
+</html>

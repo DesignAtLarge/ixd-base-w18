@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title>Test Page</title>
+		<script src="https://kit.fontawesome.com/c9acfba105.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/nav-bar.css">
+		<script src="js/jquery.js"></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div id='root-div'>
+			<div id='content-div'>
+				<div id='title-bar'>
+                    <div id='hamburger-bar'>
+                        <i class="fas fa-bars" id='hamburger-button'></i>
+                    </div>
+                </div>
+
+				<div id='nav-bar' style='display:none;'>
+                    <i class="fas fa-times" id='nav-close'></i>
+                    <ul id='nav-bar-list'>
+                        <li><a href='/home'>Home</a></li>
+                        <li><a href='/add'>Add Activity</a></li>
+                        <li><a href='/report'>Report</a></li>
+                        <li><a href='/details'>All Activities</a></li>
+						<li><a href='/settings'>Settings</a></li>
+                        <li><a href='/help'>Help</a></li>
+                        <li><a href='/'>Log Out</a></li>
+                    </ul>
+                </div>
+				
+				<div class="home-content">
+					<h1 style="margin-top: 5px;">Help</h1>
+					<div id="help-content">
+						<p>Since our app is new, we would like to have some guidances in order to have a better idea of how to use the app.</p>
+						<p class='question' id='q1'>1. What day does a report begin for every week?<i class="fas fa-angle-down drop-down-button" id='bq1'></i></p>
+						<p class='answer answer-invisible' id='aq1'>By default, a report begins on Sunday for every week.</p>
+						<p class='question' id='q2'>2. Can an activity exceed 24 hours a day?<i class="fas fa-angle-down drop-down-button" id='bq2'></i></p>
+						<p class='answer answer-invisible' id='aq2'>No. An activity cannot exceed 24 hours per day.</p>
+						<p class='question' id='q3'>3. Where can I find all the access options?<i class="fas fa-angle-down drop-down-button" id='bq3'></i></p>
+						<p class='answer answer-invisible' id='aq3'>You can flexibly go to different pages by clicking/tapping on the menu button on the top right, and see the options of where to go.</p>
+						<p class='question' id='q4'>4. Can I edit the already added activities?<i class="fas fa-angle-down drop-down-button" id='bq4'></i></p>
+						<p class='answer answer-invisible' id='aq4'>You can edit these activities by going to "All Activities" page, then click/tap on the specific activities that you would like to edit. After, you will instantly see where to edit them.</p>
+						<p class='question' id='q5'>5. Can I change the activity time display format?<i class="fas fa-angle-down drop-down-button" id='bq5'></i></p>
+						<p class='answer answer-invisible' id='aq5'>You can change it in Settings page, that has options to change it to either showing "Hours", or showing "Hours and Minutes".</p>
+						<p class='question' id='q6'>6. Can I change the weekly starting day for Weekly Report page?<i class="fas fa-angle-down drop-down-button" id='bq6'></i></p>
+						<p class='answer answer-invisible' id='aq6'>You can change it to any day in Settings page.</p>
+					</div>
+				</div>
+				{{!-- <div id='buttons'>
+					<a href='/home'>
+						<div id='add-button'>Home</div>
+					</a>
+				</div> --}}
+			</div>
+		</div>
+	</body>
+
+	<script src='js/navbar.js'></script>
+	<script src='js/cookies.js'></script>
+	<script>
+		var username = getCookie('username', document.cookie);
+		if(username === '') {
+			// Not logged in
+			window.location.href = '/';
+		}
+	</script>
+
+	<script>
+		$(document).ready(() => {
+			$('p[id^=q]').click((e) => {
+				var answerId = '#a' + e.currentTarget.id;
+				var buttonId = '#b' + e.currentTarget.id;
+				$(answerId).toggleClass('answer-invisible');
+				if($(answerId).hasClass('answer-invisible')) {
+					$(buttonId).removeClass('fa-angle-up');
+					$(buttonId).addClass('fa-angle-down');
+				} else {
+					$(buttonId).removeClass('fa-angle-down');
+					$(buttonId).addClass('fa-angle-up');
+				}
+			});
+		});
+	</script>
+</html>

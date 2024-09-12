@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/c9acfba105.js" crossorigin="anonymous"></script>
+        <script src="js/jquery.js"></script>
+        <link rel="stylesheet" href="css/settings.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id='root-div'>
+            <div id='content-div'>
+                <!-- Navbar & button section -->
+                <div id='title-bar'>
+                    <div id='hamburger-bar'>
+                        <i class="fas fa-bars" id='hamburger-button'></i>
+                    </div>
+                </div>
+                <div id='nav-bar' style='display:none;'>
+                    <i class="fas fa-times" id='nav-close'></i>
+                    <ul id='nav-bar-list'>
+                        <li><a href='/home'>Home</a></li>
+                        <li><a href='/add'>Add Activity</a></li>
+                        <li><a href='/report'>Report</a></li>
+                        <li><a href='/details'>All Activities</a></li>
+                        <li><a href='/settings'>Settings</a></li>
+                        <li><a href='/help'>Help</a></li>
+                        <li><a href='/'>Log Out</a></li>
+                    </ul>
+                </div>
+
+                <h1 style="margin-top: 5px;">Settings</h1>
+                <div class='setting-div'>
+                    <label id='startDayLabel'>Report Starts On</label>
+                    <select id="startDayInput">
+                        <option value="1">Monday</option>
+                        <option value="2">Tuesday</option>
+                        <option value="3">Wednesday</option>
+                        <option value="4">Thursday</option>
+                        <option value="5">Friday</option>
+                        <option value="6">Saturday</option>
+                        <option value="0">Sunday</option>
+                    </select>
+                </div>
+
+                <div class='setting-div'>
+                    <label id='durationFmtLabel'>Time Display Format</label>
+                    <select id="durationFmtInput">
+                        <option value="hrs">Hours (i.e. 1.25 hrs)</option>
+                        <option value="hrsmin">Hours &amp; Minutes (i.e. 1h 15m)</option>
+                    </select>
+                </div>
+                
+                <div class='save-div'>
+                    <div id='save-button'>Save</div>
+                </div>
+
+                <h2 id='setting-saved-text'>Settings saved!</h2>
+            </div>
+        </div>
+    </body>
+
+    <script src='js/navbar.js'></script>
+    <script src='js/cookies.js'></script>
+    <script>
+        var username = getCookie('username', document.cookie);
+        if(username === '') {
+            // Not logged in
+            window.location.href = '/';
+        }
+
+        // Display user settings
+        $.ajax({
+            type: "GET",
+            url: '/userRetrieveSettings',
+            data: ({ username : username }),
+            dataType: "json",
+            success: function(data) {
+                console.log("Returned data:", data);
+                if(data['success']) {
+                    var settings = data['settings'];
+                    $("#startDayInput").val(settings['startDay']);
+                    $("#durationFmtInput").val(settings['durationFmt']);
+                } else {
+                    alert("Fail to retrieve user settings: " + data['reason']);
+                }
+            },
+            error: function(e) {
+                alert("Ajax error");
+            }
+        });
+
+        // Submit settings
+        $('#save-button').click((e) => {
+            console.log("format:", $('#durationFmtInput').val());
+            $.ajax({
+                type: "GET",
+                url: '/userSetSettings',
+                data: ({ username : username, startDay: $('#startDayInput').val(), durationFmt: $('#durationFmtInput').val() }),
+                dataType: "json",
+                success: function(data) {
+                    console.log("Returned data:", data);
+                    if(data['success']) {
+                        $('#setting-saved-text').css('visibility', 'visible');
+                    } else {
+                        alert("Fail to save user settings: " + data['reason']);
+                    }
+                },
+                error: function(e) {
+                    alert("Ajax error");
+                }
+            });
+        });
+    </script>
+</html>

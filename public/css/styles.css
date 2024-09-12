@@ -1,0 +1,144 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(169.02deg, #00B6F4 0.56%, #FDDCCD 62.16%);
+}
+
+.home-content {
+    line-height: 25px;
+}
+
+#title-bar {
+    margin-bottom: 8px;
+}
+
+#mob-title {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#root-div {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#content-div {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#title-bar {
+    position: relative;
+}
+
+#back-arrow {
+    position: absolute;
+    top: 2px;
+    left: 30px;
+    font-size: 2em;
+}
+
+#back-arrow:hover {
+    cursor: pointer;
+}
+
+#options {
+    width: 100%;
+    margin: 10px 0;
+}
+
+#week, #scale {
+    background-color: lightgray;
+    box-sizing: content-box;
+    border: none;
+    padding: 5px;
+    text-align: center;
+}
+
+#list {
+    list-style: none;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.list-entry {
+    text-align: left;
+    width: 300px;
+    margin: 0 auto;
+    padding-left: 100px;
+    font-size: 1.2em;
+}
+
+.list-entry span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+#buttons {
+    width: 100%;
+}
+
+#add-button, #report-button, #logout-button {
+    background-color: #009BCF;
+    border-radius: 50px;
+    padding: 5px;
+    width: 60%;
+    display: inline-block;
+    margin: 10px 0;
+    color: white;
+}
+
+#help-content {
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+}
+
+.question {
+    background-color: white;
+    opacity: 70%;
+    margin: 2px 0;
+    padding: 5px;
+    position: relative;
+}
+
+.drop-down-button {
+    position: absolute;
+    right: 10px;
+    font-size: 1.2em;
+}
+
+.answer {
+    transition: all 0.5s linear;
+    height: auto;
+}
+
+.answer-invisible {
+    height: 0;
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 600px) {
+    #help-content {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}

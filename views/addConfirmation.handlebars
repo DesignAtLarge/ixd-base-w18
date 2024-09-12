@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/c9acfba105.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/add-confirmation.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id='root-div'>
+            <div id='content-div'>
+                {{#if error}}
+                <h1>Something went wrong...</h1>
+                {{else}}
+                <h1>Activity Created!</h1>
+                {{/if}}
+                <div id='activity-info'>
+                    {{#if error}}
+                    <div class='info-div'>
+                        <h3 class='info-title'>Error:</h3>
+                        <p class='info-content'>{{reason}}</p>
+                    </div>
+                    {{else}}
+                    <div class='info-div'>
+                        <h3 class='info-title'>Activity Name:</h3>
+                        <p>{{activityName}}</p>
+                    </div>
+                    <div class='info-div'>
+                        <h3 class='info-title'>Type:</h3>
+                        <p class='info-content'>{{type}}</p>
+                    </div>
+                    <div class='info-div'>
+                        <h3 class='info-title'>Start Time</h3>
+                        <p class='info-content'>{{startTime}}</p>
+                    </div>
+                    <div class='info-div'>
+                        <h3 class='info-title'>End Time</h3>
+                        <p class='info-content'>{{endTime}}</p>
+                    </div>
+                    {{/if}}
+                    {{#if error}}
+                    <a href='/add'><div id='done-button'>Back</div></a>
+                    {{else}}
+                    <a href='/add'><div id='done-button'>Add More Activity</div></a>
+                    <a href='/home'><div id='done-button'>Done</div></a>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src='js/cookies.js'></script>
+	<script>
+		var username = getCookie('username', document.cookie);
+		if(username === '') {
+			// Not logged in
+			window.location.href = '/';
+		}
+	</script>
+</html>

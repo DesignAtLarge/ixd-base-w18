@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(169.02deg, #00B6F4 0.56%, #FDDCCD 62.16%);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#root-div {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+#content-div {
+    width: 100%;
+}
+
+#title-bar {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+#hamburger-bar {
+    width: 90%;
+    display: inline-block;
+    box-sizing: content-box;
+}
+
+#back-bar {
+    text-align: left;
+}
+
+#hamburger-bar {
+    text-align: right;
+}
+
+#hamburger-button {
+    padding-right: 20px;
+}
+
+#hamburger-button:hover {
+    cursor: pointer;
+}
+
+#nav-bar {
+    position: absolute;
+    right: 0;
+    padding-right: 10%;
+    background-color: black;
+    color: white;
+    height: 100%;
+    top: 0;
+    text-align: left;
+    padding-top: 100px;
+}
+
+#nav-bar-list {
+    list-style: none;
+}
+
+#nav-bar-list li {
+    padding-left: 10px;
+    line-height: 2em;
+}
+
+#nav-bar-list li a {
+    text-decoration: none;
+    color: white;
+}
+
+#nav-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2em;
+}
+
+.setting-div {
+    width: 60%;
+    margin: 20px auto;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+#startDayLabel, #durationFmtLabel {
+    margin: 5px 0;
+    display: block;
+}
+
+#startDayInput, #durationFmtInput {
+    width: 100%;
+    padding: 5px 2px;
+}
+
+#setting-saved-text {
+    color: green;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+.save-div {
+    margin: 20px auto;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+#save-button {
+    background-color: #009BCF;
+    display: inline-block;
+    padding: 5px;
+    width: 60%;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 50px;
+    color: white;
+    margin-top: 10px;
+}
+
+label {
+    font-size: 15px;
+}
